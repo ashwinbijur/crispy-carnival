@@ -1,0 +1,52 @@
+---
+title: "Post With Code"
+author: "Ashwin Bijur"
+date: "2025-12-26"
+categories: [code, analysis]
+image: "matplotlib_bar.png"
+---
+
+Lets work some code into the blog and test it.
+
+```{python}
+# check functions
+print("hello world!")
+```
+
+```{python}
+# test math
+2+2
+```
+
+
+```{python}
+import warnings 
+warnings.filterwarnings("ignore", category=UserWarning, module="palmerpenguins")
+from palmerpenguins import load_penguins
+import pandas as pd
+import numpy as np
+
+penguins_df = load_penguins()
+penguins_cleaned_df = penguins_df.dropna()
+
+species_counts = penguins_cleaned_df['species'].value_counts()
+```
+
+Show Matplotlib Charts
+
+
+```{python}
+import matplotlib.pyplot as plt
+
+plot = plt.figure()
+plot.set_figwidth(6)
+plot.set_figheight(3)
+
+plt.bar(species_counts.index, species_counts.values)
+
+```
+
+
+```{python}
+plot.savefig("matplotlib_bar.png")
+```

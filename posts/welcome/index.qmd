@@ -1,0 +1,10 @@
+---
+title: "Welcome To My Blog"
+author: "Ashwin Bijur"
+date: "2025-12-26"
+categories: [news]
+---
+
+Wish me luck. I’m setting up a Quarto-powered blog, running it locally, and publishing it online. I’ll use it to document what I’m learning as I work through ML, data science, AI, and agents. The image below from Quarto sums it up well: I’m ready to get started and curious about where this goes.
+
+![](thumbnail.jpg)

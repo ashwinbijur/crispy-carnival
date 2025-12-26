@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>blog to follow my learnings</title>
+<link>https://your-website-url.example.com/</link>
+<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<description>A blog built with Quarto</description>
+<generator>quarto-1.8.26</generator>
+<lastBuildDate>Thu, 25 Dec 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Post With Code</title>
+  <dc:creator>Ashwin Bijur</dc:creator>
+  <link>https://your-website-url.example.com/posts/post-with-code/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Lets work some code into the blog and test it.</p>
+<div id="356228cc" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># check functions</span></span>
+<span id="cb1-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hello world!"</span>)</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>hello world!</code></pre>
+</div>
+</div>
+<div id="6856c7ca" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># test math</span></span>
+<span id="cb3-2"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<pre><code>4</code></pre>
+</div>
+</div>
+<div id="8a6b8985" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> warnings </span>
+<span id="cb5-2">warnings.filterwarnings(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ignore"</span>, category<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">UserWarning</span>, module<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"palmerpenguins"</span>)</span>
+<span id="cb5-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> palmerpenguins <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> load_penguins</span>
+<span id="cb5-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb5-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb5-6"></span>
+<span id="cb5-7">penguins_df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> load_penguins()</span>
+<span id="cb5-8">penguins_cleaned_df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> penguins_df.dropna()</span>
+<span id="cb5-9"></span>
+<span id="cb5-10">species_counts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> penguins_cleaned_df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'species'</span>].value_counts()</span></code></pre></div></div>
+</div>
+<p>Show Matplotlib Charts</p>
+<div id="df155b18" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb6-2"></span>
+<span id="cb6-3">plot <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.figure()</span>
+<span id="cb6-4">plot.set_figwidth(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>)</span>
+<span id="cb6-5">plot.set_figheight(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span>
+<span id="cb6-6"></span>
+<span id="cb6-7">plt.bar(species_counts.index, species_counts.values)</span></code></pre></div></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/post-with-code/index_files/figure-html/cell-5-output-1.png" width="500" height="263" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="a919be0b" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">plot.savefig(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"matplotlib_bar.png"</span>)</span></code></pre></div></div>
+</div>
+
+
+
+ ]]></description>
+  <category>code</category>
+  <category>analysis</category>
+  <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
+  <pubDate>Thu, 25 Dec 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://your-website-url.example.com/posts/post-with-code/matplotlib_bar.png" medium="image" type="image/png" height="72" width="144"/>
+</item>
+<item>
+  <title>Welcome To My Blog</title>
+  <dc:creator>Ashwin Bijur</dc:creator>
+  <link>https://your-website-url.example.com/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Wish me luck. I’m setting up a Quarto-powered blog, running it locally, and publishing it online. I’ll use it to document what I’m learning as I work through ML, data science, AI, and agents. The image below from Quarto sums it up well: I’m ready to get started and curious about where this goes.</p>
+<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <pubDate>Thu, 25 Dec 2025 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

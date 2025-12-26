@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "blog to follow my learnings",
+    "section": "",
+    "text": "test for Ashwin"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "Lets work some code into the blog and test it.\n\n# check functions\nprint(\"hello world!\")\n\nhello world!\n\n\n\n# test math\n2+2\n\n4\n\n\n\nimport warnings \nwarnings.filterwarnings(\"ignore\", category=UserWarning, module=\"palmerpenguins\")\nfrom palmerpenguins import load_penguins\nimport pandas as pd\nimport numpy as np\n\npenguins_df = load_penguins()\npenguins_cleaned_df = penguins_df.dropna()\n\nspecies_counts = penguins_cleaned_df['species'].value_counts()\n\nShow Matplotlib Charts\n\nimport matplotlib.pyplot as plt\n\nplot = plt.figure()\nplot.set_figwidth(6)\nplot.set_figheight(3)\n\nplt.bar(species_counts.index, species_counts.values)\n\n\n\n\n\n\n\n\n\nplot.savefig(\"matplotlib_bar.png\")"
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "blog to follow my learnings",
+    "section": "",
+    "text": "This repository does not accept pull requests (PRs). All pull requests will be closed."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "blog to follow my learnings",
+    "section": "",
+    "text": "Post With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Wish me luck. I’m setting up a Quarto-powered blog, running it locally, and publishing it online. I’ll use it to document what I’m learning as I work through ML, data science, AI, and agents. The image below from Quarto sums it up well: I’m ready to get started and curious about where this goes."
+  }
+]
