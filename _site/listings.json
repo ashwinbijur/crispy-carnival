@@ -2,8 +2,27 @@
   {
     "listing": "/index.html",
     "items": [
+      "/about.html",
+      "/data-blog.html",
+      "/coffee-blog.html",
+      "/coffee-reviews/cortado/index.html",
+      "/posts/interactive-charts/index.html",
+      "/coffee-reviews/dareshack/index.html",
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html",
+      "/CONTRIBUTING.html",
+      "/readme.html"
+    ]
+  },
+  {
+    "listing": "/data-blog.html",
+    "items": [
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
+  },
+  {
+    "listing": "/coffee-blog.html",
+    "items": []
   }
 ]

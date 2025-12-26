@@ -1,0 +1,8 @@
+---
+title: "It's not a dare, it's just a great choice."
+date: "2025-12-26"
+image: post-preview.png
+draft: true
+---
+
+It's not a dare, it's not a choice anymore!

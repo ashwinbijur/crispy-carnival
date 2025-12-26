@@ -1,17 +1,22 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  description: "A blog built with Quarto"
-  site-url: https://your-website-url.example.com # you must change this appropriately for RSS feeds to work properly
   title: "blog to follow my learnings"
+  draft-mode: unlinked
   navbar:
+    left:
+      - text: "Data blog"
+        icon: pie-chart-fill
+        href: data-blog.qmd
     right:
+      - text: "Coffee blog"
+        icon: cup-hot-fill
+        href: coffee-blog.qmd
       - about.qmd
       - icon: github
         href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
 format:
   html:
     theme:
