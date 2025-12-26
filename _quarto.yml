@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "blog to follow my learnings"
+  title: "blog to follow my learnings."
   draft-mode: unlinked
   navbar:
     left:
