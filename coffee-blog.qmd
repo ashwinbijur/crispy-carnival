@@ -9,11 +9,9 @@ listing:
   feed: true
 ---
 
-You might want your blog to have multiple listings.
+The idea is also to keep it light -- have a break and post something interesting that I stumble upon.
 
-For instance most of your content is about Python and data so that's what most people will be interested in. But you might also be passionate about coffee, embroidery, 14th Century cuisine or something else.
-
-Or... thinking more practically you might have a listing for blogposts and another for your podcast episodes! Quarto has great flexibility for that - as you can see here.
+One piece of trivia is that it took me four tries to finally render this online - inspite of having help from C J Hadley.
 
 ::: {#blog}
 :::

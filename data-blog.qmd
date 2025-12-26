@@ -9,10 +9,6 @@ listing:
 toc: false
 ---
 
-You'll find all of my data blogposts here. There are tutorial posts, data explorations, charts and more abstract posts.
-
-I've got a separate listing for my [coffee posts](coffee-blog.qmd)
-
 # Blog
 
 ::: {#blog}
