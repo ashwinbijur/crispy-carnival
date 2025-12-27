@@ -1,14 +1,27 @@
 [
   {
     "listing": "/coffee-blog.html",
-    "items": []
+    "items": [
+      "/coffee-reviews/dareshack/index.html",
+      "/coffee-reviews/cortado/index.html"
+    ]
   },
   {
     "listing": "/data-blog.html",
     "items": [
-      "/posts/interactive-charts/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": []
   }
 ]

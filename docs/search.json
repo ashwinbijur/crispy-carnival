@@ -16,9 +16,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "blog to follow my learnings",
+    "title": "Public Lab Book",
     "section": "",
-    "text": "I’m spinning up a Quarto‑powered blog—running it locally, publishing it online, and using it as a living notebook for everything I’m learning across machine learning, data science, AI, and agentic systems. Think of it as a public lab book: part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m stepping in with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point."
+    "text": "This blog is a living notebook. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.\nWhat you’ll find here\n# Experiments and demos: runnable Quarto notebooks and small projects you can clone and try.\n# Notes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.\n# How‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.\n# Failures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.\nAbout me\nI build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.\nOn the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.\nHow I work\nI favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.\nJoin the experiment\nIf you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point."
   },
   {
     "objectID": "CONTRIBUTING.html",
@@ -37,16 +37,16 @@
   {
     "objectID": "coffee-blog.html",
     "href": "coffee-blog.html",
-    "title": "Coffee Blog",
+    "title": "Wire",
     "section": "",
-    "text": "The idea is also to keep it light – have a break and post something interesting that I stumble upon.\nOne piece of trivia is that it took me four tries to finally render this online - inspite of having help from C J Hadley…\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Under Construction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIt’s not a dare, it’s just a great choice.\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nCortado: When and why?\n\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "data-blog.html",
     "href": "data-blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nInteractive charts\n\n\n\ncode\n\ndataviz\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -54,5 +54,19 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "Wish me luck. I’m setting up a Quarto-powered blog, running it locally, and publishing it online. I’ll use it to document what I’m learning as I work through ML, data science, AI, and agents. The image below from Quarto sums it up well: I’m ready to get started and curious about where this goes."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Fresh Slate Lab",
+    "section": "",
+    "text": "Under Contruction\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "coffee-reviews/dareshack/index.html",
+    "href": "coffee-reviews/dareshack/index.html",
+    "title": "It’s not a dare, it’s just a great choice.",
+    "section": "",
+    "text": "It’s not a dare, it’s not a choice anymore!"
   }
 ]
