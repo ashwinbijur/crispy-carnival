@@ -1,10 +1,7 @@
 [
   {
     "listing": "/coffee-blog.html",
-    "items": [
-      "/coffee-reviews/dareshack/index.html",
-      "/coffee-reviews/cortado/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/data-blog.html",
@@ -22,6 +19,10 @@
   },
   {
     "listing": "/projects.html",
+    "items": []
+  },
+  {
+    "listing": "/wire.html",
     "items": []
   }
 ]
