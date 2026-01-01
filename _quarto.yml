@@ -10,6 +10,9 @@ website:
       - text: "Projects"
         icon: file-earmark-binary-fill
         href: projects.qmd
+      - text: "Math & Stats"
+        icon: calculator-fill
+        href: math&stat.qmd
       - text: "Data blog"
         icon: pie-chart-fill
         href: data-blog.qmd
@@ -17,9 +20,8 @@ website:
       - text: "Wire"
         icon: newsletter
         href: wire.qmd
-      - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/ashwinbijur/
 format:
   html:
     theme:

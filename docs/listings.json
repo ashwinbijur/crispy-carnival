@@ -6,6 +6,7 @@
   {
     "listing": "/data-blog.html",
     "items": [
+      "/posts/interactive-charts/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
@@ -19,10 +20,18 @@
   },
   {
     "listing": "/projects.html",
-    "items": []
+    "items": [
+      "/projects/bank-credit/bank-credit.html"
+    ]
   },
   {
     "listing": "/wire.html",
     "items": []
+  },
+  {
+    "listing": "/math&stat.html",
+    "items": [
+      "/math&stat/history/ancestry-mod-ml.html"
+    ]
   }
 ]

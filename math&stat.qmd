@@ -1,10 +1,15 @@
 ---
 listing:
   id: blog
-  contents: projects
+  contents: math&stat
   sort: "date desc"
   type: default
   categories: true
   feed: true
 toc: false
 ---
+
+# Blog
+
+::: {#blog}
+:::

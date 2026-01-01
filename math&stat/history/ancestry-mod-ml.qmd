@@ -1,0 +1,41 @@
+---
+title: "A Historical Roadmap of Mathematics, Statistics, and Machine Learning"
+author: "Ashwin Bijur"
+date: "2026-01-01"
+categories: [maths, statistics, machine learning]
+---
+
+Introduction 
+
+Modern machine learning did not appear suddenly. It is the product of a long intellectual lineage spanning probability theory, statistical inference, optimization, and computational breakthroughs. This roadmap traces that evolution - 
+
+---
+
+```mermaid
+timeline
+    title History of Mathematics, Statistics, and Machine Learning
+    1600s : Pascal & Fermat formalize probability
+          : John Graunt creates first life tables
+    1700s : Bernoulli proves Law of Large Numbers
+          : Bayes' Theorem published (1763)
+    1800s : Legendre introduces least squares
+          : Gauss formalizes normal distribution
+          : Galton & Pearson develop correlation and regression
+          : Markov introduces Markov chains
+    1900s : Fisher develops maximum likelihood and ANOVA
+          : Neyman–Pearson hypothesis testing
+          : Turing formalizes computation
+          : Rosenblatt invents the perceptron
+          : Backpropagation rediscovered (1986)
+          : CART decision trees (1984)
+          : SVMs and kernel methods (1990s)
+          : Ensemble methods (bagging, boosting, stacking)
+    2000s : Deep learning resurgence with GPUs
+          : CNNs, RNNs, LSTMs mature
+    2010s : Transformers and large-scale pretraining
+    2020s : Foundation models, diffusion models, agentic workflows
+
+```
+
+source - https://en.wikipedia.org/wiki/History_of_statistics#Introduction
+
