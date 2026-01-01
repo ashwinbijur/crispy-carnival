@@ -1,0 +1,99 @@
+---
+title: "Copilot - changes for the Credit Relationship Manager"
+author: "Ashwin Bijur"
+date: "2025-12-28"
+categories: [copilot, change, process]
+---
+
+It’s the difference between looking things up and having things done. Search engines gives you information however Copilot gives you work already in motion. Instead of just fetching data, showing documents or answering questions, it interprets, drafts, prepares and prioritizes work and helps the relationship manager find time in their busy schedule. Below are some of the things that keeps them busy and we will provide a short guide to showcase what copilot can offer.
+
+```{dot}
+digraph UseCase {
+    rankdir=LR;
+    node [shape=ellipse, style=filled, fillcolor=lightyellow, fontname="Helvetica"];
+
+    // Actors
+    actor1 [label="Credit RM", shape=box, fillcolor=lightblue];
+
+    // Use cases
+    uc1 [label="Client Preparation & Research"];
+    uc2 [label="Credit Analysis & Underwriting Support"];
+    uc3 [label="Credit Memo & Documentation"];
+    uc4 [label="Client Communication & Follow‑ups"];
+    uc5 [label="Portfolio Monitoring & Early Warning"];
+    uc6 [label="Internal Collaboration & Workflow Efficiency"];
+
+
+    // Relationships
+    actor1 -> uc1;
+    actor1 -> uc2;
+    actor1 -> uc3;
+    actor1 -> uc4;
+    actor1 -> uc5;
+    actor1 -> uc6;
+}
+
+```
+
+Here are a few prompts that instantly make a relationship manager’s workflow lighter, faster, and sharper than working without Copilot. And this is just the beginning. Using Copilot is the first real step toward becoming an AI‑first organization by building everyday comfort with LLMs, strengthening intuition around model‑driven workflows, and setting the stage for deeper AI integration across credit, risk, and client engagement. Along with this initiative one can investigate agentic ai for the credit committee process which is repetitive and also involves may stakeholders.
+
+
+* Client Preparation & Research - RMs spend a huge amount of time gathering context before meetings. Copilot can compress that into minutes. What Copilot can do:
+  + Summarize long financial statements into key trends, ratios, and red flags
+  + Extract borrower risk indicators from PDFs or emails
+  + Generate concise borrower profiles from scattered documents
+  + Create comparison tables across years, products, or subsidiaries
+  + Draft meeting briefs with “what to ask” and “what to watch for”
+
+  *Example prompt:
+  Summarize this borrower’s last 3 years of financials and highlight liquidity, leverage, and cash flow concerns. Create a 5‑bullet brief for my meeting.*
+
+* Credit Analysis & Underwriting Support - Copilot won’t replace credit judgment, but it dramatically accelerates the analytical grunt work. What Copilot can do:
+  + Calculate ratios from raw financials
+  + Generate sensitivity scenarios (e.g., revenue drop, interest rate increase)
+  + Draft the narrative sections of credit memos
+  + Translate analyst‑speak into executive‑ready summaries
+  + Identify missing data or inconsistencies
+
+  *Example prompt:
+  “Calculate DSCR, FCCR, and leverage ratios from this data. Then write a credit narrative explaining the borrower’s risk profile in plain language.”*
+
+* Credit Memo & Documentation - This is where RMs lose the most time. Copilot can turn rough notes into polished documents. What Copilot can do:
+  + Draft full credit memos from bullet points
+  + Rewrite sections for clarity, tone, or regulatory alignment
+  + Generate executive summaries tailored to credit committees
+  + Convert messy emails into structured documentation
+  + Create checklists for required documents
+
+  *Example prompt:
+  “Turn these notes into a clean, structured credit memo with sections for business overview, financial analysis, risks, mitigants, and recommendation.”*
+
+* Client Communication & Follow‑ups - RMs spend hours writing emails. Copilot can handle 80% of that. What Copilot can do:
+  + Draft professional emails in seconds
+  + Rewrite messages in different tones (formal, concise, empathetic)
+  + Generate follow‑up reminders
+  + Create client‑ready explanations of complex credit terms
+  + Translate communications into multiple languages
+
+  *Example prompt:
+  “Draft a concise email explaining why we need updated financials and how it affects their credit review timeline.”*
+
+* Portfolio Monitoring & Early Warning - Copilot can act like a lightweight monitoring engine. What Copilot can do:
+  + Summarize covenant breaches or near‑breaches
+  + Flag unusual trends in borrower performance
+  + Generate monthly or quarterly portfolio summaries
+  + Draft early‑warning alerts for internal teams
+  + Create dashboards or tables from raw data
+
+  *Example prompt:
+  “Review these covenant calculations and highlight any breaches or trends that require escalation.”*
+
+* Internal Collaboration & Workflow Efficiency - RMs often coordinate across credit, legal, risk, and operations. Copilot reduces friction. What Copilot can do:
+  + Turn meeting notes into action items
+  + Draft internal memos or escalation summaries
+  + Create structured handoffs for credit analysts
+  + Rewrite technical content for non‑technical stakeholders
+  + Generate templates for recurring workflows
+
+  *Example prompt:
+  “Convert these meeting notes into a clear action plan with owners, deadlines, and risks.”*

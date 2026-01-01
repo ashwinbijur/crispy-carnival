@@ -39,14 +39,14 @@
     "href": "coffee-blog.html",
     "title": "Wire",
     "section": "",
-    "text": "Under Construction\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "flowchart TD\n    A[Loan Origination] --&gt; B[Financials, Collateral, Projections]\n    B --&gt; C[LOS / CRM / DMS]\n    C --&gt; D[RM, Credit, Risk, Legal]\n\n    E[Portfolio Monitoring] --&gt; F[Repayments, Covenants, Activity]\n    F --&gt; G[Core Banking / Risk Analytics]\n    G --&gt; H[RM, Risk, Monitoring Unit]\n\n    I[Annual Review] --&gt; J[Updated Financials, Risk Inputs]\n    J --&gt; K[LOS / Rating Engine]\n    K --&gt; L[RM, Credit Analyst, Risk Committee]"
   },
   {
     "objectID": "data-blog.html",
     "href": "data-blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nInteractive charts\n\n\n\ncode\n\ndataviz\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -60,7 +60,7 @@
     "href": "projects.html",
     "title": "Fresh Slate Lab",
     "section": "",
-    "text": "Under Contruction\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Copilot - changes for the Credit Relationship Manager\n\n\n\ncopilot\n\nchange\n\nprocess\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "coffee-reviews/dareshack/index.html",
@@ -75,5 +75,33 @@
     "title": "Wire",
     "section": "",
     "text": "Under Construction\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "coffee-blog.html#usecase-data-system-stakeholder-flow-diagram",
+    "href": "coffee-blog.html#usecase-data-system-stakeholder-flow-diagram",
+    "title": "Wire",
+    "section": "",
+    "text": "flowchart TD\n    A[Loan Origination] --&gt; B[Financials, Collateral, Projections]\n    B --&gt; C[LOS / CRM / DMS]\n    C --&gt; D[RM, Credit, Risk, Legal]\n\n    E[Portfolio Monitoring] --&gt; F[Repayments, Covenants, Activity]\n    F --&gt; G[Core Banking / Risk Analytics]\n    G --&gt; H[RM, Risk, Monitoring Unit]\n\n    I[Annual Review] --&gt; J[Updated Financials, Risk Inputs]\n    J --&gt; K[LOS / Rating Engine]\n    K --&gt; L[RM, Credit Analyst, Risk Committee]"
+  },
+  {
+    "objectID": "projects/bank-credit/bank-credit.html",
+    "href": "projects/bank-credit/bank-credit.html",
+    "title": "Copilot - changes for the Credit Relationship Manager",
+    "section": "",
+    "text": "It’s the difference between looking things up and having things done. Search engines gives you information however Copilot gives you work already in motion. Instead of just fetching data, showing documents or answering questions, it interprets, drafts, prepares and prioritizes work and helps the relationship manager find time in their busy schedule. Below are some of the things that keeps them busy and we will provide a short guide to showcase what copilot can offer.\n\n\n\n\n\n\n\nUseCase\n\n\n\nactor1\n\nCredit RM\n\n\n\nuc1\n\nClient Preparation & Research\n\n\n\nactor1-&gt;uc1\n\n\n\n\n\nuc2\n\nCredit Analysis & Underwriting Support\n\n\n\nactor1-&gt;uc2\n\n\n\n\n\nuc3\n\nCredit Memo & Documentation\n\n\n\nactor1-&gt;uc3\n\n\n\n\n\nuc4\n\nClient Communication & Follow‑ups\n\n\n\nactor1-&gt;uc4\n\n\n\n\n\nuc5\n\nPortfolio Monitoring & Early Warning\n\n\n\nactor1-&gt;uc5\n\n\n\n\n\nuc6\n\nInternal Collaboration & Workflow Efficiency\n\n\n\nactor1-&gt;uc6\n\n\n\n\n\n\n\n\n\n\nHere are a few prompts that instantly make a relationship manager’s workflow lighter, faster, and sharper than working without Copilot. And this is just the beginning. Using Copilot is the first real step toward becoming an AI‑first organization by building everyday comfort with LLMs, strengthening intuition around model‑driven workflows, and setting the stage for deeper AI integration across credit, risk, and client engagement. Along with this initiative one can investigate agentic ai for the credit committee process which is repetitive and also involves may stakeholders.\n\nClient Preparation & Research - RMs spend a huge amount of time gathering context before meetings. Copilot can compress that into minutes. What Copilot can do:\n\nSummarize long financial statements into key trends, ratios, and red flags\nExtract borrower risk indicators from PDFs or emails\nGenerate concise borrower profiles from scattered documents\nCreate comparison tables across years, products, or subsidiaries\nDraft meeting briefs with “what to ask” and “what to watch for”\n\nExample prompt: Summarize this borrower’s last 3 years of financials and highlight liquidity, leverage, and cash flow concerns. Create a 5‑bullet brief for my meeting.\nCredit Analysis & Underwriting Support - Copilot won’t replace credit judgment, but it dramatically accelerates the analytical grunt work. What Copilot can do:\n\nCalculate ratios from raw financials\nGenerate sensitivity scenarios (e.g., revenue drop, interest rate increase)\nDraft the narrative sections of credit memos\nTranslate analyst‑speak into executive‑ready summaries\nIdentify missing data or inconsistencies\n\nExample prompt: “Calculate DSCR, FCCR, and leverage ratios from this data. Then write a credit narrative explaining the borrower’s risk profile in plain language.”\nCredit Memo & Documentation - This is where RMs lose the most time. Copilot can turn rough notes into polished documents. What Copilot can do:\n\nDraft full credit memos from bullet points\nRewrite sections for clarity, tone, or regulatory alignment\nGenerate executive summaries tailored to credit committees\nConvert messy emails into structured documentation\nCreate checklists for required documents\n\nExample prompt: “Turn these notes into a clean, structured credit memo with sections for business overview, financial analysis, risks, mitigants, and recommendation.”\nClient Communication & Follow‑ups - RMs spend hours writing emails. Copilot can handle 80% of that. What Copilot can do:\n\nDraft professional emails in seconds\nRewrite messages in different tones (formal, concise, empathetic)\nGenerate follow‑up reminders\nCreate client‑ready explanations of complex credit terms\nTranslate communications into multiple languages\n\nExample prompt: “Draft a concise email explaining why we need updated financials and how it affects their credit review timeline.”\nPortfolio Monitoring & Early Warning - Copilot can act like a lightweight monitoring engine. What Copilot can do:\n\nSummarize covenant breaches or near‑breaches\nFlag unusual trends in borrower performance\nGenerate monthly or quarterly portfolio summaries\nDraft early‑warning alerts for internal teams\nCreate dashboards or tables from raw data\n\nExample prompt: “Review these covenant calculations and highlight any breaches or trends that require escalation.”\nInternal Collaboration & Workflow Efficiency - RMs often coordinate across credit, legal, risk, and operations. Copilot reduces friction. What Copilot can do:\n\nTurn meeting notes into action items\nDraft internal memos or escalation summaries\nCreate structured handoffs for credit analysts\nRewrite technical content for non‑technical stakeholders\nGenerate templates for recurring workflows\n\nExample prompt: “Convert these meeting notes into a clear action plan with owners, deadlines, and risks.”"
+  },
+  {
+    "objectID": "math&stat.html",
+    "href": "math&stat.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nA Historical Roadmap of Mathematics, Statistics, and Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 1, 2026\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "math&stat/history/ancestry-mod-ml.html",
+    "href": "math&stat/history/ancestry-mod-ml.html",
+    "title": "A Historical Roadmap of Mathematics, Statistics, and Machine Learning",
+    "section": "",
+    "text": "Introduction\nModern machine learning did not appear suddenly. It is the product of a long intellectual lineage spanning probability theory, statistical inference, optimization, and computational breakthroughs. This roadmap traces that evolution -\n\ntimeline\n    title History of Mathematics, Statistics, and Machine Learning\n    1600s : Pascal & Fermat formalize probability\n          : John Graunt creates first life tables\n    1700s : Bernoulli proves Law of Large Numbers\n          : Bayes' Theorem published (1763)\n    1800s : Legendre introduces least squares\n          : Gauss formalizes normal distribution\n          : Galton & Pearson develop correlation and regression\n          : Markov introduces Markov chains\n    1900s : Fisher develops maximum likelihood and ANOVA\n          : Neyman–Pearson hypothesis testing\n          : Turing formalizes computation\n          : Rosenblatt invents the perceptron\n          : Backpropagation rediscovered (1986)\n          : CART decision trees (1984)\n          : SVMs and kernel methods (1990s)\n          : Ensemble methods (bagging, boosting, stacking)\n    2000s : Deep learning resurgence with GPUs\n          : CNNs, RNNs, LSTMs mature\n    2010s : Transformers and large-scale pretraining\n    2020s : Foundation models, diffusion models, agentic workflows\n\nsource - https://en.wikipedia.org/wiki/History_of_statistics#Introduction"
   }
 ]

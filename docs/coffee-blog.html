@@ -210,13 +210,27 @@ window.Quarto = {
 </header>
 
 
-<p>Under Construction</p>
+<section id="usecase-data-system-stakeholder-flow-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="usecase-data-system-stakeholder-flow-diagram">Use‑Case → Data → System → Stakeholder (Flow Diagram)</h2>
+<pre class="mermaid"><code>flowchart TD
+    A[Loan Origination] --&gt; B[Financials, Collateral, Projections]
+    B --&gt; C[LOS / CRM / DMS]
+    C --&gt; D[RM, Credit, Risk, Legal]
+
+    E[Portfolio Monitoring] --&gt; F[Repayments, Covenants, Activity]
+    F --&gt; G[Core Banking / Risk Analytics]
+    G --&gt; H[RM, Risk, Monitoring Unit]
+
+    I[Annual Review] --&gt; J[Updated Financials, Risk Inputs]
+    J --&gt; K[LOS / Rating Engine]
+    K --&gt; L[RM, Credit Analyst, Risk Committee]</code></pre>
 <div id="blog">
 
 </div>
 
 
 
+</section>
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-wire">
 <div class="list grid quarto-listing-cols-3">

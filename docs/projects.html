@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -156,6 +156,11 @@ window.Quarto = {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./math&amp;stat.html"> <i class="bi bi-calculator-fill" role="img">
+</i> 
+<span class="menu-text">Math &amp; Stats</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./data-blog.html"> <i class="bi bi-pie-chart-fill" role="img">
 </i> 
 <span class="menu-text">Data blog</span></a>
@@ -163,16 +168,12 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./coffee-blog.html"> <i class="bi bi-newsletter" role="img">
+    <a class="nav-link" href="./wire.html"> <i class="bi bi-newsletter" role="img">
 </i> 
 <span class="menu-text">Wire</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ashwinbijur/"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -188,21 +189,53 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2hhbmdl">change <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29waWxvdA==">copilot <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvY2Vzcw==">process <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<p>Under Contruction</p>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-blog">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Y29waWxvdCUyQ2NoYW5nZSUyQ3Byb2Nlc3M=" data-listing-date-sort="1766876400000" data-listing-file-modified-sort="1767013806480" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
+<div class="thumbnail"><a href="./projects/bank-credit/bank-credit.html" class="no-external">
 
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./projects/bank-credit/bank-credit.html" class="no-external">Copilot - changes for the Credit Relationship Manager</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29waWxvdA=='); return false;">copilot</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2hhbmdl'); return false;">change</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvY2Vzcw=='); return false;">process</div>
+
+</div>
+<div class="delink listing-description"><a href="./projects/bank-credit/bank-credit.html" class="no-external">
+It’s the difference between looking things up and having things done. Search engines gives you information however Copilot gives you work already in motion. Instead of just…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./projects/bank-credit/bank-credit.html" class="no-external">
+<div class="listing-date">
+Dec 28, 2025
+</div>
+<div class="listing-author">
+Ashwin Bijur
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
