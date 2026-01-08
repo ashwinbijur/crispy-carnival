@@ -1,0 +1,157 @@
+---
+title: "Data Cleaning : A Business Decision With Technical Precision"
+author: "Ashwin Bijur"
+date: "2026-01-04"
+image: data-cleaning-bank-improved.JPG
+draft: false
+categories: [process, data-cleaning]
+---
+# Summary
+
+Data cleaning in banks is not a technical afterthought. It’s a strategic capability that blends:
+
+- Business ownership
+- Technical precision
+- Governance discipline
+- Traceability
+- Cloud‑native tooling like Azure can help
+
+When done right, it becomes a competitive advantage: better decisions, lower risk, and faster innovation.
+
+---
+
+# Introduction
+Banks don’t suffer from a lack of data—they suffer from a lack of trustworthy data. And **trustworthy data** doesn’t happen by accident. It’s the result of **deliberate** business decisions, disciplined technical execution, and strong governance.
+
+In this post, we’ll explore how banks can **elevate data cleaning** from an ad‑hoc technical chore to a **strategic capability**, supported by clear processes, RACI models, and modern cloud platforms like Microsoft Azure.
+
+# Why Data Cleaning in Banks Is a Business Decision
+
+Data cleaning is often misunderstood as a purely technical task. However ideally every cleaning action, whether merging records, imputing missing values, or standardizing formats changes the meaning of data. A **lack of business‑logic** application in data cleaning may render the **data synthetic**.
+
+That means cleaning decisions affect:
+
+- Regulatory reporting
+- Risk models
+- Customer segmentation
+- Fraud detection
+- Credit decisions
+- Operational efficiency
+
+Because of this, banks must treat data cleaning as a business-governed process with technical precision, not a back-office afterthought.
+
+# Governance: The Backbone of Trustworthy Data
+
+A strong governance framework ensures that cleaning decisions are:
+
+- Intentional (aligned with business rules)
+- Consistent (repeatable across teams and systems)
+- Traceable (auditable for regulators and internal risk teams)
+- Accountable (owned by the right roles)
+
+## Key Governance Components
+
+| Component  | Purpose  | Example |
+|------------|----------|---------|
+| Data Standards  | Define what “clean” means  | Standard IBAN format, KYC completeness rules
+| Data Quality Rules |	Operationalize standards |	“Address must include postal code”
+| Data Lineage |	Track where data came from and how it changed | 	Customer address updated via CRM → MDM → downstream systems
+|Data Ownership	| Assign accountability	| Product owner for deposits owns customer address quality
+|Issue Management	| Track and resolve quality issues	| Missing LEI codes flagged and routed to operations
+
+: Example in Banking {.striped .hover}
+: Example in Banking {tbl-colwidths="[25,25,50]"}
+
+# Traceability: The Non‑Negotiable Requirement
+Banks must be able to answer:
+
+- Who changed the data?
+- Why was it changed?
+- What rule triggered the change?
+- What was the original value?
+- Which downstream systems were impacted?
+
+Traceability is essential for:
+
+- Regulatory audits
+- Model validation
+- Internal controls
+- Operational risk management
+
+*Azure services like Azure Purview (Microsoft Purview) provide automated lineage, rule catalogs, and audit trails that make this feasible at scale*
+
+# The Data Cleaning Process
+
+1. Profiling - Understand the data: completeness, uniqueness, validity, consistency, timeliness.
+2. Rule Definition - Business + data stewards define rules (e.g., “Date of birth cannot be in the future”).
+3. Rule Execution - Technical teams implement rules using Azure Data Factory, Databricks, or Synapse.
+4. Exception Handling - Flag anomalies, route to operations or business owners.
+5. Remediation - Fix data manually or automatically based on approved logic.
+6. Validation - Ensure the fix meets business and regulatory expectations.
+7. Documentation & Lineage Update - Record what changed and why.
+8. Monitoring - Continuous quality dashboards and alerts.
+
+## RACI for Data Cleaning in Banks
+
+|Activity |	Responsible |	Accountable |	Consulted |	Informed |
+|---------|-------------|-------------|-----------|----------|
+|Define data quality rules |	Data Stewards |	Data Owners |	Compliance, Risk |	Engineering |
+|Implement rules |	Data Engineering |	Data Platform Lead | Data Stewards |	Data Owners |
+|Approve remediation logic |	Data Owners |	Business Unit Lead |	Risk, Compliance |	Engineering |
+|Execute cleaning jobs	| Engineering |	Platform Lead |	Stewards |	Owners |
+|Monitor quality |	Data Quality Team |	CDO |	Risk |	Business Units |
+|Audit & lineage |	Governance Office |	CDO |	Compliance |	All stakeholders|
+
+: A RACI model clarifies who does what {.striped .hover}
+: A RACI model clarifies who does what {tbl-colwidths="[25,18.75,18.75,18.75,18.75]"}
+
+## Types of Data Cleaning
+
+
+|Cleaning Type |	Description |	Banking Example |
+|--------------|-------------|-----------------|
+|Standardization |	Convert to consistent formats |	IBAN formatting, date formats |
+|Deduplication |	Merge duplicate records |	Duplicate customer profiles
+|Validation |	Check against rules |	Invalid SWIFT codes |
+|Enrichment	| Add missing data |	Append LEI codes |
+|Imputation	| Fill missing values	| Estimate missing risk ratings |
+|Correction	| Fix incorrect values |	Wrong branch code |
+|Consolidation	| Harmonize across systems	| Align product codes across regions |
+
+: Banking Context {.striped .hover}
+
+# How Microsoft Azure Supports Enterprise‑Grade Data Cleaning
+
+Azure provides a modular, scalable toolkit for data quality and governance:
+
+1. Microsoft Purview
+
+- Data catalog
+- Lineage
+- Business glossary
+- Policy enforcement
+- Data classification
+
+2. Azure Data Factory
+
+- Rule execution pipelines
+- Data movement
+- Orchestration
+
+3. Azure Databricks
+
+- Advanced cleaning logic
+- Machine learning–based anomaly detection
+- Scalable processing
+
+4. Azure Synapse Analytics
+- Integrated analytics
+- SQL‑based rule execution
+- Real‑time dashboards
+
+5. Azure Monitor + Log Analytics
+- Quality monitoring
+- Alerts
+- Operational insights
+
+---

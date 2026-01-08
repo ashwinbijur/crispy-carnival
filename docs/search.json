@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Public Lab Book",
     "section": "",
-    "text": "This blog is a living notebook. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.\nWhat you’ll find here\n# Experiments and demos: runnable Quarto notebooks and small projects you can clone and try.\n# Notes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.\n# How‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.\n# Failures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.\nAbout me\nI build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.\nOn the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.\nHow I work\nI favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.\nJoin the experiment\nIf you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point."
+    "text": "This blog is a living notebook. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.\nWhat you’ll find here\n\nExperiments and demos: runnable Quarto notebooks and small projects you can clone and try.\nNotes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.\nHow‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.\nFailures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.\n\nAbout me\nI build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.\nOn the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.\nHow I work\nI favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.\nJoin the experiment\nIf you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point."
   },
   {
     "objectID": "CONTRIBUTING.html",
@@ -46,7 +46,7 @@
     "href": "data-blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nData Cleaning to Agentic AI — A Banking Industry Walkthrough\n\n\n\ncode\n\ndata-cleaning\n\nmachine-learning\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nInteractive charts\n\n\n\ncode\n\ndataviz\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nData Cleaning : A Business Decision With Technical Precision\n\n\n\nprocess\n\ndata-cleaning\n\n\n\n\n\n\n\n\n\nJan 4, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -236,5 +236,33 @@
     "title": "Credit Committee Agentic Workflow",
     "section": "Tactical deployment in a credit instituition",
     "text": "Tactical deployment in a credit instituition\nSince this is a stand-alone workflow and with an additional manual step to the credit systems it can be built and deployed tactically\n\nPros\n\nTime to market\nGood 1st POC for agentic ai\nDeployed within one department\nDisplaces one or two FTEs\nMakes efficient use of executive time\nBuilds executive trust in agentic ai\n\n\n\nCons\n\nMay be seen as too simple\nIf designed without strategic intent it will die"
+  },
+  {
+    "objectID": "posts/data-cleaning-Biz-Dec/index.html",
+    "href": "posts/data-cleaning-Biz-Dec/index.html",
+    "title": "Data Cleaning : A Business Decision With Technical Precision",
+    "section": "",
+    "text": "Data cleaning in banks is not a technical afterthought. It’s a strategic capability that blends:\n\nBusiness ownership\nTechnical precision\nGovernance discipline\nTraceability\nCloud‑native tooling like Azure can help\n\nWhen done right, it becomes a competitive advantage: better decisions, lower risk, and faster innovation."
+  },
+  {
+    "objectID": "posts/data-cleaning-Biz-Dec/index.html#key-governance-components",
+    "href": "posts/data-cleaning-Biz-Dec/index.html#key-governance-components",
+    "title": "Data Cleaning : A Business Decision With Technical Precision",
+    "section": "Key Governance Components",
+    "text": "Key Governance Components\n\nExample in Banking\n\n\n\n\n\n\n\nComponent\nPurpose\nExample\n\n\n\n\nData Standards\nDefine what “clean” means\nStandard IBAN format, KYC completeness rules\n\n\nData Quality Rules\nOperationalize standards\n“Address must include postal code”\n\n\nData Lineage\nTrack where data came from and how it changed\nCustomer address updated via CRM → MDM → downstream systems\n\n\nData Ownership\nAssign accountability\nProduct owner for deposits owns customer address quality\n\n\nIssue Management\nTrack and resolve quality issues\nMissing LEI codes flagged and routed to operations"
+  },
+  {
+    "objectID": "posts/data-cleaning-Biz-Dec/index.html#raci-for-data-cleaning-in-banks",
+    "href": "posts/data-cleaning-Biz-Dec/index.html#raci-for-data-cleaning-in-banks",
+    "title": "Data Cleaning : A Business Decision With Technical Precision",
+    "section": "RACI for Data Cleaning in Banks",
+    "text": "RACI for Data Cleaning in Banks\n\nA RACI model clarifies who does what\n\n\n\n\n\n\n\n\n\nActivity\nResponsible\nAccountable\nConsulted\nInformed\n\n\n\n\nDefine data quality rules\nData Stewards\nData Owners\nCompliance, Risk\nEngineering\n\n\nImplement rules\nData Engineering\nData Platform Lead\nData Stewards\nData Owners\n\n\nApprove remediation logic\nData Owners\nBusiness Unit Lead\nRisk, Compliance\nEngineering\n\n\nExecute cleaning jobs\nEngineering\nPlatform Lead\nStewards\nOwners\n\n\nMonitor quality\nData Quality Team\nCDO\nRisk\nBusiness Units\n\n\nAudit & lineage\nGovernance Office\nCDO\nCompliance\nAll stakeholders"
+  },
+  {
+    "objectID": "posts/data-cleaning-Biz-Dec/index.html#types-of-data-cleaning",
+    "href": "posts/data-cleaning-Biz-Dec/index.html#types-of-data-cleaning",
+    "title": "Data Cleaning : A Business Decision With Technical Precision",
+    "section": "Types of Data Cleaning",
+    "text": "Types of Data Cleaning\n\nBanking Context\n\n\n\n\n\n\n\nCleaning Type\nDescription\nBanking Example\n\n\n\n\nStandardization\nConvert to consistent formats\nIBAN formatting, date formats\n\n\nDeduplication\nMerge duplicate records\nDuplicate customer profiles\n\n\nValidation\nCheck against rules\nInvalid SWIFT codes\n\n\nEnrichment\nAdd missing data\nAppend LEI codes\n\n\nImputation\nFill missing values\nEstimate missing risk ratings\n\n\nCorrection\nFix incorrect values\nWrong branch code\n\n\nConsolidation\nHarmonize across systems\nAlign product codes across regions"
   }
 ]

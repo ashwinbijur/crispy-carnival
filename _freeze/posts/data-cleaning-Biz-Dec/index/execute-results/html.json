@@ -1,0 +1,12 @@
+{
+  "hash": "305f3854d2a47a488853ed1f9d6ff350",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Data Cleaning : A Business Decision With Technical Precision\"\nauthor: \"Ashwin Bijur\"\ndate: \"2026-01-04\"\nimage: data-cleaning-bank-improved.JPG\ndraft: false\ncategories: [process, data-cleaning]\n---\n\n# Introduction\nBanks don’t suffer from a lack of data—they suffer from a lack of trustworthy data. And **trustworthy data** doesn’t happen by accident. It’s the result of **deliberate** business decisions, disciplined technical execution, and strong governance.\n\nIn this post, we’ll explore how banks can **elevate data cleaning** from an ad‑hoc technical chore to a **strategic capability**, supported by clear processes, RACI models, and modern cloud platforms like Microsoft Azure.\n\n# Why Data Cleaning in Banks Is a Business Decision\n\nData cleaning is often misunderstood as a purely technical task. However ideally every cleaning action, whether merging records, imputing missing values, or standardizing formats changes the meaning of data. A **lack of business‑logic** application in data cleaning may render the **data synthetic**.\n\nThat means cleaning decisions affect:\n\n- Regulatory reporting\n- Risk models\n- Customer segmentation\n- Fraud detection\n- Credit decisions\n- Operational efficiency\n\nBecause of this, banks must treat data cleaning as a business-governed process with technical precision, not a back-office afterthought.\n\n# Governance: The Backbone of Trustworthy Data\n\nA strong governance framework ensures that cleaning decisions are:\n\n- Intentional (aligned with business rules)\n- Consistent (repeatable across teams and systems)\n- Traceable (auditable for regulators and internal risk teams)\n- Accountable (owned by the right roles)\n\n## Key Governance Components\n\n\n```{markdown}\n\n::: {.table}\nTable: Model Performance Summary\n\n| Model        | Accuracy | F1 Score | Notes              |\n|--------------|----------|----------|--------------------|\n| Baseline     | 0.81     | 0.78     | No tuning          |\n| Fine‑tuned   | 0.92     | 0.90     | 3‑epoch training   |\n| Distilled    | 0.89     | 0.87     | Lightweight model  |\n:::\n\n```\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

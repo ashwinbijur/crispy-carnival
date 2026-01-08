@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ashwin Bijur">
+<meta name="dcterms.date" content="2026-01-04">
 
-<title>data-blog – Fresh Slate Lab</title>
+<title>Data Cleaning : A Business Decision With Technical Precision – Fresh Slate Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,77 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog'] = new List('listing-blog', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Fresh Slate Lab</span>
     </a>
   </div>
@@ -151,24 +93,24 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> <i class="bi bi-file-earmark-binary-fill" role="img">
+    <a class="nav-link" href="../../projects.html"> <i class="bi bi-file-earmark-binary-fill" role="img">
 </i> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./math&amp;stat.html"> <i class="bi bi-calculator-fill" role="img">
+    <a class="nav-link" href="../../math&amp;stat.html"> <i class="bi bi-calculator-fill" role="img">
 </i> 
 <span class="menu-text">Math &amp; Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./data-blog.html" aria-current="page"> <i class="bi bi-pie-chart-fill" role="img">
+    <a class="nav-link" href="../../data-blog.html"> <i class="bi bi-pie-chart-fill" role="img">
 </i> 
 <span class="menu-text">Data blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./wire.html"> <i class="bi bi-newsletter" role="img">
+    <a class="nav-link" href="../../wire.html"> <i class="bi bi-newsletter" role="img">
 </i> 
 <span class="menu-text">Wire</span></a>
   </li>  
@@ -185,119 +127,335 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Data Cleaning : A Business Decision With Technical Precision</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">process</div>
+                <div class="quarto-category">data-cleaning</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ashwin Bijur </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 4, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YS1jbGVhbmluZw==">data-cleaning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvY2Vzcw==">process <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<section id="blog" class="level1">
-<h1>Blog</h1>
-<div id="listing-blog" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cHJvY2VzcyUyQ2RhdGEtY2xlYW5pbmc=" data-listing-date-sort="1767481200000" data-listing-file-modified-sort="1767888212213" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="705">
-<div class="thumbnail"><a href="./posts/data-cleaning-Biz-Dec/index.html" class="no-external">
 
-<img loading="lazy" src="./posts/data-cleaning-Biz-Dec/data-cleaning-bank-improved.JPG" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title" data-anchor-id="blog">
-<a href="./posts/data-cleaning-Biz-Dec/index.html" class="no-external">Data Cleaning : A Business Decision With Technical Precision</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvY2Vzcw=='); return false;">process</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1jbGVhbmluZw=='); return false;">data-cleaning</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/data-cleaning-Biz-Dec/index.html" class="no-external">
-Data cleaning in banks is not a technical afterthought. It’s a strategic capability that blends:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/data-cleaning-Biz-Dec/index.html" class="no-external">
-<div class="listing-date">
-Jan 4, 2026
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y29kZSUyQ2FuYWx5c2lz" data-listing-date-sort="1766703600000" data-listing-file-modified-sort="1766764297372" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
-<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/post-with-code/matplotlib_bar.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
-Lets work some code into the blog and test it.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Dec 26, 2025
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bmV3cw==" data-listing-date-sort="1766703600000" data-listing-file-modified-sort="1766763140100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="54">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts\welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-Wish me luck. I’m setting up a Quarto-powered blog, running it locally, and publishing it online. I’ll use it to document what I’m learning as I work through ML, data…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Dec 26, 2025
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>Data cleaning in banks is not a technical afterthought. It’s a strategic capability that blends:</p>
+<ul>
+<li>Business ownership</li>
+<li>Technical precision</li>
+<li>Governance discipline</li>
+<li>Traceability</li>
+<li>Cloud‑native tooling like Azure can help</li>
+</ul>
+<p>When done right, it becomes a competitive advantage: better decisions, lower risk, and faster innovation.</p>
+<hr>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Banks don’t suffer from a lack of data—they suffer from a lack of trustworthy data. And <strong>trustworthy data</strong> doesn’t happen by accident. It’s the result of <strong>deliberate</strong> business decisions, disciplined technical execution, and strong governance.</p>
+<p>In this post, we’ll explore how banks can <strong>elevate data cleaning</strong> from an ad‑hoc technical chore to a <strong>strategic capability</strong>, supported by clear processes, RACI models, and modern cloud platforms like Microsoft Azure.</p>
+</section>
+<section id="why-data-cleaning-in-banks-is-a-business-decision" class="level1">
+<h1>Why Data Cleaning in Banks Is a Business Decision</h1>
+<p>Data cleaning is often misunderstood as a purely technical task. However ideally every cleaning action, whether merging records, imputing missing values, or standardizing formats changes the meaning of data. A <strong>lack of business‑logic</strong> application in data cleaning may render the <strong>data synthetic</strong>.</p>
+<p>That means cleaning decisions affect:</p>
+<ul>
+<li>Regulatory reporting</li>
+<li>Risk models</li>
+<li>Customer segmentation</li>
+<li>Fraud detection</li>
+<li>Credit decisions</li>
+<li>Operational efficiency</li>
+</ul>
+<p>Because of this, banks must treat data cleaning as a business-governed process with technical precision, not a back-office afterthought.</p>
+</section>
+<section id="governance-the-backbone-of-trustworthy-data" class="level1">
+<h1>Governance: The Backbone of Trustworthy Data</h1>
+<p>A strong governance framework ensures that cleaning decisions are:</p>
+<ul>
+<li>Intentional (aligned with business rules)</li>
+<li>Consistent (repeatable across teams and systems)</li>
+<li>Traceable (auditable for regulators and internal risk teams)</li>
+<li>Accountable (owned by the right roles)</li>
+</ul>
+<section id="key-governance-components" class="level2">
+<h2 class="anchored" data-anchor-id="key-governance-components">Key Governance Components</h2>
+<table class="caption-top table">
+<caption>Example in Banking</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data Standards</td>
+<td>Define what “clean” means</td>
+<td>Standard IBAN format, KYC completeness rules</td>
+</tr>
+<tr class="even">
+<td>Data Quality Rules</td>
+<td>Operationalize standards</td>
+<td>“Address must include postal code”</td>
+</tr>
+<tr class="odd">
+<td>Data Lineage</td>
+<td>Track where data came from and how it changed</td>
+<td>Customer address updated via CRM → MDM → downstream systems</td>
+</tr>
+<tr class="even">
+<td>Data Ownership</td>
+<td>Assign accountability</td>
+<td>Product owner for deposits owns customer address quality</td>
+</tr>
+<tr class="odd">
+<td>Issue Management</td>
+<td>Track and resolve quality issues</td>
+<td>Missing LEI codes flagged and routed to operations</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="traceability-the-nonnegotiable-requirement" class="level1">
+<h1>Traceability: The Non‑Negotiable Requirement</h1>
+<p>Banks must be able to answer:</p>
+<ul>
+<li>Who changed the data?</li>
+<li>Why was it changed?</li>
+<li>What rule triggered the change?</li>
+<li>What was the original value?</li>
+<li>Which downstream systems were impacted?</li>
+</ul>
+<p>Traceability is essential for:</p>
+<ul>
+<li>Regulatory audits</li>
+<li>Model validation</li>
+<li>Internal controls</li>
+<li>Operational risk management</li>
+</ul>
+<p><em>Azure services like Azure Purview (Microsoft Purview) provide automated lineage, rule catalogs, and audit trails that make this feasible at scale</em></p>
+</section>
+<section id="the-data-cleaning-process" class="level1">
+<h1>The Data Cleaning Process</h1>
+<ol type="1">
+<li>Profiling - Understand the data: completeness, uniqueness, validity, consistency, timeliness.</li>
+<li>Rule Definition - Business + data stewards define rules (e.g., “Date of birth cannot be in the future”).</li>
+<li>Rule Execution - Technical teams implement rules using Azure Data Factory, Databricks, or Synapse.</li>
+<li>Exception Handling - Flag anomalies, route to operations or business owners.</li>
+<li>Remediation - Fix data manually or automatically based on approved logic.</li>
+<li>Validation - Ensure the fix meets business and regulatory expectations.</li>
+<li>Documentation &amp; Lineage Update - Record what changed and why.</li>
+<li>Monitoring - Continuous quality dashboards and alerts.</li>
+</ol>
+<section id="raci-for-data-cleaning-in-banks" class="level2">
+<h2 class="anchored" data-anchor-id="raci-for-data-cleaning-in-banks">RACI for Data Cleaning in Banks</h2>
+<table class="caption-top table">
+<caption>A RACI model clarifies who does what</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Activity</th>
+<th>Responsible</th>
+<th>Accountable</th>
+<th>Consulted</th>
+<th>Informed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Define data quality rules</td>
+<td>Data Stewards</td>
+<td>Data Owners</td>
+<td>Compliance, Risk</td>
+<td>Engineering</td>
+</tr>
+<tr class="even">
+<td>Implement rules</td>
+<td>Data Engineering</td>
+<td>Data Platform Lead</td>
+<td>Data Stewards</td>
+<td>Data Owners</td>
+</tr>
+<tr class="odd">
+<td>Approve remediation logic</td>
+<td>Data Owners</td>
+<td>Business Unit Lead</td>
+<td>Risk, Compliance</td>
+<td>Engineering</td>
+</tr>
+<tr class="even">
+<td>Execute cleaning jobs</td>
+<td>Engineering</td>
+<td>Platform Lead</td>
+<td>Stewards</td>
+<td>Owners</td>
+</tr>
+<tr class="odd">
+<td>Monitor quality</td>
+<td>Data Quality Team</td>
+<td>CDO</td>
+<td>Risk</td>
+<td>Business Units</td>
+</tr>
+<tr class="even">
+<td>Audit &amp; lineage</td>
+<td>Governance Office</td>
+<td>CDO</td>
+<td>Compliance</td>
+<td>All stakeholders</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="types-of-data-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-data-cleaning">Types of Data Cleaning</h2>
+<table class="table-striped table-hover caption-top table">
+<caption>Banking Context</caption>
+<colgroup>
+<col style="width: 31%">
+<col style="width: 29%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cleaning Type</th>
+<th>Description</th>
+<th>Banking Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Standardization</td>
+<td>Convert to consistent formats</td>
+<td>IBAN formatting, date formats</td>
+</tr>
+<tr class="even">
+<td>Deduplication</td>
+<td>Merge duplicate records</td>
+<td>Duplicate customer profiles</td>
+</tr>
+<tr class="odd">
+<td>Validation</td>
+<td>Check against rules</td>
+<td>Invalid SWIFT codes</td>
+</tr>
+<tr class="even">
+<td>Enrichment</td>
+<td>Add missing data</td>
+<td>Append LEI codes</td>
+</tr>
+<tr class="odd">
+<td>Imputation</td>
+<td>Fill missing values</td>
+<td>Estimate missing risk ratings</td>
+</tr>
+<tr class="even">
+<td>Correction</td>
+<td>Fix incorrect values</td>
+<td>Wrong branch code</td>
+</tr>
+<tr class="odd">
+<td>Consolidation</td>
+<td>Harmonize across systems</td>
+<td>Align product codes across regions</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="how-microsoft-azure-supports-enterprisegrade-data-cleaning" class="level1">
+<h1>How Microsoft Azure Supports Enterprise‑Grade Data Cleaning</h1>
+<p>Azure provides a modular, scalable toolkit for data quality and governance:</p>
+<ol type="1">
+<li>Microsoft Purview</li>
+</ol>
+<ul>
+<li>Data catalog</li>
+<li>Lineage</li>
+<li>Business glossary</li>
+<li>Policy enforcement</li>
+<li>Data classification</li>
+</ul>
+<ol start="2" type="1">
+<li>Azure Data Factory</li>
+</ol>
+<ul>
+<li>Rule execution pipelines</li>
+<li>Data movement</li>
+<li>Orchestration</li>
+</ul>
+<ol start="3" type="1">
+<li>Azure Databricks</li>
+</ol>
+<ul>
+<li>Advanced cleaning logic</li>
+<li>Machine learning–based anomaly detection</li>
+<li>Scalable processing</li>
+</ul>
+<ol start="4" type="1">
+<li>Azure Synapse Analytics</li>
+</ol>
+<ul>
+<li>Integrated analytics</li>
+<li>SQL‑based rule execution</li>
+<li>Real‑time dashboards</li>
+</ul>
+<ol start="5" type="1">
+<li>Azure Monitor + Log Analytics</li>
+</ol>
+<ul>
+<li>Quality monitoring</li>
+<li>Alerts</li>
+<li>Operational insights</li>
+</ul>
+<hr>
 
 
 </section>
