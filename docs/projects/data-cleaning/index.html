@@ -107,7 +107,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -116,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -165,49 +168,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Data Cleaning to Agentic AI — A Banking Industry Walkthrough</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">data-cleaning</div>
-                <div class="quarto-category">machine-learning</div>
-                <div class="quarto-category">agentic-ai</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Ashwin Bijur </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">January 7, 2026</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Cleaning to Agentic AI — A Banking Industry Walkthrough</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">code</div>
+    <div class="quarto-category">data-cleaning</div>
+    <div class="quarto-category">machine-learning</div>
+    <div class="quarto-category">agentic-ai</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ashwin Bijur </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 7, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p>Modern banking runs on data however before AI can detect fraud, score credit, or automate decisions that data must be cleaned, structured, and made trustworthy.</p>
@@ -217,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Data Cleaning: The Foundation of Everything</h1>
 <p>The journey always begins with one unglamorous but essential step: data cleaning. The action of cleaning data may be technical however each decision needs to be backed by business logic to create a worthy foundation for future predictions.</p>
 <p>In the below code snippet, lets import some data and identify the messy data and mark it as “NaN”. We can then apply business decisions on handling each “NaN”.</p>
-<div id="b46beb80" class="cell" data-execution_count="1">
+<div id="4c881fd6" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -300,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In a real banking environment, dozens of features influence creditworthiness: income stability, debt‑to‑income ratio, employment history, past delinquencies, and more. But every strong analytical story starts with a simple, intuitive baseline.</p>
 <p>So let’s begin with the most widely used signal in consumer lending - Credit Score.</p>
 <p>And before we build anything complex, we ask a simple question: Can a single feature already give us a meaningful prediction of default risk?</p>
-<div id="1865bf58" class="cell" data-execution_count="2">
+<div id="dbfae8c2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the CSV</span></span>
@@ -327,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>In the graph we see lower scores lead to defaults however in real world displaying it on a graph may not be feasible to we take help from statistics to test our theory. The below piece of code is using past data to identify correlation between credit score and default and building a predictive model for future cases. We can also check the accuracy of the prediction.</p>
-<div id="6c1fc9b0" class="cell" data-execution_count="3">
+<div id="0cf558da" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -356,7 +358,7 @@ Prediction for score 700: [0]</code></pre>
 <h1>Artificial Intelligence: Adding Context + Reasoning</h1>
 <p>One can say that AI doesn’t begin with the model but it begins the moment you convert human messiness into machine‑readable meaning.</p>
 <p>Customer support logs are a goldmine but only after you extract Sentiment, Emotion, Intensity, Topic, Intent, Resolution status, Customer trajectory etc. That’s the moment unstructured text becomes intelligence. Lets create a simple NLP sentiment encoding to understand this.</p>
-<div id="217cc640" class="cell" data-execution_count="4">
+<div id="163c260c" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -382,7 +384,7 @@ Prediction for score 700: [0]</code></pre>
 <p>You’ve just transformed human emotion into numerical signals that downstream models can reason about churn prediction, escalation likelihood, agent performance scoring, issue severity ranking, customer lifetime value risk, operational bottleneck,detection etc</p>
 <p>A model can’t reason about “frustrated” but it can reason about -1.</p>
 <p>A customer saying “My card keeps getting declined and I’m really annoyed” becomes:</p>
-<div id="fc20c28b" class="cell" data-execution_count="5">
+<div id="b235b6fb" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
@@ -439,7 +441,7 @@ Prediction for score 700: [0]</code></pre>
 <section id="agentic-ai-systems-that-act-not-just-predict" class="level1">
 <h1>Agentic AI: Systems That Act, Not Just Predict</h1>
 <p>Now lets create a simple agentic ai model that will monitor transactions continuously and it will send an “alert” when it finds a transaction that has a risk of being fraudulent. To keep it simple we are using a logistic regression model with a single feature “amount” however in real life one can expect a multivariate model with multiple features and multiple predictions. The model will independently flag and send alerts for transactions with risk higher than the defined threshold. For the alert we can further create a validation agent who will email a human for checks and approvals.</p>
-<div id="4cf0ec7e" class="cell" data-execution_count="6">
+<div id="fd63fe2f" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the setup</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>

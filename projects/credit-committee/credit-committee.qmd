@@ -1,0 +1,414 @@
+---
+title: "Credit Committee Agentic Workflow"
+author: "Ashwin Bijur"
+date: "2026-01-08"
+categories: [code, project, process, agentic-ai]
+---
+
+## Introduction 
+
+Credit committees depend on timely, complete, and well‑structured loan packages. In practice, this process is often slowed by:
+
+- Missing documents 
+- Manual reminders 
+- Last‑minute summaries 
+- Fragmented communication 
+
+This page presents a **lightweight agentic AI orchestrator** that automates the entire workflow — from document intake to executive summaries — using a clean Python architecture. 
+
+The system uses: 
+
+- An **Orchestrator** to manage the loan cycle 
+- An **Intake Agent** to store documents 
+- A **Checklist Agent** to validate completeness 
+- A **Summary Agent** to generate executive summaries 
+- A simple **state machine** to track progress 
+
+The result is a repeatable, auditable, and scalable workflow for credit committees. 
+
+---
+
+## Workflow Diagram
+```{mermaid}
+sequenceDiagram
+    participant RM as Relationship Manager
+    participant Intake as Intake Agent
+    participant Checklist as Checklist Agent
+    participant Orchestrator
+    participant Summary as Summary Agent
+    participant Committee
+
+    RM->>Orchestrator: Start new loan cycle
+    Orchestrator->>RM: Invite to upload documents
+
+    RM->>Intake: Upload documents
+    Intake->>Orchestrator: Document stored
+
+    Orchestrator->>Checklist: Run completeness check
+    Checklist->>Orchestrator: Missing items / complete
+
+    Orchestrator->>RM: Reminder for missing documents
+
+    Note over Orchestrator: At cutoff date
+
+    Orchestrator->>Summary: Generate executive summary
+    Summary->>Committee: Email summary package
+    Orchestrator->>Orchestrator: Reset cycle
+
+```
+
+## Domain Model
+
+```{python}
+from enum import Enum
+from dataclasses import dataclass, field
+from datetime import datetime
+from typing import List, Dict
+
+class LoanCycleStatus(Enum):
+    INITIATED = "initiated"
+    COLLECTING_DOCS = "collecting_docs"
+    READY_FOR_COMMITTEE = "ready_for_committee"
+    COMPLETED = "completed"
+
+@dataclass
+class RequiredDocument:
+    name: str
+    description: str
+
+@dataclass
+class UploadedDocument:
+    doc_id: str
+    loan_id: str
+    name: str
+    uploaded_by: str
+    uploaded_at: datetime
+    location: str
+
+@dataclass
+class LoanApplication:
+    loan_id: str
+    rm_id: str
+    borrower_name: str
+    amount: float
+    created_at: datetime
+    cutoff_date: datetime
+    status: LoanCycleStatus = LoanCycleStatus.INITIATED
+    required_docs: List[RequiredDocument] = field(default_factory=list)
+    uploaded_docs: List[UploadedDocument] = field(default_factory=list)
+    metadata: Dict = field(default_factory=dict)
+
+```
+
+## Repository Layer
+
+```{python}
+class LoanRepository:
+    def __init__(self):
+        self._loans = {}
+
+    def add(self, loan):
+        self._loans[loan.loan_id] = loan
+
+    def get(self, loan_id):
+        return self._loans.get(loan_id)
+
+    def update(self, loan):
+        self._loans[loan.loan_id] = loan
+
+    def list_active(self):
+        return [
+            l for l in self._loans.values()
+            if l.status in {LoanCycleStatus.INITIATED, LoanCycleStatus.COLLECTING_DOCS}
+        ]
+
+```
+
+## Agent Interfaces
+
+
+```{python}
+from abc import ABC, abstractmethod
+
+class IntakeAgent(ABC):
+    @abstractmethod
+    def ingest_document(self, loan_id, rm_id, doc_name, location):
+        ...
+
+class ChecklistAgent(ABC):
+    @abstractmethod
+    def check_completeness(self, loan):
+        ...
+
+    @abstractmethod
+    def build_reminder_message(self, loan, missing_docs):
+        ...
+
+class SummaryAgent(ABC):
+    @abstractmethod
+    def build_executive_summary(self, loan):
+        ...
+
+    @abstractmethod
+    def build_committee_email(self, summaries):
+        ...
+
+```
+
+## Simple Agent Implementations
+
+### Intake Agent
+```{python}
+import uuid
+from datetime import UTC
+from datetime import datetime
+
+
+class SimpleIntakeAgent(IntakeAgent):
+    def __init__(self, repo):
+        self.repo = repo
+
+    def ingest_document(self, loan_id, rm_id, doc_name, location):
+        loan = self.repo.get(loan_id)
+        doc = UploadedDocument(
+            doc_id=str(uuid.uuid4()),
+            loan_id=loan_id,
+            name=doc_name,
+            uploaded_by=rm_id,
+            uploaded_at=datetime.now(UTC),
+            location=location,
+        )
+        loan.uploaded_docs.append(doc)
+        loan.status = LoanCycleStatus.COLLECTING_DOCS
+        self.repo.update(loan)
+        return doc
+
+```
+
+### Checklist Agent
+```{python}
+class SimpleChecklistAgent(ChecklistAgent):
+    def check_completeness(self, loan):
+        uploaded = {d.name for d in loan.uploaded_docs}
+        required = {r.name for r in loan.required_docs}
+        missing = sorted(list(required - uploaded))
+        return {"is_complete": len(missing) == 0, "missing_docs": missing}
+
+    def build_reminder_message(self, loan, missing_docs):
+        return (
+            f"Loan {loan.loan_id} is missing:\n"
+            + "\n".join(f"- {m}" for m in missing_docs)
+        )
+
+```
+
+
+### Summary Agent (LLM‑ready)
+
+```{python}
+class DummySummaryAgent(SummaryAgent):
+    def build_executive_summary(self, loan):
+        return (
+            f"Executive Summary for {loan.borrower_name}\n"
+            f"Amount: {loan.amount}\n"
+            f"Documents: {len(loan.uploaded_docs)} uploaded\n"
+        )
+
+    def build_committee_email(self, summaries):
+        body = "\n\n".join(summaries.values())
+        return f"Credit Committee Package\n\n{body}"
+
+```
+
+## Orchestrator
+
+```{python}
+class CreditCommitteeOrchestrator:
+    def __init__(self, repo, intake, checklist, summary):
+        self.repo = repo
+        self.intake = intake
+        self.checklist = checklist
+        self.summary = summary
+
+    def start_new_cycle(self, loan):
+        self.repo.add(loan)
+
+    def receive_document(self, loan_id, rm_id, doc_name, location):
+        return self.intake.ingest_document(loan_id, rm_id, doc_name, location)
+
+    def run_completeness_checks(self):
+        for loan in self.repo.list_active():
+            result = self.checklist.check_completeness(loan)
+            if result["is_complete"]:
+                loan.status = LoanCycleStatus.READY_FOR_COMMITTEE
+                self.repo.update(loan)
+
+    def close_cycle(self):
+        summaries = {}
+        for loan in self.repo._loans.values():
+            if loan.status == LoanCycleStatus.READY_FOR_COMMITTEE:
+                summaries[loan.loan_id] = self.summary.build_executive_summary(loan)
+                loan.status = LoanCycleStatus.COMPLETED
+                self.repo.update(loan)
+        return self.summary.build_committee_email(summaries)
+
+```
+
+# Demo: Running a Full Cycle
+
+
+```{python}
+from datetime import datetime, UTC
+from datetime import datetime, timedelta
+now = datetime.now(UTC)
+
+repo = LoanRepository()
+intake = SimpleIntakeAgent(repo)
+checklist = SimpleChecklistAgent()
+summary = DummySummaryAgent()
+
+orch = CreditCommitteeOrchestrator(repo, intake, checklist, summary)
+
+loan = LoanApplication(
+    loan_id="LN-001",
+    rm_id="rm@example.com",
+    borrower_name="Acme Corp",
+    amount=5_000_000,
+    created_at=datetime.now(UTC),
+    cutoff_date=datetime.now(UTC) + timedelta(days=3),
+    required_docs=[
+        RequiredDocument("Financials", "3-year audited"),
+        RequiredDocument("Business Plan", "Projected cashflows")
+    ]
+)
+
+orch.start_new_cycle(loan)
+
+orch.receive_document("LN-001", "rm@example.com", "Financials", "s3://docs/fin.pdf")
+
+orch.run_completeness_checks()
+
+email = orch.close_cycle()
+email
+```
+
+
+# Testing the system
+
+In this section, we run an end‑to‑end scenario that exercises the full agentic workflow:
+
+- Start a new loan cycle
+- Upload documents
+- Run completeness checks
+- Close the cycle and generate the committee summary email
+
+```{python}
+
+from datetime import datetime, timedelta, UTC
+
+# Fresh in-memory setup for this test
+repo = LoanRepository()
+intake = SimpleIntakeAgent(repo)
+checklist = SimpleChecklistAgent()
+summary = DummySummaryAgent()
+
+orch = CreditCommitteeOrchestrator(repo, intake, checklist, summary)
+
+# 1. Create a new loan cycle
+loan = LoanApplication(
+    loan_id="LN-TEST-001",
+    rm_id="rm.tester@example.com",
+    borrower_name="Test Corp",
+    amount=1_000_000,
+    created_at=datetime.now(UTC),
+    cutoff_date=datetime.now(UTC) + timedelta(days=2),
+    required_docs=[
+        RequiredDocument("Financials", "3-year audited"),
+        RequiredDocument("Business Plan", "Projected cashflows")
+    ]
+)
+
+orch.start_new_cycle(loan)
+
+print("=== After starting new cycle ===")
+print("Status:", loan.status)
+print("Required docs:", [d.name for d in loan.required_docs])
+print()
+
+# 2. Upload one document (incomplete package)
+orch.receive_document(
+    loan_id="LN-TEST-001",
+    rm_id="rm.tester@example.com",
+    doc_name="Financials",
+    location="s3://docs/ln-test-001-financials.pdf",
+)
+
+print("=== After uploading Financials ===")
+print("Uploaded docs:", [d.name for d in loan.uploaded_docs])
+print("Status:", loan.status)
+print()
+
+# 3. Run completeness checks
+orch.run_completeness_checks()
+
+print("=== After completeness check ===")
+print("Status:", loan.status)
+print()
+
+# 4. Force-close the cycle and generate committee email
+email_body = orch.close_cycle()
+
+print("=== Committee Email ===")
+print(email_body)
+
+```
+
+The output of this cell shows:
+
+- The initial loan state and required documents
+- The state transition after a partial document upload
+- The status after running the completeness check
+- The final executive summary email generated for the committee
+
+This demonstrates that the orchestrator and agents work together as a coherent, testable system.
+
+# Summary: From Prototype to Production
+
+The prototype demonstrates:
+
+- Clean architecture
+- Modular agents
+- A deterministic orchestrator
+- A testable workflow
+
+## Strategic deployment in a credit instituition
+
+The system needs:
+
+- Credit policy embedding - possibly connect a policy knowledge base (RAG)
+- Enterprise infrastructure
+- Security and compliance hardening
+- LLM governance
+- Integration with existing credit systems
+- UI and workflow tooling
+- Operational readiness
+
+
+## Tactical deployment in a credit instituition
+Since this is a stand-alone workflow and with an additional manual step to the credit systems it can be built and deployed tactically
+
+### Pros
+
+- Time to market
+- Good 1st POC for agentic ai
+- Deployed within one department
+- Displaces one or two FTEs
+- Makes efficient use of executive time
+- Builds executive trust in agentic ai
+
+### Cons
+
+- May be seen as too simple
+- If designed without strategic intent it will die
+
+

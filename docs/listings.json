@@ -7,6 +7,7 @@
     "listing": "/data-blog.html",
     "items": [
       "/posts/data-cleaning/index.html",
+      "/posts/interactive-charts/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
@@ -21,6 +22,8 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/credit-committee/credit-committee.html",
+      "/projects/data-cleaning/index.html",
       "/projects/bank-credit/bank-credit.html"
     ]
   },
@@ -31,6 +34,7 @@
   {
     "listing": "/math&stat.html",
     "items": [
+      "/math&stat/least-squares/least-squares.html",
       "/math&stat/history/ancestry-mod-ml.html"
     ]
   }
