@@ -1,0 +1,108 @@
+---
+title: "Least Squares: A Modern Workhorse in Machine Learning"
+author: "Ashwin Bijur"
+date: "2026-01-08"
+categories: [maths, statistics, machine learning]
+---
+# Introduction
+The least squares method remains one of the most widely used optimization tools in machine learning. Despite its simplicity, it **underpins many** of the models organizations rely on for forecasting, risk scoring, and operational decision‑making.
+
+At its core, least squares identifies the model parameters that minimize the squared gap between predictions and reality. This foundational idea extends naturally to more advanced methods such as regularized regression, generalized linear models, and even the complex loss surfaces optimized in deep learning.
+
+A simple way to visualize this is through a **DIY analogy**. Imagine an enthusiastic home improver who starts drilling holes for a shelf before taking proper measurements. The holes end up scattered—some close to where they should be, others noticeably off. When it’s finally time to mount the shelf, the only practical strategy is to position it so that it covers as many holes as possible while keeping the overall alignment reasonable. In effect, the installer chooses the placement that minimizes the “total error” across all the misplaced holes.
+
+Least squares works the same way: it finds the position or set of parameters that best reconciles imperfect data, reducing the overall discrepancy in the most balanced way possible.
+
+# Example
+Lets throw in some numbers (and python is our friend) so that we can understand this better.
+
+## make a table with two predictors and one target variable
+This is simple however it reflects real‑world structure like ad campaigns investment on two social media channels and impact on sales.
+```{python}
+import numpy as np
+import pandas as pd
+
+data = pd.DataFrame({
+    "x1": [1.2,2.1,0.5,3.3,1.8,2.5,0.9,3.0,1.4,2.8,1.1,2.2,0.7,3.1,1.6,2.9,0.8,2.4,1.3,3.2],
+    "x2": [3.4,1.7,2.9,0.8,2.2,3.1,1.5,2.7,0.9,3.3,2.4,1.2,3.0,1.9,2.8,0.7,1.1,2.6,3.2,1.4],
+    "y":  [14.1,11.3,9.2,12.7,12.5,17.4,8.1,16.8,9.7,18.2,11.0,11.9,10.1,15.4,13.3,12.5,7.9,15.9,13.8,14.8]
+})
+
+data.head()
+```
+
+## Fit a least squares model
+Imagine the wall with holes and now you are holding the shelf to fit it through maximum holes. If you wish to go into details the output of OLS regression results can be looked up with the help of copilot for detailed explanation.
+```{python}
+import statsmodels.api as sm
+
+X = data[["x1", "x2"]]
+X = sm.add_constant(X)
+y = data["y"]
+
+model = sm.OLS(y, X).fit()
+model.summary()
+```
+
+## And few graphs
+Visuals help our understanding better than tables
+
+### Predicted vs. Actual Values
+A quick way to assess model performance
+```{python}
+import matplotlib.pyplot as plt
+
+pred = model.predict(X)
+
+plt.figure(figsize=(7,5))
+plt.scatter(y, pred, color="navy")
+plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--')
+plt.xlabel("Actual")
+plt.ylabel("Predicted")
+plt.title("Predicted vs Actual Values")
+plt.tight_layout()
+plt.show()
+```
+
+### Residual Plot
+A clean residual plot signals stability and reliability.
+```{python}
+residuals = y - pred
+
+plt.figure(figsize=(7,5))
+plt.scatter(pred, residuals, color="darkgreen")
+plt.axhline(0, color='red', linestyle='--')
+plt.xlabel("Predicted")
+plt.ylabel("Residual")
+plt.title("Residual Plot")
+plt.tight_layout()
+plt.show()
+```
+
+### Coefficient Bar Chart
+A simple way to communicate variable importance.
+```{python}
+coef = model.params
+
+plt.figure(figsize=(7,5))
+coef.drop("const").plot(kind="bar", color=["#1f77b4", "#ff7f0e"])
+plt.title("Model Coefficients")
+plt.ylabel("Coefficient Value")
+plt.tight_layout()
+plt.show()
+```
+
+## Observations
+- Both predictors meaningfully influence the outcome, with x1 showing a slightly stronger effect.
+- The model demonstrates stable residuals, indicating a reliable linear relationship.
+- The predicted vs. actual plot shows tight alignment, reinforcing that least squares provides a strong baseline model.
+- This type of model is often used as a benchmark before deploying more complex ML architectures.
+
+# Real‑World Applications
+1. Forecasting & Planning - Revenue forecasting, Workforce planning, Inventory optimization
+2. Risk & Compliance - Credit scoring, Fraud detection baselines, Early‑warning indicators
+3. Healthcare & Life Sciences - Outcome prediction, Dose–response modeling, Clinical signal detection
+4. Operations & Engineering - Sensor calibration, Predictive maintenance, Quality control analytics
+5. Machine Learning Infrastructure - Loss minimization, Embedding alignment, Regression layers inside deep models
+
+Least squares is not just a statistical technique — it’s a strategic tool that helps organizations make decisions grounded in data rather than intuition.
