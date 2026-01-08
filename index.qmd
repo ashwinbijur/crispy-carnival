@@ -7,13 +7,10 @@ I’m doing this out loud because the process matters as much as the result. Pos
 
 **What you’ll find here**
 
-  **#** Experiments and demos: runnable Quarto notebooks and small projects you can clone and try.
-
-  **#** Notes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.
-
-  **#** How‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.
-
-  **#** Failures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.
+- Experiments and demos: runnable Quarto notebooks and small projects you can clone and try.
+- Notes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.
+- How‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.
+- Failures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.
 
 **About me**
 
