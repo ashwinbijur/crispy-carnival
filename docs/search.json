@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Public Lab Book",
     "section": "",
-    "text": "This blog is a living notebook. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.\nWhat you’ll find here\n\nExperiments and demos: runnable Quarto notebooks and small projects you can clone and try.\nNotes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.\nHow‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.\nFailures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.\n\nAbout me\nI build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.\nOn the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.\nHow I work\nI favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.\nJoin the experiment\nIf you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point."
+    "text": "This blog is a living notebook - the code seen isn’t a screenshot — it’s actual code running on my machine. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.\nWhat you’ll find here\n\nExperiments and demos: runnable Quarto notebooks and small projects you can clone and try.\nNotes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.\nHow‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.\nFailures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.\n\nAbout me\nI build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.\nOn the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.\nHow I work\nI favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.\nJoin the experiment\nIf you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point."
   },
   {
     "objectID": "CONTRIBUTING.html",
@@ -39,14 +39,14 @@
     "href": "coffee-blog.html",
     "title": "Wire",
     "section": "",
-    "text": "flowchart TD\n    A[Loan Origination] --&gt; B[Financials, Collateral, Projections]\n    B --&gt; C[LOS / CRM / DMS]\n    C --&gt; D[RM, Credit, Risk, Legal]\n\n    E[Portfolio Monitoring] --&gt; F[Repayments, Covenants, Activity]\n    F --&gt; G[Core Banking / Risk Analytics]\n    G --&gt; H[RM, Risk, Monitoring Unit]\n\n    I[Annual Review] --&gt; J[Updated Financials, Risk Inputs]\n    J --&gt; K[LOS / Rating Engine]\n    K --&gt; L[RM, Credit Analyst, Risk Committee]"
+    "text": "Under Construction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding AI Benchmarks - FS angle\n\n\n\n\n\n\nAshwin Bijur\n\n\nJan 10, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "data-blog.html",
     "href": "data-blog.html",
-    "title": "Blog",
+    "title": "Data and Characteristics",
     "section": "",
-    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nData Cleaning : A Business Decision With Technical Precision\n\n\n\nprocess\n\ndata-cleaning\n\n\n\n\n\n\n\n\n\nJan 4, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+    "text": "Data and Characteristics\n\n\n\n\n\n\n\n\n\n\nData Cleaning : A Business Decision With Technical Precision\n\n\n\nprocess\n\ndata-cleaning\n\n\n\n\n\n\n\n\n\nJan 4, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nInteractive charts\n\n\n\ncode\n\ndataviz\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 26, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -74,7 +74,7 @@
     "href": "wire.html",
     "title": "Wire",
     "section": "",
-    "text": "Under Construction\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "ML and AI market\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding AI Benchmarks - FS angle\n\n\n\n\n\n\nAshwin Bijur\n\n\nJan 10, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "coffee-blog.html#usecase-data-system-stakeholder-flow-diagram",
@@ -93,9 +93,9 @@
   {
     "objectID": "math&stat.html",
     "href": "math&stat.html",
-    "title": "Blog",
+    "title": "Mathematics & Statistics",
     "section": "",
-    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nLeast Squares: A Modern Workhorse in Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nA Historical Roadmap of Mathematics, Statistics, and Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 1, 2026\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+    "text": "Mathematics & Statistics\n\n\n\n\n\n\n\n\n\n\nLeast Squares: A Modern Workhorse in Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nA Historical Roadmap of Mathematics, Statistics, and Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 1, 2026\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "math&stat/history/ancestry-mod-ml.html",
@@ -264,5 +264,33 @@
     "title": "Data Cleaning : A Business Decision With Technical Precision",
     "section": "Types of Data Cleaning",
     "text": "Types of Data Cleaning\n\nBanking Context\n\n\n\n\n\n\n\nCleaning Type\nDescription\nBanking Example\n\n\n\n\nStandardization\nConvert to consistent formats\nIBAN formatting, date formats\n\n\nDeduplication\nMerge duplicate records\nDuplicate customer profiles\n\n\nValidation\nCheck against rules\nInvalid SWIFT codes\n\n\nEnrichment\nAdd missing data\nAppend LEI codes\n\n\nImputation\nFill missing values\nEstimate missing risk ratings\n\n\nCorrection\nFix incorrect values\nWrong branch code\n\n\nConsolidation\nHarmonize across systems\nAlign product codes across regions"
+  },
+  {
+    "objectID": "wire/ai-benchmark/ai-benchmark.html",
+    "href": "wire/ai-benchmark/ai-benchmark.html",
+    "title": "Understanding AI Benchmarks - FS angle",
+    "section": "",
+    "text": "In a sector where precision is paramount and missteps are costly, choosing the right AI model is far more than a technical preference. It’s a matter of sound judgement. This piece cuts through the clutter to show which benchmarks genuinely matter for financial services, and which models are truly up to the task."
+  },
+  {
+    "objectID": "wire/ai-benchmark/ai-benchmark.html#math-code-benchmarks-matter-most",
+    "href": "wire/ai-benchmark/ai-benchmark.html#math-code-benchmarks-matter-most",
+    "title": "Understanding AI Benchmarks - FS angle",
+    "section": "1. Math + Code Benchmarks Matter Most",
+    "text": "1. Math + Code Benchmarks Matter Most\nGSM8K, HumanEval, and MBPP directly correlate with:\n\nPricing models\nRisk engines\nQuant research\nAutomation pipelines\n\nModels like Phi‑3‑Medium and Claude Sonnet consistently lead here."
+  },
+  {
+    "objectID": "wire/ai-benchmark/ai-benchmark.html#truthfulness-is-critical-for-compliance",
+    "href": "wire/ai-benchmark/ai-benchmark.html#truthfulness-is-critical-for-compliance",
+    "title": "Understanding AI Benchmarks - FS angle",
+    "section": "2. Truthfulness Is Critical for Compliance",
+    "text": "2. Truthfulness Is Critical for Compliance\nTruthfulQA is a strong predictor of:\n\nReduced hallucinations\nBetter regulatory alignment\nSafer customer facing outputs\n\nClaude Sonnet and Phi‑3‑Medium dominate this category."
+  },
+  {
+    "objectID": "wire/ai-benchmark/ai-benchmark.html#reasoning-benchmarks-predict-fraud-risk-performance",
+    "href": "wire/ai-benchmark/ai-benchmark.html#reasoning-benchmarks-predict-fraud-risk-performance",
+    "title": "Understanding AI Benchmarks - FS angle",
+    "section": "3. Reasoning Benchmarks Predict Fraud & Risk Performance",
+    "text": "3. Reasoning Benchmarks Predict Fraud & Risk Performance\nARC Challenge and CommonsenseQA map to:\n\nFraud detection\nScenario analysis\nEdge-case reasoning These are essential for FS risk teams."
   }
 ]

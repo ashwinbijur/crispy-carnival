@@ -1,12 +1,15 @@
 [
   {
     "listing": "/coffee-blog.html",
-    "items": []
+    "items": [
+      "/wire/ai-benchmark/ai-benchmark.html"
+    ]
   },
   {
     "listing": "/data-blog.html",
     "items": [
       "/posts/data-cleaning-Biz-Dec/index.html",
+      "/posts/interactive-charts/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
@@ -28,7 +31,9 @@
   },
   {
     "listing": "/wire.html",
-    "items": []
+    "items": [
+      "/wire/ai-benchmark/ai-benchmark.html"
+    ]
   },
   {
     "listing": "/math&stat.html",
