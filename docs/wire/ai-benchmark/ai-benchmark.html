@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ashwin Bijur">
+<meta name="dcterms.date" content="2026-01-10">
 
-<title>Wire – Fresh Slate Lab</title>
+<title>Understanding AI Benchmarks - FS angle – Fresh Slate Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,30 +25,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-24772959a0e306aba8d7698078628ce7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-24772959a0e306aba8d7698078628ce7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,67 +74,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-wire .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-wire'] = new List('listing-wire', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -306,7 +248,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Fresh Slate Lab</span>
     </a>
   </div>
@@ -317,24 +259,24 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> <i class="bi bi-file-earmark-binary-fill" role="img">
+    <a class="nav-link" href="../../projects.html"> <i class="bi bi-file-earmark-binary-fill" role="img">
 </i> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./math&amp;stat.html"> <i class="bi bi-calculator-fill" role="img">
+    <a class="nav-link" href="../../math&amp;stat.html"> <i class="bi bi-calculator-fill" role="img">
 </i> 
 <span class="menu-text">Math &amp; Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data-blog.html"> <i class="bi bi-pie-chart-fill" role="img">
+    <a class="nav-link" href="../../data-blog.html"> <i class="bi bi-pie-chart-fill" role="img">
 </i> 
 <span class="menu-text">Data blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./wire.html" aria-current="page"> <i class="bi bi-newsletter-fill" role="img">
+    <a class="nav-link" href="../../wire.html"> <i class="bi bi-newsletter-fill" role="img">
 </i> 
 <span class="menu-text">Wire</span></a>
   </li>  
@@ -362,14 +304,26 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Wire</h1>
+<h1 class="title">Understanding AI Benchmarks - FS angle</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ashwin Bijur </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 10, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -379,45 +333,256 @@ window.Quarto = {
 </header>
 
 
-<section id="ml-and-ai-market" class="level1">
-<h1>ML and AI market</h1>
-<div id="blog">
-
-</div>
-
+<p>In a sector where precision is paramount and missteps are costly, choosing the right AI model is far more than a technical preference. It’s a matter of sound judgement. This piece cuts through the clutter to show which benchmarks genuinely matter for financial services, and which models are truly up to the task.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>AI model benchmarks can feel abstract with publications using a sea of acronyms like <em>GSM8K</em>, <em>MMLU</em>, <em>TruthfulQA</em>, and <em>HumanEval</em>. But for financial services, these benchmarks map directly to real operational needs: risk modeling, compliance, automation, fraud detection, and customer experience. This post tries to break down each benchmark in plain language, explains why it matters, and ranks them by <strong>financial‑services relevance</strong>. All data is sourced from publicly available model evaluations from Microsoft, OpenAI, Anthropic, Meta, and academic benchmark suites.</p>
+<hr>
+</section>
+<section id="why-benchmarks-matter-in-financial-services" class="level1">
+<h1>Why Benchmarks Matter in Financial Services</h1>
+<p>Financial institutions rely on AI for:</p>
+<ul>
+<li>Risk &amp; pricing models</li>
+<li>Regulatory compliance &amp; auditability</li>
+<li>Fraud detection &amp; anomaly reasoning</li>
+<li>Customer support automation</li>
+<li>Developer productivity &amp; quant tooling</li>
+</ul>
+<p>Benchmarks help us understand which models excel at:</p>
+<ul>
+<li>Math reasoning</li>
+<li>Code generation</li>
+<li>Truthfulness</li>
+<li>Logical reasoning</li>
+<li>Document understanding</li>
+</ul>
+<p>These capabilities directly map to FS workflows.</p>
+<hr>
+</section>
+<section id="benchmark-table-sorted-by-fs-relevance" class="level1">
+<h1>Benchmark Table (Sorted by FS Relevance)</h1>
+<p>Below is the full benchmark table, sorted from <strong>most relevant → least relevant</strong> for financial services.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Benchmark</th>
+<th>Category</th>
+<th>What It Tests</th>
+<th>Real‑World FS Usage</th>
+<th>Top 5 Models (Best → Worst)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GSM8K CoT</td>
+<td>Math Reasoning</td>
+<td>Step-by-step math logic</td>
+<td>Risk modeling, pricing engines, underwriting, portfolio optimization</td>
+<td>Phi‑3‑Medium, Phi‑3‑Small, Claude Sonnet, GPT‑3.5, Phi‑3‑Mini</td>
+</tr>
+<tr class="even">
+<td>HumanEval</td>
+<td>Code Generation</td>
+<td>Writing functions</td>
+<td>Automation, ETL, quant infra, API wrappers</td>
+<td>Claude Sonnet, GPT‑3.5, Llama‑3, Phi‑3‑Small, Phi‑3‑Mini</td>
+</tr>
+<tr class="odd">
+<td>MBPP</td>
+<td>Code Reasoning</td>
+<td>Solving coding problems</td>
+<td>Backtesting, feature engineering, data validation</td>
+<td>Claude Sonnet, GPT‑3.5, Phi‑3‑Medium, Phi‑3‑Small, Llama‑3</td>
+</tr>
+<tr class="even">
+<td>TruthfulQA</td>
+<td>Safety</td>
+<td>Avoiding hallucinations</td>
+<td>Compliance, regulatory reporting, audit trails</td>
+<td>Claude Sonnet, Phi‑3‑Medium, GPT‑3.5, Phi‑3‑Small, Mixtral</td>
+</tr>
+<tr class="odd">
+<td>ARC Challenge</td>
+<td>Reasoning</td>
+<td>Hard logic</td>
+<td>Fraud detection, scenario analysis, stress testing</td>
+<td>Claude Sonnet, Phi‑3‑Medium, Phi‑3‑Small, GPT‑3.5, Mixtral</td>
+</tr>
+<tr class="even">
+<td>ARC Easy</td>
+<td>Reasoning</td>
+<td>Basic logic</td>
+<td>Decision trees, rule-based automation</td>
+<td>Phi‑3‑Medium, Phi‑3‑Small, Claude Sonnet, GPT‑3.5, Mixtral</td>
+</tr>
+<tr class="odd">
+<td>BoolQ</td>
+<td>NLP + Reasoning</td>
+<td>Yes/no with context</td>
+<td>Customer support, policy Q&amp;A</td>
+<td>Claude Sonnet, Phi‑3‑Medium, Phi‑3‑Small, Mixtral, Llama‑3</td>
+</tr>
+<tr class="even">
+<td>CommonsenseQA</td>
+<td>Commonsense</td>
+<td>Everyday logic</td>
+<td>Fraud heuristics, intent detection</td>
+<td>Claude Sonnet, Phi‑3‑Medium, Phi‑3‑Small, Mixtral, Llama‑3</td>
+</tr>
+<tr class="odd">
+<td>ANLI</td>
+<td>NLP</td>
+<td>Contradiction detection</td>
+<td>Contract review, policy comparison</td>
+<td>Claude Sonnet, Phi‑3‑Medium, Llama‑3, Mixtral, Phi‑3‑Small</td>
+</tr>
+<tr class="even">
+<td>HellaSwag</td>
+<td>NLP</td>
+<td>Sentence prediction</td>
+<td>Email drafting, workflow completion</td>
+<td>Phi‑3‑Medium, Claude Sonnet, Phi‑3‑Small, Llama‑3, Mixtral</td>
+</tr>
+<tr class="odd">
+<td>WinoGrande</td>
+<td>NLP</td>
+<td>Pronoun resolution</td>
+<td>KYC/AML extraction, document parsing</td>
+<td>Claude Sonnet, Phi‑3‑Small, Phi‑3‑Medium, GPT‑3.5, Mixtral</td>
+</tr>
+<tr class="even">
+<td>MMLU</td>
+<td>Knowledge</td>
+<td>Academic knowledge</td>
+<td>Analyst training, research copilots</td>
+<td>Phi‑3‑Medium, Phi‑3‑Small, Claude Sonnet, GPT‑3.5, Mixtral</td>
+</tr>
+<tr class="odd">
+<td>BigBench Hard</td>
+<td>Reasoning</td>
+<td>Abstract reasoning</td>
+<td>Agentic workflows, complex planning</td>
+<td>Phi‑3‑Medium, Phi‑3‑Small, Mixtral, GPT‑3.5, Phi‑3‑Mini</td>
+</tr>
+<tr class="even">
+<td>AGI Eval</td>
+<td>General Reasoning</td>
+<td>Broad intelligence</td>
+<td>Autonomous workflows</td>
+<td>GPT‑3.5, Claude Sonnet, Phi‑3‑Medium, Mixtral, Phi‑3‑Small</td>
+</tr>
+<tr class="odd">
+<td>PIQA</td>
+<td>Physical Reasoning</td>
+<td>Object affordances</td>
+<td>UX reasoning</td>
+<td>Claude Sonnet, Phi‑3‑Medium, Phi‑3‑Small, GPT‑3.5, Mixtral</td>
+</tr>
+<tr class="even">
+<td>Social IQA</td>
+<td>Social Reasoning</td>
+<td>Social situations</td>
+<td>Customer empathy, HR bots</td>
+<td>Claude Sonnet, Phi‑3‑Medium, Phi‑3‑Small, Mixtral, Llama‑3</td>
+</tr>
+<tr class="odd">
+<td>TriviaQA</td>
+<td>Knowledge</td>
+<td>Trivia recall</td>
+<td>Search assistants</td>
+<td>GPT‑3.5, Mixtral, Claude Sonnet, Llama‑3, Gemma</td>
+</tr>
+<tr class="even">
+<td>MedQA</td>
+<td>Medical</td>
+<td>Medical exam questions</td>
+<td>Not relevant to FS</td>
+<td>Claude Sonnet, GPT‑3.5, Mixtral, Llama‑3, Phi‑3‑Medium</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="key-insights-for-financial-services" class="level1">
+<h1>Key Insights for Financial Services</h1>
+<p><img src="ai-benchmark.png" class="img-fluid"></p>
+<section id="math-code-benchmarks-matter-most" class="level2">
+<h2 class="anchored" data-anchor-id="math-code-benchmarks-matter-most">1. Math + Code Benchmarks Matter Most</h2>
+<p>GSM8K, HumanEval, and MBPP directly correlate with:</p>
+<ul>
+<li>Pricing models</li>
+<li>Risk engines</li>
+<li>Quant research</li>
+<li>Automation pipelines</li>
+</ul>
+<p>Models like <strong>Phi‑3‑Medium</strong> and <strong>Claude Sonnet</strong> consistently lead here.</p>
+</section>
+<section id="truthfulness-is-critical-for-compliance" class="level2">
+<h2 class="anchored" data-anchor-id="truthfulness-is-critical-for-compliance">2. Truthfulness Is Critical for Compliance</h2>
+<p>TruthfulQA is a strong predictor of:</p>
+<ul>
+<li>Reduced hallucinations</li>
+<li>Better regulatory alignment</li>
+<li>Safer customer facing outputs</li>
+</ul>
+<p>Claude Sonnet and Phi‑3‑Medium dominate this category.</p>
+</section>
+<section id="reasoning-benchmarks-predict-fraud-risk-performance" class="level2">
+<h2 class="anchored" data-anchor-id="reasoning-benchmarks-predict-fraud-risk-performance">3. Reasoning Benchmarks Predict Fraud &amp; Risk Performance</h2>
+<p>ARC Challenge and CommonsenseQA map to:</p>
+<ul>
+<li>Fraud detection</li>
+<li>Scenario analysis</li>
+<li>Edge-case reasoning These are essential for FS risk teams.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>Benchmarks aren’t abstract — they map directly to financial workflows. Models like <strong>Phi‑3‑Medium</strong>, <strong>Claude Sonnet</strong>, and <strong>GPT‑3.5</strong> consistently perform well across the categories that matter most for financial services.</p>
+<p>While evaluating models for FS use cases, one will prioritize:</p>
+<ol type="1">
+<li>Math reasoning</li>
+<li>Code generation</li>
+<li>Truthfulness</li>
+<li>Hard reasoning</li>
+<li>Document NLP</li>
+</ol>
+<p>This gives you the strongest operational ROI.</p>
+<hr>
+<p><em>The benchmark results, model comparisons, and financial‑services relevance assessments in this post are based on publicly available information from model providers and academic benchmark suites. They are intended for <strong>informational and educational purposes only</strong>.</em></p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>Microsoft. <em>Phi‑3 Model Family Benchmarks</em>.</li>
+<li>OpenAI. <em>GPT‑3.5 and GPT‑4 Technical Evaluations</em>.</li>
+<li>Anthropic. <em>Claude 3 Model Card &amp; Benchmarks</em>.</li>
+<li>Meta AI. <em>Llama‑3 Performance Benchmarks</em>.</li>
+<li>Hendrycks et al.&nbsp;<em>MMLU: Measuring Massive Multitask Language Understanding</em>.</li>
+<li>Cobbe et al.&nbsp;<em>GSM8K: Grade School Math Benchmark</em>.</li>
+<li>Chen et al.&nbsp;<em>Evaluating Large Language Models on Code Generation (HumanEval)</em>.</li>
+<li>Srivastava et al.&nbsp;<em>BIG-Bench: Beyond the Imitation Game Benchmark</em>.</li>
+<li>Zellers et al.&nbsp;<em>HellaSwag Benchmark</em>.</li>
+<li>Bisk et al.&nbsp;<em>PIQA: Physical Interaction QA</em>.</li>
+<li>Sap et al.&nbsp;<em>Social IQA Benchmark</em>.</li>
+<li>Lin et al.&nbsp;<em>TruthfulQA Benchmark</em>.</li>
+<li>Clark et al.&nbsp;<em>CommonsenseQA Benchmark</em></li>
+</ul>
 
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-wire">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1767999600000" data-listing-file-modified-sort="1768045001792" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="924">
-<a href="./wire/ai-benchmark/ai-benchmark.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./wire/ai-benchmark/ai-benchmark.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Understanding AI Benchmarks - FS angle
-</h5>
-<div class="card-text listing-description delink">
-In a sector where precision is paramount and missteps are costly, choosing the right AI model is far more than a technical preference. It’s a matter of sound judgement. This…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Ashwin Bijur
-</div>
-<div class="listing-date">
-Jan 10, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

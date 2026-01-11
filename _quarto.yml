@@ -18,15 +18,17 @@ website:
         href: data-blog.qmd
     right:
       - text: "Wire"
-        icon: newsletter
+        icon: newsletter-fill
         href: wire.qmd
       - icon: github
         href: https://github.com/ashwinbijur/
 format:
   html:
     theme:
-      - cosmo
-      - bootswatch
+      light: cosmo
+      dark: darkly
+    toggle: true
+    default-mode: light
     css: styles.css
 
 

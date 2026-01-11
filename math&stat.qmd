@@ -9,7 +9,7 @@ listing:
 toc: false
 ---
 
-# Blog
+# Mathematics & Statistics
 
 ::: {#blog}
 :::

@@ -1,1 +1,16 @@
 /* css styles */
+
+/* -----------------------------------------
+   Dark mode navbar override
+   ----------------------------------------- */
+body.quarto-dark .navbar {
+  background-color: #1a1a1a !important;
+  /* soft dark */
+  border-color: #1a1a1a !important;
+}
+
+/* Navbar text in dark mode */
+body.quarto-dark .navbar .navbar-brand,
+body.quarto-dark .navbar .nav-link {
+  color: #ffffff !important;
+}
