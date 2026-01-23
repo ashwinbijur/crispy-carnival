@@ -1,0 +1,36 @@
+---
+title: "Regression Loss Functions"
+author: "Ashwin Bijur"
+date: "2026-01-10"
+categories: [maths, statistics, machine learning]
+image: "regression_loss_function.png"
+---
+
+No profit until you know what a loss function is!
+
+
+# What Is a Loss Function?
+
+Loss functions sit at the heart of machine learning. They quantify how wrong a model is and guide the optimization process. Whether predicting credit risk, loan pricing, or fraud probability, choosing the right loss function determines how your model learns.
+
+|ML Task|What Loss Functions Measure|Typical Output Type|Why It Matters|
+|--|----|---|----|
+|Regression|Numerical error between predicted and actual values|Continuous numbers|Ensures predictions (e.g., spend, income, residual value) are close to true values|
+|Classification|Probability error between predicted probability and true class|Probabilities (0–1)|Penalizes overconfident wrong predictions; crucial for risk scoring|
+|Ranking|Ordering quality of predicted scores|Relative ordering|Ensures high‑value or high‑risk items appear at the top
+|Risk Modeling|Asymmetric penalties, especially costly false negatives|Weighted errors|Reflects real-world cost differences (e.g., missing a default is worse than flagging a good borrower)
+|Optimization (SGD, Adam, etc.)|Minimizes the loss to improve model parameters|Updated model weights|Drives learning by reducing error over iterations|
+
+
+## Regression Loss Functions
+
+|Loss Function|Brief Understanding|Best For|Banking Example|
+|--|----|----|----|
+|MSE (Mean Squared Error)|Squares errors, penalizes large deviations heavily|Stable datasets where large errors must be discouraged|Predicting monthly credit card spend or loan utilization|
+|MAE (Mean Absolute Error)|Uses absolute differences, robust to outliers|Noisy datasets with extreme values|Predicting customer income or irregular transaction amounts|
+|RMSE (Root Mean Squared Error)|Square root of MSE, interpretable in original units	When interpretability in the target scale matters|Forecasting daily ATM withdrawals or branch cash demand|
+|Huber Loss|Hybrid of MSE and MAE; smooth for small errors, robust for large ones|Mixed-noise environments|Predicting LTV (loan‑to‑value) where some valuations are noisy|
+|Quantile Loss|Penalizes under‑ or over‑prediction asymmetrically|Tail‑risk or percentile forecasting|Predicting 95th percentile loss for stress testing|
+|Log‑Cosh Loss|Smooth approximation of MAE; less sensitive to outliers|Stable training with mild noise|Predicting customer balance volatility|
+|MAPE (Mean Absolute Percentage Error)|Measures percentage error; scale‑free|When relative error matters|Forecasting credit card spend as % deviation from expected|
+|Poisson Loss|For count‑based targets|Count data predictions|Number of transactions per customer per month|

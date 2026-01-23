@@ -95,7 +95,7 @@
     "href": "math&stat.html",
     "title": "Mathematics & Statistics",
     "section": "",
-    "text": "Mathematics & Statistics\n\n\n\n\n\n\n\n\n\n\nLeast Squares: A Modern Workhorse in Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nA Historical Roadmap of Mathematics, Statistics, and Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 1, 2026\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+    "text": "Mathematics & Statistics\n\n\n\n\n\n\n\n\n\n\nRegression Loss Functions\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nLeast Squares: A Modern Workhorse in Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nA Historical Roadmap of Mathematics, Statistics, and Machine Learning\n\n\n\nmaths\n\nstatistics\n\nmachine learning\n\n\n\n\n\n\n\n\n\nJan 1, 2026\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "math&stat/history/ancestry-mod-ml.html",
@@ -292,5 +292,33 @@
     "title": "Understanding AI Benchmarks - FS angle",
     "section": "3. Reasoning Benchmarks Predict Fraud & Risk Performance",
     "text": "3. Reasoning Benchmarks Predict Fraud & Risk Performance\nARC Challenge and CommonsenseQA map to:\n\nFraud detection\nScenario analysis\nEdge-case reasoning These are essential for FS risk teams."
+  },
+  {
+    "objectID": "math&stat/loss-functions/loss-function.html",
+    "href": "math&stat/loss-functions/loss-function.html",
+    "title": "Regression Loss Functions",
+    "section": "",
+    "text": "No profit until you know what a loss function is!"
+  },
+  {
+    "objectID": "math&stat/loss-functions/loss-function.html#regression-loss-functions",
+    "href": "math&stat/loss-functions/loss-function.html#regression-loss-functions",
+    "title": "Regression Loss Functions",
+    "section": "Regression Loss Functions",
+    "text": "Regression Loss Functions\n\n\n\n\n\n\n\n\n\nLoss Function\nBrief Understanding\nBest For\nBanking Example\n\n\n\n\nMSE (Mean Squared Error)\nSquares errors, penalizes large deviations heavily\nStable datasets where large errors must be discouraged\nPredicting monthly credit card spend or loan utilization\n\n\nMAE (Mean Absolute Error)\nUses absolute differences, robust to outliers\nNoisy datasets with extreme values\nPredicting customer income or irregular transaction amounts\n\n\nRMSE (Root Mean Squared Error)\nSquare root of MSE, interpretable in original units When interpretability in the target scale matters\nForecasting daily ATM withdrawals or branch cash demand\n\n\n\nHuber Loss\nHybrid of MSE and MAE; smooth for small errors, robust for large ones\nMixed-noise environments\nPredicting LTV (loan‑to‑value) where some valuations are noisy\n\n\nQuantile Loss\nPenalizes under‑ or over‑prediction asymmetrically\nTail‑risk or percentile forecasting\nPredicting 95th percentile loss for stress testing\n\n\nLog‑Cosh Loss\nSmooth approximation of MAE; less sensitive to outliers\nStable training with mild noise\nPredicting customer balance volatility\n\n\nMAPE (Mean Absolute Percentage Error)\nMeasures percentage error; scale‑free\nWhen relative error matters\nForecasting credit card spend as % deviation from expected\n\n\nPoisson Loss\nFor count‑based targets\nCount data predictions\nNumber of transactions per customer per month\n\n\n\n\n\n\n\n\n\n\nLossTable\n\n\n\nLossFunctionsTable\n\nLoss Function\n\nFormula\n\nInference\n\nMSE\n\n (1/n) Σ (y - ŷ)² \n\nLarge errors dominate due to squaring\n\nMAE\n\n (1/n) Σ |y - ŷ| \n\nTreats all errors equally; robust to outliers\n\nRMSE\n\n √[(1/n) Σ (y - ŷ)²] \n\nSame behaviour as MSE but in original units\n\nHuber Loss\n\n                    { if |y-ŷ| ≤ δ: 0.5*(y-ŷ)^2  else: δ*(|y-ŷ| - 0.5*δ) }                \n\nBalances sensitivity and robustness\n\nMAPE\n\n (1/n) Σ |(y - ŷ) / y| \n\nShows percentage error; unstable for small y\n\nQuantile Loss (q)\n\n max(q·e, (q-1)·e), where e = y - ŷ \n\nPenalizes under‑prediction more than over‑prediction\n\nLog‑Cosh\n\n (1/n) Σ log(cosh(y - ŷ)) \n\nSmooth, stable, reduces extreme outlier impact"
+  },
+  {
+    "objectID": "math&stat/regression-loss-functions/regression-loss-function.html",
+    "href": "math&stat/regression-loss-functions/regression-loss-function.html",
+    "title": "Regression Loss Functions",
+    "section": "",
+    "text": "No profit until you know what a loss function is!"
+  },
+  {
+    "objectID": "math&stat/regression-loss-functions/regression-loss-function.html#regression-loss-functions",
+    "href": "math&stat/regression-loss-functions/regression-loss-function.html#regression-loss-functions",
+    "title": "Regression Loss Functions",
+    "section": "Regression Loss Functions",
+    "text": "Regression Loss Functions\nWhat are they\n\n\n\n\n\n\n\n\n\nLoss Function\nBrief Understanding\nBest For\nBanking Example\n\n\n\n\nMSE (Mean Squared Error)\nSquares errors, penalizes large deviations heavily\nStable datasets where large errors must be discouraged\nPredicting monthly credit card spend or loan utilization\n\n\nMAE (Mean Absolute Error)\nUses absolute differences, robust to outliers\nNoisy datasets with extreme values\nPredicting customer income or irregular transaction amounts\n\n\nRMSE (Root Mean Squared Error)\nSquare root of MSE, interpretable in original units When interpretability in the target scale matters\nForecasting daily ATM withdrawals or branch cash demand\n\n\n\nHuber Loss\nHybrid of MSE and MAE; smooth for small errors, robust for large ones\nMixed-noise environments\nPredicting LTV (loan‑to‑value) where some valuations are noisy\n\n\nQuantile Loss\nPenalizes under‑ or over‑prediction asymmetrically\nTail‑risk or percentile forecasting\nPredicting 95th percentile loss for stress testing\n\n\nLog‑Cosh Loss\nSmooth approximation of MAE; less sensitive to outliers\nStable training with mild noise\nPredicting customer balance volatility\n\n\nMAPE (Mean Absolute Percentage Error)\nMeasures percentage error; scale‑free\nWhen relative error matters\nForecasting credit card spend as % deviation from expected\n\n\nPoisson Loss\nFor count‑based targets\nCount data predictions\nNumber of transactions per customer per month"
   }
 ]
