@@ -38,6 +38,7 @@
   {
     "listing": "/math&stat.html",
     "items": [
+      "/math&stat/regression-loss-functions/regression-loss-function.html",
       "/math&stat/least-squares/least-squares.html",
       "/math&stat/history/ancestry-mod-ml.html"
     ]

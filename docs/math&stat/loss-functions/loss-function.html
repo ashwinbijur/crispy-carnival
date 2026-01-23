@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ashwin Bijur">
+<meta name="dcterms.date" content="2026-01-10">
 
-<title>mathstat – Fresh Slate Lab</title>
+<title>Regression Loss Functions – Fresh Slate Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,30 +25,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-24772959a0e306aba8d7698078628ce7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-24772959a0e306aba8d7698078628ce7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,70 +74,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog'] = new List('listing-blog', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -306,7 +248,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Fresh Slate Lab</span>
     </a>
   </div>
@@ -317,24 +259,24 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> <i class="bi bi-file-earmark-binary-fill" role="img">
+    <a class="nav-link" href="../../projects.html"> <i class="bi bi-file-earmark-binary-fill" role="img">
 </i> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./math&amp;stat.html" aria-current="page"> <i class="bi bi-calculator-fill" role="img">
+    <a class="nav-link" href="../../math&amp;stat.html"> <i class="bi bi-calculator-fill" role="img">
 </i> 
 <span class="menu-text">Math &amp; Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data-blog.html"> <i class="bi bi-pie-chart-fill" role="img">
+    <a class="nav-link" href="../../data-blog.html"> <i class="bi bi-pie-chart-fill" role="img">
 </i> 
 <span class="menu-text">Data blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./wire.html"> <i class="bi bi-newsletter-fill" role="img">
+    <a class="nav-link" href="../../wire.html"> <i class="bi bi-newsletter-fill" role="img">
 </i> 
 <span class="menu-text">Wire</span></a>
   </li>  
@@ -355,127 +297,241 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bWFjaGluZSUyMGxlYXJuaW5n">machine learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bWF0aHM=">maths <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c3RhdGlzdGljcw==">statistics <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Regression Loss Functions</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">maths</div>
+    <div class="quarto-category">statistics</div>
+    <div class="quarto-category">machine learning</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ashwin Bijur </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<section id="mathematics-statistics" class="level1">
-<h1>Mathematics &amp; Statistics</h1>
-<div id="listing-blog" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bWF0aHMlMkNzdGF0aXN0aWNzJTJDbWFjaGluZSUyMGxlYXJuaW5n" data-listing-date-sort="1767999600000" data-listing-file-modified-sort="1769184937469" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="291">
-<div class="thumbnail"><a href="./math&amp;stat/regression-loss-functions/regression-loss-function.html" class="no-external">
+</header>
 
-<img loading="lazy" src="./math&amp;stat/regression-loss-functions/regression_loss_function.png" class="thumbnail-image">
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title" data-anchor-id="mathematics-statistics">
-<a href="./math&amp;stat/regression-loss-functions/regression-loss-function.html" class="no-external">Regression Loss Functions</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aHM='); return false;">maths</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljcw=='); return false;">statistics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZSUyMGxlYXJuaW5n'); return false;">machine learning</div>
-
+<p>No profit until you know what a loss function is!</p>
+<section id="what-is-a-loss-function" class="level1">
+<h1>What Is a Loss Function?</h1>
+<p>Loss functions sit at the heart of machine learning. They quantify how wrong a model is and guide the optimization process. Whether predicting credit risk, loan pricing, or fraud probability, choosing the right loss function determines how your model learns.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 30%">
+<col style="width: 23%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ML Task</th>
+<th>What Loss Functions Measure</th>
+<th>Typical Output Type</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Regression</td>
+<td>Numerical error between predicted and actual values</td>
+<td>Continuous numbers</td>
+<td>Ensures predictions (e.g., spend, income, residual value) are close to true values</td>
+</tr>
+<tr class="even">
+<td>Classification</td>
+<td>Probability error between predicted probability and true class</td>
+<td>Probabilities (0–1)</td>
+<td>Penalizes overconfident wrong predictions; crucial for risk scoring</td>
+</tr>
+<tr class="odd">
+<td>Ranking</td>
+<td>Ordering quality of predicted scores</td>
+<td>Relative ordering</td>
+<td>Ensures high‑value or high‑risk items appear at the top</td>
+</tr>
+<tr class="even">
+<td>Risk Modeling</td>
+<td>Asymmetric penalties, especially costly false negatives</td>
+<td>Weighted errors</td>
+<td>Reflects real-world cost differences (e.g., missing a default is worse than flagging a good borrower)</td>
+</tr>
+<tr class="odd">
+<td>Optimization (SGD, Adam, etc.)</td>
+<td>Minimizes the loss to improve model parameters</td>
+<td>Updated model weights</td>
+<td>Drives learning by reducing error over iterations</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="regression-loss-functions" class="level2">
+<h2 class="anchored" data-anchor-id="regression-loss-functions">Regression Loss Functions</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Loss Function</th>
+<th>Brief Understanding</th>
+<th>Best For</th>
+<th>Banking Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MSE (Mean Squared Error)</td>
+<td>Squares errors, penalizes large deviations heavily</td>
+<td>Stable datasets where large errors must be discouraged</td>
+<td>Predicting monthly credit card spend or loan utilization</td>
+</tr>
+<tr class="even">
+<td>MAE (Mean Absolute Error)</td>
+<td>Uses absolute differences, robust to outliers</td>
+<td>Noisy datasets with extreme values</td>
+<td>Predicting customer income or irregular transaction amounts</td>
+</tr>
+<tr class="odd">
+<td>RMSE (Root Mean Squared Error)</td>
+<td>Square root of MSE, interpretable in original units When interpretability in the target scale matters</td>
+<td>Forecasting daily ATM withdrawals or branch cash demand</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Huber Loss</td>
+<td>Hybrid of MSE and MAE; smooth for small errors, robust for large ones</td>
+<td>Mixed-noise environments</td>
+<td>Predicting LTV (loan‑to‑value) where some valuations are noisy</td>
+</tr>
+<tr class="odd">
+<td>Quantile Loss</td>
+<td>Penalizes under‑ or over‑prediction asymmetrically</td>
+<td>Tail‑risk or percentile forecasting</td>
+<td>Predicting 95th percentile loss for stress testing</td>
+</tr>
+<tr class="even">
+<td>Log‑Cosh Loss</td>
+<td>Smooth approximation of MAE; less sensitive to outliers</td>
+<td>Stable training with mild noise</td>
+<td>Predicting customer balance volatility</td>
+</tr>
+<tr class="odd">
+<td>MAPE (Mean Absolute Percentage Error)</td>
+<td>Measures percentage error; scale‑free</td>
+<td>When relative error matters</td>
+<td>Forecasting credit card spend as % deviation from expected</td>
+</tr>
+<tr class="even">
+<td>Poisson Loss</td>
+<td>For count‑based targets</td>
+<td>Count data predictions</td>
+<td>Number of transactions per customer per month</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 950.00 258.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 254)">
+<title>LossTable</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-254 946,-254 946,4 -4,4"></polygon>
+<!-- LossFunctionsTable -->
+<g id="node1" class="node">
+<title>LossFunctionsTable</title>
+<polygon fill="none" stroke="black" points="9,-215 9,-245 129,-245 129,-215 9,-215"></polygon>
+<text text-anchor="start" x="21.17" y="-226.4" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">Loss Function</text>
+<polygon fill="none" stroke="black" points="129,-215 129,-245 576,-245 576,-215 129,-215"></polygon>
+<text text-anchor="start" x="324.89" y="-226.4" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">Formula</text>
+<polygon fill="none" stroke="black" points="576,-215 576,-245 933,-245 933,-215 576,-215"></polygon>
+<text text-anchor="start" x="723.38" y="-226.4" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">Inference</text>
+<polygon fill="none" stroke="black" points="9,-185 9,-215 129,-215 129,-185 9,-185"></polygon>
+<text text-anchor="start" x="53.83" y="-195.4" font-family="Helvetica,sans-Serif" font-size="14.00">MSE</text>
+<polygon fill="none" stroke="black" points="129,-185 129,-215 576,-215 576,-185 129,-185"></polygon>
+<text text-anchor="start" x="304.28" y="-195.4" font-family="Helvetica,sans-Serif" font-size="14.00"> (1/n) Σ (y - ŷ)² </text>
+<polygon fill="none" stroke="black" points="576,-185 576,-215 933,-215 933,-185 576,-185"></polygon>
+<text text-anchor="start" x="635.43" y="-195.4" font-family="Helvetica,sans-Serif" font-size="14.00">Large errors dominate due to squaring</text>
+<polygon fill="none" stroke="black" points="9,-155 9,-185 129,-185 129,-155 9,-155"></polygon>
+<text text-anchor="start" x="53.83" y="-165.4" font-family="Helvetica,sans-Serif" font-size="14.00">MAE</text>
+<polygon fill="none" stroke="black" points="129,-155 129,-185 576,-185 576,-155 129,-155"></polygon>
+<text text-anchor="start" x="309.19" y="-165.4" font-family="Helvetica,sans-Serif" font-size="14.00"> (1/n) Σ |y - ŷ| </text>
+<polygon fill="none" stroke="black" points="576,-155 576,-185 933,-185 933,-155 576,-155"></polygon>
+<text text-anchor="start" x="625.72" y="-165.4" font-family="Helvetica,sans-Serif" font-size="14.00">Treats all errors equally; robust to outliers</text>
+<polygon fill="none" stroke="black" points="9,-125 9,-155 129,-155 129,-125 9,-125"></polygon>
+<text text-anchor="start" x="48.78" y="-135.4" font-family="Helvetica,sans-Serif" font-size="14.00">RMSE</text>
+<polygon fill="none" stroke="black" points="129,-125 129,-155 576,-155 576,-125 129,-125"></polygon>
+<text text-anchor="start" x="294.55" y="-135.4" font-family="Helvetica,sans-Serif" font-size="14.00"> √[(1/n) Σ (y - ŷ)²] </text>
+<polygon fill="none" stroke="black" points="576,-125 576,-155 933,-155 933,-125 576,-125"></polygon>
+<text text-anchor="start" x="616.76" y="-135.4" font-family="Helvetica,sans-Serif" font-size="14.00">Same behaviour as MSE but in original units</text>
+<polygon fill="none" stroke="black" points="9,-95 9,-125 129,-125 129,-95 9,-95"></polygon>
+<text text-anchor="start" x="33.2" y="-105.4" font-family="Helvetica,sans-Serif" font-size="14.00">Huber Loss</text>
+<polygon fill="none" stroke="black" points="129,-95 129,-125 576,-125 576,-95 129,-95"></polygon>
+<text text-anchor="start" x="135.78" y="-105.4" font-family="Helvetica,sans-Serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ if |y-ŷ| ≤ δ: 0.5*(y-ŷ)^2 &nbsp;else: δ*(|y-ŷ| - 0.5*δ) } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+<polygon fill="none" stroke="black" points="576,-95 576,-125 933,-125 933,-95 576,-95"></polygon>
+<text text-anchor="start" x="643.61" y="-105.4" font-family="Helvetica,sans-Serif" font-size="14.00">Balances sensitivity and robustness</text>
+<polygon fill="none" stroke="black" points="9,-65 9,-95 129,-95 129,-65 9,-65"></polygon>
+<text text-anchor="start" x="49.16" y="-75.4" font-family="Helvetica,sans-Serif" font-size="14.00">MAPE</text>
+<polygon fill="none" stroke="black" points="129,-65 129,-95 576,-95 576,-65 129,-65"></polygon>
+<text text-anchor="start" x="295.19" y="-75.4" font-family="Helvetica,sans-Serif" font-size="14.00"> (1/n) Σ |(y - ŷ) / y| </text>
+<polygon fill="none" stroke="black" points="576,-65 576,-95 933,-95 933,-65 576,-65"></polygon>
+<text text-anchor="start" x="615.6" y="-75.4" font-family="Helvetica,sans-Serif" font-size="14.00">Shows percentage error; unstable for small y</text>
+<polygon fill="none" stroke="black" points="9,-35 9,-65 129,-65 129,-35 9,-35"></polygon>
+<text text-anchor="start" x="15.7" y="-45.4" font-family="Helvetica,sans-Serif" font-size="14.00">Quantile Loss (q)</text>
+<polygon fill="none" stroke="black" points="129,-35 129,-65 576,-65 576,-35 129,-35"></polygon>
+<text text-anchor="start" x="242.22" y="-45.4" font-family="Helvetica,sans-Serif" font-size="14.00"> max(q·e, (q-1)·e), where e = y - ŷ </text>
+<polygon fill="none" stroke="black" points="576,-35 576,-65 933,-65 933,-35 576,-35"></polygon>
+<text text-anchor="start" x="582.9" y="-45.4" font-family="Helvetica,sans-Serif" font-size="14.00">Penalizes under‑prediction more than over‑prediction</text>
+<polygon fill="none" stroke="black" points="9,-5 9,-35 129,-35 129,-5 9,-5"></polygon>
+<text text-anchor="start" x="35.15" y="-15.4" font-family="Helvetica,sans-Serif" font-size="14.00">Log‑Cosh</text>
+<polygon fill="none" stroke="black" points="129,-5 129,-35 576,-35 576,-5 129,-5"></polygon>
+<text text-anchor="start" x="279.38" y="-15.4" font-family="Helvetica,sans-Serif" font-size="14.00"> (1/n) Σ log(cosh(y - ŷ)) </text>
+<polygon fill="none" stroke="black" points="576,-5 576,-35 933,-35 933,-5 576,-5"></polygon>
+<text text-anchor="start" x="608.21" y="-15.4" font-family="Helvetica,sans-Serif" font-size="14.00">Smooth, stable, reduces extreme outlier impact</text>
+<polygon fill="none" stroke="black" points="8,-4 8,-246 934,-246 934,-4 8,-4"></polygon>
+</g>
+</g>
+</svg>
 </div>
-<div class="delink listing-description"><a href="./math&amp;stat/regression-loss-functions/regression-loss-function.html" class="no-external">
-No profit until you know what a loss function is!
-</a></div>
-</div>
-<div class="metadata">
-<a href="./math&amp;stat/regression-loss-functions/regression-loss-function.html" class="no-external">
-<div class="listing-date">
-Jan 10, 2026
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bWF0aHMlMkNzdGF0aXN0aWNzJTJDbWFjaGluZSUyMGxlYXJuaW5n" data-listing-date-sort="1767826800000" data-listing-file-modified-sort="1767872200520" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="530">
-<div class="thumbnail"><a href="./math&amp;stat/least-squares/least-squares.html" class="no-external">
-
-<p class="card-img-top"><img src="math&stat\least-squares\least-squares_files\figure-html\cell-4-output-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./math&amp;stat/least-squares/least-squares.html" class="no-external">Least Squares: A Modern Workhorse in Machine Learning</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aHM='); return false;">maths</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljcw=='); return false;">statistics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZSUyMGxlYXJuaW5n'); return false;">machine learning</div>
-
-</div>
-<div class="delink listing-description"><a href="./math&amp;stat/least-squares/least-squares.html" class="no-external">
-The least squares method remains one of the most widely used optimization tools in machine learning. Despite its simplicity, it <strong>underpins many</strong> of the models organizations…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./math&amp;stat/least-squares/least-squares.html" class="no-external">
-<div class="listing-date">
-Jan 8, 2026
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWF0aHMlMkNzdGF0aXN0aWNzJTJDbWFjaGluZSUyMGxlYXJuaW5n" data-listing-date-sort="1767222000000" data-listing-file-modified-sort="1767263356863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="303">
-<div class="thumbnail"><a href="./math&amp;stat/history/ancestry-mod-ml.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./math&amp;stat/history/ancestry-mod-ml.html" class="no-external">A Historical Roadmap of Mathematics, Statistics, and Machine Learning</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aHM='); return false;">maths</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljcw=='); return false;">statistics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZSUyMGxlYXJuaW5n'); return false;">machine learning</div>
-
-</div>
-<div class="delink listing-description"><a href="./math&amp;stat/history/ancestry-mod-ml.html" class="no-external">
-Introduction
-</a></div>
-</div>
-<div class="metadata">
-<a href="./math&amp;stat/history/ancestry-mod-ml.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2026
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
+<hr>
 
 
-
+</section>
 </section>
 
 </main> <!-- /main -->
