@@ -25,3 +25,11 @@ I favor small, testable experiments over long, speculative plans. Each post aims
 **Join the experiment**
 
 If you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point.
+
+---
+
+### Stay in touch
+
+<a href="https://ashwinbijur.substack.com" class="btn btn-success" target="_blank">
+Subscribe by email
+</a>

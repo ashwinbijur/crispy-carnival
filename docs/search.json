@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Public Lab Book",
     "section": "",
-    "text": "This blog is a living notebook - the code seen isn’t a screenshot — it’s actual code running on my machine. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.\nWhat you’ll find here\n\nExperiments and demos: runnable Quarto notebooks and small projects you can clone and try.\nNotes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.\nHow‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.\nFailures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.\n\nAbout me\nI build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.\nOn the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.\nHow I work\nI favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.\nJoin the experiment\nIf you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point."
+    "text": "This blog is a living notebook - the code seen isn’t a screenshot — it’s actual code running on my machine. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.\nWhat you’ll find here\n\nExperiments and demos: runnable Quarto notebooks and small projects you can clone and try.\nNotes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.\nHow‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.\nFailures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.\n\nAbout me\nI build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.\nOn the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.\nHow I work\nI favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.\nJoin the experiment\nIf you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point.\n\n\nStay in touch\n Subscribe by email"
   },
   {
     "objectID": "CONTRIBUTING.html",
@@ -60,7 +60,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nCredit Committee Agentic Workflow\n\n\n\ncode\n\nproject\n\nprocess\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nData Cleaning to Agentic AI — A Banking Industry Walkthrough\n\n\n\ncode\n\ndata-cleaning\n\nmachine-learning\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nCopilot - changes for the Credit Relationship Manager\n\n\n\ncopilot\n\nchange\n\nprocess\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nThe Five Layers of AI: A Delivery-First View\n\n\n\nai\n\nprogram management\n\nsystems thinking\n\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nCredit Committee Agentic Workflow\n\n\n\ncode\n\nproject\n\nprocess\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nData Cleaning to Agentic AI — A Banking Industry Walkthrough\n\n\n\ncode\n\ndata-cleaning\n\nmachine-learning\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nCopilot - changes for the Credit Relationship Manager\n\n\n\ncopilot\n\nchange\n\nprocess\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "coffee-reviews/dareshack/index.html",
@@ -320,5 +320,61 @@
     "title": "Regression Loss Functions",
     "section": "Regression Loss Functions",
     "text": "Regression Loss Functions\nWhat are they\n\n\n\n\n\n\n\n\n\nLoss Function\nBrief Understanding\nBest For\nBanking Example\n\n\n\n\nMSE (Mean Squared Error)\nSquares errors, penalizes large deviations heavily\nStable datasets where large errors must be discouraged\nPredicting monthly credit card spend or loan utilization\n\n\nMAE (Mean Absolute Error)\nUses absolute differences, robust to outliers\nNoisy datasets with extreme values\nPredicting customer income or irregular transaction amounts\n\n\nRMSE (Root Mean Squared Error)\nSquare root of MSE, interpretable in original units When interpretability in the target scale matters\nForecasting daily ATM withdrawals or branch cash demand\n\n\n\nHuber Loss\nHybrid of MSE and MAE; smooth for small errors, robust for large ones\nMixed-noise environments\nPredicting LTV (loan‑to‑value) where some valuations are noisy\n\n\nQuantile Loss\nPenalizes under‑ or over‑prediction asymmetrically\nTail‑risk or percentile forecasting\nPredicting 95th percentile loss for stress testing\n\n\nLog‑Cosh Loss\nSmooth approximation of MAE; less sensitive to outliers\nStable training with mild noise\nPredicting customer balance volatility\n\n\nMAPE (Mean Absolute Percentage Error)\nMeasures percentage error; scale‑free\nWhen relative error matters\nForecasting credit card spend as % deviation from expected\n\n\nPoisson Loss\nFor count‑based targets\nCount data predictions\nNumber of transactions per customer per month"
+  },
+  {
+    "objectID": "projects/5-layers/5-layers.html",
+    "href": "projects/5-layers/5-layers.html",
+    "title": "The Five Layers of AI: A Delivery-First View",
+    "section": "",
+    "text": "Most AI initiatives don’t fail because the models are weak. They fail because no one designed the system that surrounds them."
+  },
+  {
+    "objectID": "projects/5-layers/5-layers.html#why-ai-fails-without-structure",
+    "href": "projects/5-layers/5-layers.html#why-ai-fails-without-structure",
+    "title": "The Five Layers of AI: A Delivery-First View",
+    "section": "Why AI Fails Without Structure",
+    "text": "Why AI Fails Without Structure\nMost AI initiatives fail not because of models, but because teams confuse capability with delivery.\nTo consistently ship AI solutions, I use a simple mental model: five layers of AI, each with distinct risks, owners, and success metrics.\nThis framework helps align business, product, data, and engineering—and keeps execution grounded."
+  },
+  {
+    "objectID": "projects/5-layers/5-layers.html#layer-1-business-decision-layer",
+    "href": "projects/5-layers/5-layers.html#layer-1-business-decision-layer",
+    "title": "The Five Layers of AI: A Delivery-First View",
+    "section": "Layer 1: Business & Decision Layer",
+    "text": "Layer 1: Business & Decision Layer\nPurpose: Why AI exists at all\n\nBusiness objective, decision to automate or augment\nEconomic value, risk tolerance, regulatory constraints\nClear definition of who trusts the output and why\n\n\nIf this layer is weak, the AI becomes a demo, not a product.\n\nIndicators:\n\nDecision Coverage Ratio - % of target decisions where AI output is actually used (not ignored or overridden by default)\nValue Realization vs Business Case - Realized financial or risk impact vs approved AI business case (% variance)\nRisk Acceptance Clarity - % of AI decisions with explicitly documented risk, escalation, and accountability owner"
+  },
+  {
+    "objectID": "projects/5-layers/5-layers.html#layer-2-product-workflow-layer",
+    "href": "projects/5-layers/5-layers.html#layer-2-product-workflow-layer",
+    "title": "The Five Layers of AI: A Delivery-First View",
+    "section": "Layer 2: Product & Workflow Layer",
+    "text": "Layer 2: Product & Workflow Layer\nPurpose: Where AI fits into real work\n\nUser journeys, handoffs, and exceptions\nHuman-in-the-loop vs straight-through processing\nOperational ownership when AI is wrong\n\n\nAI succeeds when it changes workflows, not when it impresses stakeholders.\n\nIndicators:\n\nWorkflow Adoption Rate - % of users or processes actively using AI-enabled workflows after launch\nHuman-in-the-Loop Efficiency - Reduction in manual handling time per decision or case (% or minutes saved)\nException Escalation Rate - % of AI outputs requiring manual override or rework (tracked over time)"
+  },
+  {
+    "objectID": "projects/5-layers/5-layers.html#layer-3-data-layer",
+    "href": "projects/5-layers/5-layers.html#layer-3-data-layer",
+    "title": "The Five Layers of AI: A Delivery-First View",
+    "section": "Layer 3: Data Layer",
+    "text": "Layer 3: Data Layer\nPurpose: What the system learns from\n\nData sources, quality, lineage, and bias\nFeature availability at decision time\nFeedback loops for learning and drift detection\n\n\nMost AI delays are data problems disguised as model problems.\n\nIndicators:\n\nData Availability at Decision Time - % of required features available when the decision is made (not just in training)\nData Quality SLA Compliance - % adherence to agreed thresholds for freshness, completeness, and accuracy\nFeedback Loop Coverage - % of AI decisions with captured outcomes feeding back into learning or monitoring"
+  },
+  {
+    "objectID": "projects/5-layers/5-layers.html#layer-4-model-logic-layer",
+    "href": "projects/5-layers/5-layers.html#layer-4-model-logic-layer",
+    "title": "The Five Layers of AI: A Delivery-First View",
+    "section": "Layer 4: Model & Logic Layer",
+    "text": "Layer 4: Model & Logic Layer\nPurpose: How intelligence is implemented\n\nModel selection (rules, ML, LLMs, hybrid)\nAccuracy vs explainability trade-offs\nEvaluation metrics aligned to business impact\n\n\nModels are interchangeable; decisions are not.\n\nIndicators:\n\nBusiness-Aligned Model Performance - Model performance measured against business-relevant metrics (e.g., loss avoided, uplift, error cost)\nExplainability Coverage - % of AI decisions where explanation meets regulatory or stakeholder requirements\nModel Drift Detection Lead Time - Time between performance degradation and detection/alert"
+  },
+  {
+    "objectID": "projects/5-layers/5-layers.html#layer-5-platform-operations-layer",
+    "href": "projects/5-layers/5-layers.html#layer-5-platform-operations-layer",
+    "title": "The Five Layers of AI: A Delivery-First View",
+    "section": "Layer 5: Platform & Operations Layer",
+    "text": "Layer 5: Platform & Operations Layer\nPurpose: Whether AI survives contact with reality\n\nDeployment, monitoring, scalability\nCost control and latency constraints\nGovernance, auditability, and change management\n\n\nAI that cannot be operated is technical debt.\n\nIndicators:\n\nProduction Stability (SLA / SLO Compliance) - Uptime, latency, and error-rate adherence for AI services\nCost per Decision / Inference - Fully loaded operational cost per AI-driven decision, tracked over time\nChange & Release Success Rate - % of model or logic updates deployed without rollback or incident"
+  },
+  {
+    "objectID": "projects/5-layers/5-layers.html#why-this-matters-for-delivery",
+    "href": "projects/5-layers/5-layers.html#why-this-matters-for-delivery",
+    "title": "The Five Layers of AI: A Delivery-First View",
+    "section": "Why This Matters for Delivery",
+    "text": "Why This Matters for Delivery\nAs a program or project manager in AI, my role is not to optimize one layer—but to orchestrate all five: - Translate strategy into executable systems\n- Surface risks early across data, product, and ops\n- Keep teams focused on outcomes, not novelty\nAI delivery is a systems problem.\nClear layers turn complexity into momentum.\n\nIf you are building AI that must actually ship, scale, and be trusted—start with structure."
   }
 ]

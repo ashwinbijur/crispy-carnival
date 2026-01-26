@@ -20,6 +20,8 @@ website:
       - text: "Wire"
         icon: newsletter-fill
         href: wire.qmd
+      - text: Subscribe
+        href: https://ashwinbijur.substack.com
       - icon: github
         href: https://github.com/ashwinbijur/
 format:

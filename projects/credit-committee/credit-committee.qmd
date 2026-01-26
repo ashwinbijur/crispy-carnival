@@ -2,6 +2,7 @@
 title: "Credit Committee Agentic Workflow"
 author: "Ashwin Bijur"
 date: "2026-01-08"
+image: "buildingblocksofagenticai.jpeg"
 categories: [code, project, process, agentic-ai]
 ---
 
