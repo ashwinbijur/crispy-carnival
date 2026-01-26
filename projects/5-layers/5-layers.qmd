@@ -1,0 +1,121 @@
+---
+title: "The Five Layers of AI: A Delivery-First View"
+author: "Ashwin Bijur"
+date: "2026-01-12"
+image: "five-components-aiom.png"
+categories: [ai, program management, systems thinking]
+---
+Most AI initiatives don’t fail because the models are weak.
+They fail because no one designed the system that surrounds them.
+
+
+## Why AI Fails Without Structure
+
+Most AI initiatives fail not because of models, but because teams confuse *capability* with *delivery*.  
+To consistently ship AI solutions, I use a simple mental model: **five layers of AI**, each with distinct risks, owners, and success metrics.
+
+This framework helps align business, product, data, and engineering—and keeps execution grounded.
+
+---
+
+## Layer 1: Business & Decision Layer  
+**Purpose:** Why AI exists at all  
+
+- Business objective, decision to automate or augment
+- Economic value, risk tolerance, regulatory constraints
+- Clear definition of *who* trusts the output and *why*
+
+> If this layer is weak, the AI becomes a demo, not a product.
+
+**Indicators:** 
+
+- Decision Coverage Ratio - % of target decisions where AI output is actually used (not ignored or overridden by default)
+- Value Realization vs Business Case - Realized financial or risk impact vs approved AI business case (% variance)
+- Risk Acceptance Clarity - % of AI decisions with explicitly documented risk, escalation, and accountability owner
+
+---
+
+## Layer 2: Product & Workflow Layer  
+**Purpose:** Where AI fits into real work  
+
+- User journeys, handoffs, and exceptions
+- Human-in-the-loop vs straight-through processing
+- Operational ownership when AI is wrong
+
+> AI succeeds when it changes workflows, not when it impresses stakeholders.
+
+**Indicators:** 
+
+- Workflow Adoption Rate - % of users or processes actively using AI-enabled workflows after launch
+- Human-in-the-Loop Efficiency - Reduction in manual handling time per decision or case (% or minutes saved)
+- Exception Escalation Rate - % of AI outputs requiring manual override or rework (tracked over time)
+
+---
+
+## Layer 3: Data Layer  
+**Purpose:** What the system learns from  
+
+- Data sources, quality, lineage, and bias
+- Feature availability at decision time
+- Feedback loops for learning and drift detection
+
+> Most AI delays are data problems disguised as model problems.
+
+**Indicators:** 
+
+- Data Availability at Decision Time - % of required features available when the decision is made (not just in training)
+- Data Quality SLA Compliance - % adherence to agreed thresholds for freshness, completeness, and accuracy
+- Feedback Loop Coverage - % of AI decisions with captured outcomes feeding back into learning or monitoring
+
+---
+
+## Layer 4: Model & Logic Layer  
+**Purpose:** How intelligence is implemented  
+
+- Model selection (rules, ML, LLMs, hybrid)
+- Accuracy vs explainability trade-offs
+- Evaluation metrics aligned to business impact
+
+> Models are interchangeable; decisions are not.
+
+**Indicators:** 
+
+- Business-Aligned Model Performance - Model performance measured against business-relevant metrics (e.g., loss avoided, uplift, error cost)
+- Explainability Coverage - % of AI decisions where explanation meets regulatory or stakeholder requirements
+- Model Drift Detection Lead Time - Time between performance degradation and detection/alert
+
+---
+
+## Layer 5: Platform & Operations Layer  
+**Purpose:** Whether AI survives contact with reality  
+
+- Deployment, monitoring, scalability
+- Cost control and latency constraints
+- Governance, auditability, and change management
+
+> AI that cannot be operated is technical debt.
+
+**Indicators:**
+
+- Production Stability (SLA / SLO Compliance) - Uptime, latency, and error-rate adherence for AI services
+- Cost per Decision / Inference - Fully loaded operational cost per AI-driven decision, tracked over time
+- Change & Release Success Rate - % of model or logic updates deployed without rollback or incident
+
+---
+
+## Why This Matters for Delivery
+
+As a program or project manager in AI, my role is not to optimize one layer—but to **orchestrate all five**:
+- Translate strategy into executable systems  
+- Surface risks early across data, product, and ops  
+- Keep teams focused on outcomes, not novelty  
+
+AI delivery is a systems problem.  
+Clear layers turn complexity into momentum.
+
+---
+
+*If you are building AI that must actually ship, scale, and be trusted—start with structure.*
+
+
+
