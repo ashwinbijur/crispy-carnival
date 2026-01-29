@@ -60,7 +60,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nThe Five Layers of AI: A Delivery-First View\n\n\n\nai\n\nprogram management\n\nsystems thinking\n\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nCredit Committee Agentic Workflow\n\n\n\ncode\n\nproject\n\nprocess\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nData Cleaning to Agentic AI — A Banking Industry Walkthrough\n\n\n\ncode\n\ndata-cleaning\n\nmachine-learning\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nCopilot - changes for the Credit Relationship Manager\n\n\n\ncopilot\n\nchange\n\nprocess\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
+    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nAI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs\n\n\n\nCorporate Finance\n\nAI\n\nSaaS\n\nAzure\n\n\n\n\n\n\n\n\n\nJan 16, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nThe Five Layers of AI: A Delivery-First View\n\n\n\nai\n\nprogram management\n\nsystems thinking\n\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nCredit Committee Agentic Workflow\n\n\n\ncode\n\nproject\n\nprocess\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nData Cleaning to Agentic AI — A Banking Industry Walkthrough\n\n\n\ncode\n\ndata-cleaning\n\nmachine-learning\n\nagentic-ai\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nAshwin Bijur\n\n\n\n\n\n\n\n\n\n\n\n\nCopilot - changes for the Credit Relationship Manager\n\n\n\ncopilot\n\nchange\n\nprocess\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nAshwin Bijur\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "coffee-reviews/dareshack/index.html",
@@ -376,5 +376,61 @@
     "title": "The Five Layers of AI: A Delivery-First View",
     "section": "Why This Matters for Delivery",
     "text": "Why This Matters for Delivery\nAs a program or project manager in AI, my role is not to optimize one layer—but to orchestrate all five: - Translate strategy into executable systems\n- Surface risks early across data, product, and ops\n- Keep teams focused on outcomes, not novelty\nAI delivery is a systems problem.\nClear layers turn complexity into momentum.\n\nIf you are building AI that must actually ship, scale, and be trusted—start with structure."
+  },
+  {
+    "objectID": "projects/saasfin-azure/saasfin-azure.html",
+    "href": "projects/saasfin-azure/saasfin-azure.html",
+    "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
+    "section": "",
+    "text": "SaaS finance operates under structural pressures that traditional finance models were never designed for i.e. recurring revenue, usage-based pricing, high data velocity, and extreme sensitivity to churn and cash burn. Artificial Intelligence, when deployed on an enterprise-grade platform like Microsoft Azure, enables finance teams to move from retrospective reporting to real-time, forward-looking financial control and decision intelligence."
+  },
+  {
+    "objectID": "projects/saasfin-azure/saasfin-azure.html#ai-driven-arr-forecasting-revenue-intelligence",
+    "href": "projects/saasfin-azure/saasfin-azure.html#ai-driven-arr-forecasting-revenue-intelligence",
+    "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
+    "section": "AI-Driven ARR, Forecasting & Revenue Intelligence",
+    "text": "AI-Driven ARR, Forecasting & Revenue Intelligence\nBusiness objective - Improve forecast accuracy for:\n\nAnnual RR / Monthly RR\nNet Revenue Retention (NRR)\nExpansion vs churn-driven growth\n\n\n\n\n\n\n\n\nAzureArchitecture\n\n\n\nSaaS\n\nSaaS Systems\n(CRM, Billing, Product Usage)\n\n\n\nADF\n\nAzure Data Factory / Event Hub\n\n\n\nSaaS-&gt;ADF\n\n\n\n\n\nADLS\n\nAzure Data Lake Gen2\n\n\n\nADF-&gt;ADLS\n\n\n\n\n\nSynapse\n\nAzure Synapse Analytics\n\n\n\nADLS-&gt;Synapse\n\n\n\n\n\nAML\n\nAzure Machine Learning\n(Forecasting Models)\n\n\n\nSynapse-&gt;AML\n\n\n\n\n\nAOAI\n\nAzure OpenAI\n(Narrative Insights)\n\n\n\nSynapse-&gt;AOAI\n\n\n\n\n\nPBI\n\nPower BI\n(Finance & Exec Dashboards)\n\n\n\nSynapse-&gt;PBI\n\n\n\n\n\n\n\n\n\n\nWhat AI actually does here\n\nPredict churn probability at customer and cohort level\nSimulate ARR under pricing, discounting, and usage scenarios\nAuto-generate CFO-ready commentary explaining forecast movements\n\nFinance impact\n\nRolling forecasts updated weekly or daily\nReduced reliance on spreadsheet-based planning\nEarly warning signals embedded into finance cadence"
+  },
+  {
+    "objectID": "projects/saasfin-azure/saasfin-azure.html#working-capital-cash-burn-optimization-for-saas",
+    "href": "projects/saasfin-azure/saasfin-azure.html#working-capital-cash-burn-optimization-for-saas",
+    "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
+    "section": "Working Capital & Cash Burn Optimization for SaaS",
+    "text": "Working Capital & Cash Burn Optimization for SaaS\nBusiness objective is to optimize\n\nCash runway\nBilling efficiency\nCustomer payment behavior\n\n\n\n\n\n\n\n\nAzureArchitecture\n\n\n\nERP\n\nERP / Billing / Payments\n\n\n\nADF\n\nAzure Data Factory\n\n\n\nERP-&gt;ADF\n\n\n\n\n\nSQLDL\n\nAzure SQL + Data Lake\n\n\n\nADF-&gt;SQLDL\n\n\n\n\n\nAML\n\nAzure Machine Learning\n\n\n\nSQLDL-&gt;AML\n\n\n\n\n\nPBI\n\nPower BI + Alerts\n\n\n\nAML-&gt;PBI\n\n\n\n\n\n\n\n\n\n\nAI capabilities\n\nPredict late payments before invoices age\nIdentify customers with high churn + non-payment risk\nSimulate burn-rate under hiring or infrastructure scenarios\n\nFinance impact\n\nMore accurate runway projections\nBetter coordination between Finance, Sales, and RevOps\nReduced surprise liquidity events"
+  },
+  {
+    "objectID": "projects/saasfin-azure/saasfin-azure.html#continuous-revenue-recognition-controls",
+    "href": "projects/saasfin-azure/saasfin-azure.html#continuous-revenue-recognition-controls",
+    "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
+    "section": "Continuous Revenue Recognition & Controls",
+    "text": "Continuous Revenue Recognition & Controls\nBusiness objective is to move from periodic controls to continuous financial assurance.\n\n\n\n\n\n\n\nAzureArchitecture\n\n\n\nERP\n\nERP / Revenue Subledger\n\n\n\nEventGrid\n\nAzure Event Grid\n\n\n\nERP-&gt;EventGrid\n\n\n\n\n\nFunctions\n\nAzure Functions\n\n\n\nEventGrid-&gt;Functions\n\n\n\n\n\nAML\n\nAzure Machine Learning\n(Anomaly Detection)\n\n\n\nFunctions-&gt;AML\n\n\n\n\n\nDash\n\nCompliance Dashboards & Alerts\n\n\n\nAML-&gt;Dash\n\n\n\n\n\n\n\n\n\n\nAI use cases\n\nDetect anomalous revenue postings\nFlag contracts with unusual allocation patterns\nMonitor manual journal entries in near real time\n\nFinance impact\n\nStronger audit readiness\nReduced manual review workload\nImproved trust in automated revenue processes"
+  },
+  {
+    "objectID": "projects/saasfin-azure/saasfin-azure.html#ai-augmented-cfo-narrative-board-reporting",
+    "href": "projects/saasfin-azure/saasfin-azure.html#ai-augmented-cfo-narrative-board-reporting",
+    "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
+    "section": "AI-Augmented CFO Narrative & Board Reporting",
+    "text": "AI-Augmented CFO Narrative & Board Reporting\nBusiness objective is to eliminate manual preparation of:\n\nBoard decks\nEarnings narratives\nVariance explanations\n\n\n\n\n\n\n\n\nAzureArchitecture\n\n\n\nSource\n\nERP / Revenue Subledger\n\n\n\nFDM\n\nFinancial Data Models\n\n\n\nSource-&gt;FDM\n\n\n\n\n\nAOAI\n\nAzure OpenAI\n\n\n\nFDM-&gt;AOAI\n\n\n\n\n\nNarr\n\nNarrative Layer\n(Docs / PowerPoint / BI)\n\n\n\nAOAI-&gt;Narr\n\n\n\n\n\n\n\n\n\n\nAI output examples\n\n“NRR declined 120 bps primarily due to SMB churn in EMEA…”\n“Cash runway reduced by 1.8 months driven by accelerated hiring…”\n\nFinance impact\n\nFaster close-to-board cycles\nMore consistent, explainable messaging\nCFO time shifted from preparation to decision-making"
+  },
+  {
+    "objectID": "projects/saasfin-azure/saasfin-azure.html#governance-model",
+    "href": "projects/saasfin-azure/saasfin-azure.html#governance-model",
+    "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
+    "section": "Governance model",
+    "text": "Governance model\nFor SaaS companies, AI governance must be explicit:\n\nHuman-in-the-loop for pricing and revenue decisions\nModel versioning tied to reporting periods\nAudit logs for all AI-driven adjustments\nClear ownership between Finance, Data, and IT\n\nAzure’s native security, role-based access, and monitoring capabilities make this feasible without custom engineering."
+  },
+  {
+    "objectID": "projects/saasfin-azure/saasfin-azure.html#priority-queue",
+    "href": "projects/saasfin-azure/saasfin-azure.html#priority-queue",
+    "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
+    "section": "Priority queue",
+    "text": "Priority queue\n\nARR and churn intelligence - delivers highest ROI\nModernization the finance data layer before scaling AI\nAI models are financial assets and should be treated as such\nFinance teams personnel –&gt; AI augmented analysts"
+  },
+  {
+    "objectID": "projects/saasfin-azure/saasfin-azure.html#final-thought",
+    "href": "projects/saasfin-azure/saasfin-azure.html#final-thought",
+    "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
+    "section": "Final thought",
+    "text": "Final thought\nAI will not replace SaaS finance professionals however finance teams that adopt AI responsibly will outperform those that do not. Azure provides a pragmatic, enterprise-ready path to intelligent finance without sacrificing control, compliance, or credibility."
   }
 ]
