@@ -1,0 +1,23 @@
+---
+title: "Pipes"
+---
+
+Banking systems run on pipes.
+
+Data moves across domains (Risk, Finance, Treasury, Markets) through ingestion, transformation, aggregation, reconciliation, and control layers.
+
+This section focuses on the **structures that keep pipelines reliable under supervisory scrutiny**:
+
+- Data lineage and traceability patterns  
+- Governance operating models (ownership, approvals, change boundaries)  
+- Data contracts and validation controls  
+- Minimal reference architectures for regulated environments  
+- AI readiness foundations (what must be true before AI can scale)
+
+## Start with
+
+- [Banking AI Playbook](pipes/banking-ai-playbook/banking-ai-playbook.qmd)
+- [Data contracts and schema governance](pipes/data-contracts/data-contracts.qmd)
+- [Validation gates for regulated pipelines](pipes/validation-gates/validation-gates.qmd)
+  
+

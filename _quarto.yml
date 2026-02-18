@@ -3,23 +3,27 @@ project:
   output-dir: docs
 
 website:
-  title: "Fresh Slate Lab"
+  title: "Banking : Pipes & Pits"
   draft-mode: unlinked
   navbar:
     left:
-      - text: "Projects"
-        icon: file-earmark-binary-fill
-        href: projects.qmd
-      - text: "Math & Stats"
-        icon: calculator-fill
-        href: math&stat.qmd
-      - text: "Data blog"
-        icon: pie-chart-fill
-        href: data-blog.qmd
+      - text: "Pipes"
+        href: pipes.qmd
+      - text: "Pits"
+        href: pits.qmd
+      - text: "Lab"
+        menu:
+          - text: "Overview"
+            href: lab.qmd
+          - text: "Projects"
+            href: projects.qmd
+          - text: "Data blog"
+            href: data-blog.qmd
+          - text: "Math & Stats"
+            href: math&stat.qmd
+          - text: "Wire"
+            href: wire.qmd
     right:
-      - text: "Wire"
-        icon: newsletter-fill
-        href: wire.qmd
       - text: Subscribe
         href: https://ashwinbijur.substack.com
       - icon: github

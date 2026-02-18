@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>projects – Banking : Pipes &amp; Pits</title>
+<title>Pipes – Banking : Pipes &amp; Pits</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,70 +72,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog'] = new List('listing-blog', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -317,7 +257,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./pipes.html"> 
+    <a class="nav-link active" href="./pipes.html" aria-current="page"> 
 <span class="menu-text">Pipes</span></a>
   </li>  
   <li class="nav-item">
@@ -374,199 +314,51 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="YWdlbnRpYy1haQ==">agentic-ai <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QXp1cmU=">Azure <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2hhbmdl">change <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29waWxvdA==">copilot <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29ycG9yYXRlJTIwRmluYW5jZQ==">Corporate Finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YS1jbGVhbmluZw==">data-cleaning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZS1sZWFybmluZw==">machine-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvY2Vzcw==">process <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvZ3JhbSUyMG1hbmFnZW1lbnQ=">program management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvamVjdA==">project <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2FhUw==">SaaS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3lzdGVtcyUyMHRoaW5raW5n">systems thinking <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-<section id="projects" class="level1">
-<h1>Projects</h1>
-<div id="listing-blog" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Q29ycG9yYXRlJTIwRmluYW5jZSUyQ0FJJTJDU2FhUyUyQ0F6dXJl" data-listing-date-sort="1768518000000" data-listing-file-modified-sort="1769700742800" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="812">
-<div class="thumbnail"><a href="./projects/saasfin-azure/saasfin-azure.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title" data-anchor-id="projects">
-<a href="./projects/saasfin-azure/saasfin-azure.html" class="no-external">AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29ycG9yYXRlJTIwRmluYW5jZQ=='); return false;">Corporate Finance</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2FhUw=='); return false;">SaaS</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXp1cmU='); return false;">Azure</div>
-
-</div>
-<div class="delink listing-description"><a href="./projects/saasfin-azure/saasfin-azure.html" class="no-external">
-SaaS finance operates under structural pressures that traditional finance models were never designed for i.e.&nbsp;recurring revenue, usage-based pricing, high data velocity, and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./projects/saasfin-azure/saasfin-azure.html" class="no-external">
-<div class="listing-date">
-Jan 16, 2026
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YWklMkNwcm9ncmFtJTIwbWFuYWdlbWVudCUyQ3N5c3RlbXMlMjB0aGlua2luZw==" data-listing-date-sort="1768172400000" data-listing-file-modified-sort="1769426859364" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="598">
-<div class="thumbnail"><a href="./projects/5-layers/5-layers.html" class="no-external">
-
-<img loading="lazy" src="./projects/5-layers/five-components-aiom.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/5-layers/5-layers.html" class="no-external">The Five Layers of AI: A Delivery-First View</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZ3JhbSUyMG1hbmFnZW1lbnQ='); return false;">program management</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtcyUyMHRoaW5raW5n'); return false;">systems thinking</div>
-
-</div>
-<div class="delink listing-description"><a href="./projects/5-layers/5-layers.html" class="no-external">
-Most AI initiatives don’t fail because the models are weak. They fail because no one designed the system that surrounds them.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./projects/5-layers/5-layers.html" class="no-external">
-<div class="listing-date">
-Jan 12, 2026
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Y29kZSUyQ3Byb2plY3QlMkNwcm9jZXNzJTJDYWdlbnRpYy1haQ==" data-listing-date-sort="1767826800000" data-listing-file-modified-sort="1769427143527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1710">
-<div class="thumbnail"><a href="./projects/credit-committee/credit-committee.html" class="no-external">
-
-<img loading="lazy" src="./projects/credit-committee/buildingblocksofagenticai.jpeg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/credit-committee/credit-committee.html" class="no-external">Credit Committee Agentic Workflow</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdA=='); return false;">project</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvY2Vzcw=='); return false;">process</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWdlbnRpYy1haQ=='); return false;">agentic-ai</div>
-
-</div>
-<div class="delink listing-description"><a href="./projects/credit-committee/credit-committee.html" class="no-external">
-Credit committees depend on timely, complete, and well‑structured loan packages. In practice, this process is often slowed by:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./projects/credit-committee/credit-committee.html" class="no-external">
-<div class="listing-date">
-Jan 8, 2026
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Y29kZSUyQ2RhdGEtY2xlYW5pbmclMkNtYWNoaW5lLWxlYXJuaW5nJTJDYWdlbnRpYy1haQ==" data-listing-date-sort="1767740400000" data-listing-file-modified-sort="1767868487393" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1846">
-<div class="thumbnail"><a href="./projects/data-cleaning/index.html" class="no-external">
-
-<img loading="lazy" src="./projects/data-cleaning/data-cleaning-bank-improved.JPG" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/data-cleaning/index.html" class="no-external">Data Cleaning to Agentic AI — A Banking Industry Walkthrough</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1jbGVhbmluZw=='); return false;">data-cleaning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZS1sZWFybmluZw=='); return false;">machine-learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWdlbnRpYy1haQ=='); return false;">agentic-ai</div>
-
-</div>
-<div class="delink listing-description"><a href="./projects/data-cleaning/index.html" class="no-external">
-Modern banking runs on data however before AI can detect fraud, score credit, or automate decisions that data must be cleaned, structured, and made trustworthy.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./projects/data-cleaning/index.html" class="no-external">
-<div class="listing-date">
-Jan 7, 2026
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Y29waWxvdCUyQ2NoYW5nZSUyQ3Byb2Nlc3M=" data-listing-date-sort="1766876400000" data-listing-file-modified-sort="1767013806480" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
-<div class="thumbnail"><a href="./projects/bank-credit/bank-credit.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/bank-credit/bank-credit.html" class="no-external">Copilot - changes for the Credit Relationship Manager</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29waWxvdA=='); return false;">copilot</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hhbmdl'); return false;">change</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvY2Vzcw=='); return false;">process</div>
-
-</div>
-<div class="delink listing-description"><a href="./projects/bank-credit/bank-credit.html" class="no-external">
-It’s the difference between looking things up and having things done. Search engines gives you information however Copilot gives you work already in motion. Instead of just…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./projects/bank-credit/bank-credit.html" class="no-external">
-<div class="listing-date">
-Dec 28, 2025
-</div>
-<div class="listing-author">
-Ashwin Bijur
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Pipes</h1>
 </div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Banking systems run on pipes.</p>
+<p>Data moves across domains (Risk, Finance, Treasury, Markets) through ingestion, transformation, aggregation, reconciliation, and control layers.</p>
+<p>This section focuses on the <strong>structures that keep pipelines reliable under supervisory scrutiny</strong>:</p>
+<ul>
+<li>Data lineage and traceability patterns<br>
+</li>
+<li>Governance operating models (ownership, approvals, change boundaries)<br>
+</li>
+<li>Data contracts and validation controls<br>
+</li>
+<li>Minimal reference architectures for regulated environments<br>
+</li>
+<li>AI readiness foundations (what must be true before AI can scale)</li>
+</ul>
+<section id="start-with" class="level2">
+<h2 class="anchored" data-anchor-id="start-with">Start with</h2>
+<ul>
+<li><a href="./pipes/banking-ai-playbook/banking-ai-playbook.html">Banking AI Playbook</a></li>
+<li><a href="./pipes/data-contracts/data-contracts.html">Data contracts and schema governance</a></li>
+<li><a href="./pipes/validation-gates/validation-gates.html">Validation gates for regulated pipelines</a></li>
+</ul>
 
 
 </section>
