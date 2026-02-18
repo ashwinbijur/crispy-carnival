@@ -1,0 +1,7 @@
+---
+title: "Lab"
+---
+
+This section contains exploratory work, notes, experiments, and older material.
+
+It’s intentionally separated from **Pipes & Pits**, which focuses on regulated banking data foundations, governance, and failure modes.

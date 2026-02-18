@@ -1,0 +1,23 @@
+---
+title: "Pits"
+---
+
+Where pipes weaken, pits form.
+
+In regulated banking environments, failure is often silent before it becomes visible:
+- reconciliation breaks late,
+- controls trigger after the fact,
+- downstream consumers inherit corrupted meaning.
+
+This section analyses **failure modes** that degrade regulatory reporting and AI-readiness:
+
+- Schema drift and contract breaks  
+- Semantic inconsistency across domains  
+- Identity resolution / golden record gaps  
+- Ownership ambiguity and control boundary failures  
+- Monitoring blind spots (freshness, missingness, drift)
+
+## Start with
+
+- [Where banking data pipelines break — and why AI suffers first](pits/pipelines-break/pipelines-break.qmd)
+- [Schema drift in regulated reporting pipelines](pits/schema-drift/schema-drift.qmd)

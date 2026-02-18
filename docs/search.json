@@ -16,9 +16,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Public Lab Book",
+    "title": "Banking : Pipes & Pits",
     "section": "",
-    "text": "This blog is a living notebook - the code seen isn’t a screenshot — it’s actual code running on my machine. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”\nI’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.\nWhat you’ll find here\n\nExperiments and demos: runnable Quarto notebooks and small projects you can clone and try.\nNotes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.\nHow‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.\nFailures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.\n\nAbout me\nI build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.\nOn the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.\nHow I work\nI favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.\nJoin the experiment\nIf you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point.\n\n\nStay in touch\n Subscribe by email"
+    "text": "I am a Senior Business Analyst specialising in regulated banking data platforms, regulatory reporting pipelines, and data governance frameworks within tier-1 financial institutions.\nMy experience spans Financial Markets, Risk, Finance, and Regulatory Reporting environments operating under intensive supervisory scrutiny. These environments demand demonstrable data lineage, aggregation integrity, reconciliation discipline, and control evidence across complex front-to-back systems.\nIn practice, this means working within regulatory frameworks that require traceability, consistent data definitions, and auditable transformation logic across domains.\nAcross roles, I have operated at the intersection of business, data, and technology. My work has focused on:\n\nEnd-to-end data lineage and aggregation analysis\n\nRegulatory reporting transformations and platform migrations\n\nDefinition of governed data structures and validation controls\n\nTranslation of regulatory and business requirements into executable delivery specifications\n\nCross-domain impact analysis across Risk, Finance, and Treasury systems\n\nFunctional understanding of banking products and their data representation across front-to-back architectures\n\nI am particularly interested in the industrialisation challenge facing banks today: building data foundations robust enough to support both regulatory scrutiny and AI-driven decision systems.\nMy focus is on the structural conditions that allow complex data and AI systems to operate safely, transparently, and at scale in regulated environments.\n\n\n\nAI readiness in banking\n\nData contract and schema governance patterns\n\nProduction failure modes in reporting pipelines\n\nOwnership and control frameworks for regulated data systems\n\nArchitecture considerations for AI under supervisory constraints\n\n\n\n\n Subscribe by email"
   },
   {
     "objectID": "CONTRIBUTING.html",
@@ -432,5 +432,82 @@
     "title": "AI-Driven Corporate Finance for SaaS Companies: Azure Reference Architectures for CFOs",
     "section": "Final thought",
     "text": "Final thought\nAI will not replace SaaS finance professionals however finance teams that adopt AI responsibly will outperform those that do not. Azure provides a pragmatic, enterprise-ready path to intelligent finance without sacrificing control, compliance, or credibility."
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Banking : Pipes & Pits",
+    "section": "",
+    "text": "I am a Senior Business Analyst specialising in regulated banking data platforms, regulatory reporting pipelines, and data governance frameworks within tier-1 financial institutions.\nMy experience spans Financial Markets, Risk, Finance, and Regulatory Reporting environments operating under intensive supervisory scrutiny. These environments demand demonstrable data lineage, aggregation integrity, reconciliation discipline, and control evidence across complex front-to-back systems.\nIn practice, this means working within regulatory frameworks that require traceability, consistent data definitions, and auditable transformation logic across domains.\nAcross roles, I have operated at the intersection of business, data, and technology. My work has focused on:\n\nEnd-to-end data lineage and aggregation analysis\n\nRegulatory reporting transformations and platform migrations\n\nDefinition of governed data structures and validation controls\n\nTranslation of regulatory and business requirements into executable delivery specifications\n\nCross-domain impact analysis across Risk, Finance, and Treasury systems\n\nFunctional understanding of banking products and their data representation across front-to-back architectures\n\nI am particularly interested in the industrialisation challenge facing banks today: building data foundations robust enough to support both regulatory scrutiny and AI-driven decision systems.\nMy focus is on the structural conditions that allow complex data and AI systems to operate safely, transparently, and at scale in regulated environments.\n\n\n\nAI readiness in banking\n\nData contract and schema governance patterns\n\nProduction failure modes in reporting pipelines\n\nOwnership and control frameworks for regulated data systems\n\nArchitecture considerations for AI under supervisory constraints\n\n\n\n\n Subscribe by email"
+  },
+  {
+    "objectID": "lab.html",
+    "href": "lab.html",
+    "title": "Lab",
+    "section": "",
+    "text": "This section contains exploratory work, notes, experiments, and older material.\nIt’s intentionally separated from Pipes & Pits, which focuses on regulated banking data foundations, governance, and failure modes."
+  },
+  {
+    "objectID": "pipes.html",
+    "href": "pipes.html",
+    "title": "Pipes",
+    "section": "",
+    "text": "Banking systems run on pipes.\nData moves across domains (Risk, Finance, Treasury, Markets) through ingestion, transformation, aggregation, reconciliation, and control layers.\nThis section focuses on the structures that keep pipelines reliable under supervisory scrutiny:"
+  },
+  {
+    "objectID": "pipes.html#start-with",
+    "href": "pipes.html#start-with",
+    "title": "Pipes",
+    "section": "Start with",
+    "text": "Start with\n\nBanking AI Playbook\nData contracts and schema governance\nValidation gates for regulated pipelines"
+  },
+  {
+    "objectID": "pits.html",
+    "href": "pits.html",
+    "title": "Pits",
+    "section": "",
+    "text": "Where pipes weaken, pits form.\nIn regulated banking environments, failure is often silent before it becomes visible: - reconciliation breaks late, - controls trigger after the fact, - downstream consumers inherit corrupted meaning.\nThis section analyses failure modes that degrade regulatory reporting and AI-readiness:"
+  },
+  {
+    "objectID": "pits.html#start-with",
+    "href": "pits.html#start-with",
+    "title": "Pits",
+    "section": "Start with",
+    "text": "Start with\n\nWhere banking data pipelines break — and why AI suffers first\nSchema drift in regulated reporting pipelines"
+  },
+  {
+    "objectID": "pits/schema-drift/schema-drift.html",
+    "href": "pits/schema-drift/schema-drift.html",
+    "title": "Schema drift in regulated reporting pipelines",
+    "section": "",
+    "text": "(Coming next.)"
+  },
+  {
+    "objectID": "pipes/validation-gates/validation-gates.html",
+    "href": "pipes/validation-gates/validation-gates.html",
+    "title": "Validation gates for regulated pipelines",
+    "section": "",
+    "text": "(Coming next.)"
+  },
+  {
+    "objectID": "pipes/data-contracts/data-contracts.html",
+    "href": "pipes/data-contracts/data-contracts.html",
+    "title": "Data contracts and schema governance",
+    "section": "",
+    "text": "(Coming next.)"
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html",
+    "href": "pits/pipelines-break/pipelines-break.html",
+    "title": "Where banking data pipelines break — and why AI suffers first",
+    "section": "",
+    "text": "(Coming next.)"
+  },
+  {
+    "objectID": "pipes/banking-ai-playbook/banking-ai-playbook.html",
+    "href": "pipes/banking-ai-playbook/banking-ai-playbook.html",
+    "title": "Banking AI Playbook",
+    "section": "",
+    "text": "(Coming next.)"
   }
 ]

@@ -1,32 +1,31 @@
----
-title: "Public Lab Book"
----
-This blog is a living notebook - the code seen isn’t a screenshot — it’s actual code running on my machine. I’m building it with Quarto, running everything locally, publishing what works, and keeping the rest as a record of experiments. Expect a mix of notebooks, short writeups, reproducible code, and honest failure notes — part documentation, part exploration, part “let’s see what happens when I push this button.”
+## About
 
-I’m doing this out loud because the process matters as much as the result. Posts will range from quick riffs and reproducible demos to deeper walkthroughs of pipelines and models. The goal is practical clarity: show what I tried, what broke, and what I learned.
+I am a Senior Business Analyst specialising in regulated banking data platforms, regulatory reporting pipelines, and data governance frameworks within tier-1 financial institutions.
 
-**What you’ll find here**
+My experience spans Financial Markets, Risk, Finance, and Regulatory Reporting environments operating under intensive supervisory scrutiny. These environments demand demonstrable data lineage, aggregation integrity, reconciliation discipline, and control evidence across complex front-to-back systems.
 
-- Experiments and demos: runnable Quarto notebooks and small projects you can clone and try.
-- Notes and reflections: concise writeups that capture intuition, tradeoffs, and next steps.
-- How‑tos and patterns: practical recipes for data modelling, pipelines, migrations, and CI/CD.
-- Failures and fixes: debugging threads and postmortems so others don’t repeat the same mistakes.
+In practice, this means working within regulatory frameworks that require traceability, consistent data definitions, and auditable transformation logic across domains.
 
-**About me**
+Across roles, I have operated at the intersection of business, data, and technology. My work has focused on:
 
-I build practical, data‑led solutions and enjoy getting stuck into messy problems until they make sense. I turn fragmented feeds and brittle rules into a single, reliable flow people can trust. I lead and coach teams, run reviews and roadmaps, and I’m happiest rolling up my sleeves to remove blockers and get things over the line.
+- End-to-end data lineage and aggregation analysis  
+- Regulatory reporting transformations and platform migrations  
+- Definition of governed data structures and validation controls  
+- Translation of regulatory and business requirements into executable delivery specifications  
+- Cross-domain impact analysis across Risk, Finance, and Treasury systems  
+- Functional understanding of banking products and their data representation across front-to-back architectures  
 
-On the technical side I work with data modelling, modern data pipelines and migration workflows, Python, SQL, version control, and CI/CD. I’m sharpening my analytics skills through a Data Science and AI course and I prototype quickly to test ideas in the real world. I’m a clear communicator, a self‑starter, and I like helping others learn so improvements stick.
+I am particularly interested in the industrialisation challenge facing banks today: building data foundations robust enough to support both regulatory scrutiny and AI-driven decision systems.
 
-**How I work**
+My focus is on the structural conditions that allow complex data and AI systems to operate safely, transparently, and at scale in regulated environments.
 
-I favor small, testable experiments over long, speculative plans. Each post aims to be reproducible and actionable: code, notes, and the minimal context needed to run or adapt the work. When something is exploratory, I’ll label it as such; when it’s a pattern I trust, I’ll call that out too.
+### What I write about
 
-**Join the experiment**
-
-If you’re curious about machine learning, data engineering, AI, or agentic systems, you’ll find something useful here — or at least a clear record of what didn’t work. Subscribe to the feed, fork the notebooks, or drop a comment on a post. I’m here with curiosity, a stack of experiments, and zero certainty about where this path leads. Which is exactly the point.
-
----
+- AI readiness in banking  
+- Data contract and schema governance patterns  
+- Production failure modes in reporting pipelines  
+- Ownership and control frameworks for regulated data systems  
+- Architecture considerations for AI under supervisory constraints  
 
 ### Stay in touch
 

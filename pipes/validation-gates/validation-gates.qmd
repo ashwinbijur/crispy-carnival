@@ -1,0 +1,5 @@
+---
+title: "Validation gates for regulated pipelines"
+---
+
+(Coming next.)

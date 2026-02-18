@@ -1,0 +1,5 @@
+---
+title: "Where banking data pipelines break — and why AI suffers first"
+---
+
+(Coming next.)
