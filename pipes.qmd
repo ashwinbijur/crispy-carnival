@@ -16,6 +16,7 @@ This section focuses on the **structures that keep pipelines reliable under supe
 
 ## Start with
 
+- [Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works](pipes/schema-drift-in-regulated-reporting-pipelines-a-control-pattern-that-actually-works/schema-drift-in-regulated-reporting-pipelines-a-control-pattern-that-actually-works.qmd)
 - [Banking AI Playbook](pipes/banking-ai-playbook/banking-ai-playbook.qmd)
 - [Data contracts and schema governance](pipes/data-contracts/data-contracts.qmd)
 - [Validation gates for regulated pipelines](pipes/validation-gates/validation-gates.qmd)

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-15">
+<meta name="dcterms.date" content="2026-02-20">
 
-<title>Where Banking Data Pipelines Break and Why AI Suffers First – Banking : Pipes &amp; Pits</title>
+<title>Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works – Banking : Pipes &amp; Pits</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -322,12 +322,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Where Banking Data Pipelines Break and Why AI Suffers First</h1>
+<h1 class="title">Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Pits</div>
-    <div class="quarto-category">Failure Modes</div>
-    <div class="quarto-category">AI Readiness</div>
-    <div class="quarto-category">Data Governance</div>
+    <div class="quarto-category">Pipes</div>
+    <div class="quarto-category">Governance Patterns</div>
+    <div class="quarto-category">Data Contracts</div>
+    <div class="quarto-category">Regulatory Reporting</div>
   </div>
   </div>
 
@@ -339,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 15, 2026</p>
+      <p class="date">February 20, 2026</p>
     </div>
   </div>
   
@@ -351,122 +351,203 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Banking systems look stable from the outside.</p>
-<p>Reports run. Dashboards populate. Regulatory submissions go out.</p>
-<p>But underneath, data moves through layered transformations, joins, aggregations, reconciliations, and controls across front-to-back systems. Those are the <em>pipes</em>.</p>
-<p>Where pipes weaken, <em>pits</em> form.</p>
-<p>AI systems are often the first to fall into them, not because AI is fragile, but because it is highly sensitive to silent changes in meaning.</p>
-<section id="schema-drift-the-silent-break" class="level2">
-<h2 class="anchored" data-anchor-id="schema-drift-the-silent-break">1. Schema drift (the silent break)</h2>
-<p>A field is renamed.<br>
-An enum expands.<br>
-A data type changes.<br>
-A timestamp shifts from local time to UTC.</p>
-<p>Downstream pipelines often keep running.</p>
-<p>The dangerous part is not the change. It’s the <em>silence</em>.</p>
+<p>Schema drift is not a rare edge case in banking systems.</p>
+<p>It is routine.</p>
+<p>Fields are renamed.<br>
+Enums expand.<br>
+Data types evolve.<br>
+Upstream vendors change formats.</p>
+<p>In regulated environments, the question is not whether drift occurs.</p>
+<p>The question is whether it is governed under constraint.</p>
+<hr>
+<section id="the-practical-constraints-reality-layer" class="level2">
+<h2 class="anchored" data-anchor-id="the-practical-constraints-reality-layer">The Practical Constraints (Reality Layer)</h2>
+<p>Schema governance does not operate in a vacuum.</p>
+<p>In regulated banks, it is constrained by:</p>
 <ul>
-<li>Reporting processes may surface the issue later through reconciliation breaks.</li>
-<li>AI systems can degrade quietly: feature distributions shift, model confidence patterns change, and performance decays without a clean “fail” signal.</li>
+<li><strong>Legacy mainframe architectures</strong> where schemas are embedded in COBOL copybooks or batch file structures.</li>
+<li><strong>Vendor schema lock-in</strong>, particularly in core banking or market data systems, where upstream structures cannot be modified.</li>
+<li><strong>Cross-border data residency constraints</strong>, limiting replication or transformation patterns.</li>
+<li><strong>Regulatory submission timelines</strong> (e.g., liquidity, capital, trade reporting) where changes cannot delay filing.</li>
+<li><strong>Change politics</strong>, where domain owners resist breaking downstream consumers.</li>
 </ul>
-<p><strong>Pit signature:</strong> the pipeline is “green” but the meaning is wrong.</p>
+<p>Governance patterns must function within these constraints and not assume greenfield control authority.</p>
+<hr>
 </section>
-<section id="semantic-inconsistency-same-word-different-truth" class="level2">
-<h2 class="anchored" data-anchor-id="semantic-inconsistency-same-word-different-truth">2. Semantic inconsistency (same word, different truth)</h2>
-<p>In banks, the same business term can carry different definitions across domains.</p>
-<p>“Exposure” in Risk might not equal “Exposure” in Treasury.<br>
-“Customer” in onboarding might not equal “Customer” in CRM.<br>
-“Product” in Finance might not equal “Product” in Markets.</p>
-<p>These mismatches create systemic disagreement:</p>
+<section id="the-problem-drift-without-boundary" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-drift-without-boundary">The Problem: Drift Without Boundary</h2>
+<p>In many legacy banking environments:</p>
 <ul>
-<li>Different filters, cut-offs, and aggregation logic</li>
-<li>Different timing and booking assumptions</li>
-<li>Different reference data sources</li>
+<li>Schema changes are communicated informally.</li>
+<li>Downstream consumers rely on documentation rather than enforcement.</li>
+<li>Type coercion is silent.</li>
+<li>Breaking changes are bundled with unrelated releases due to deadline pressure.</li>
 </ul>
-<p>If semantics are not explicit and governed, models learn patterns that are <em>structurally disputed</em>.</p>
-<p><strong>Pit signature:</strong> technically correct data that is contextually incorrect.</p>
+<p>The result:</p>
+<p>The system remains operational.<br>
+Meaning shifts silently.<br>
+Reconciliation detects issues late.<br>
+AI systems inherit degraded feature definitions.</p>
+<hr>
 </section>
-<section id="identity-resolution-gaps-broken-joins-distorted-aggregates" class="level2">
-<h2 class="anchored" data-anchor-id="identity-resolution-gaps-broken-joins-distorted-aggregates">3. Identity resolution gaps (broken joins, distorted aggregates)</h2>
-<p>Identity is foundational, and it is frequently weak.</p>
+<section id="the-control-pattern-under-constraint" class="level2">
+<h2 class="anchored" data-anchor-id="the-control-pattern-under-constraint">The Control Pattern (Under Constraint)</h2>
+<p>A realistic schema governance model contains five enforceable layers.</p>
+<section id="versioned-schema-registry-even-for-legacy" class="level3">
+<h3 class="anchored" data-anchor-id="versioned-schema-registry-even-for-legacy">1. Versioned Schema Registry (Even for Legacy)</h3>
+<p>Even if upstream is mainframe:</p>
 <ul>
-<li>multiple IDs for the same real-world entity</li>
-<li>unstable keys across systems</li>
-<li>duplicate records and many-to-many joins</li>
-<li>missing link tables that force heuristics</li>
+<li>Extracted schemas must be version-controlled at ingestion boundary.</li>
+<li>Copybooks or flat-file definitions must be checked into source control.</li>
+<li>Compatibility checks occur at the ingestion layer.</li>
 </ul>
-<p>Regulatory reporting can sometimes detect this via late reconciliation.</p>
-<p>AI training pipelines often cannot. They absorb the distortion.</p>
-<p><strong>Pit signature:</strong> aggregate numbers fluctuate or drift “mysteriously” after upstream changes, despite no visible logic change downstream.</p>
+<p>Governance begins where control is possible.</p>
+<hr>
 </section>
-<section id="ownership-ambiguity-controls-without-accountability" class="level2">
-<h2 class="anchored" data-anchor-id="ownership-ambiguity-controls-without-accountability">4. Ownership ambiguity (controls without accountability)</h2>
-<p>Most pipeline weakness is not technical. It is organisational.</p>
-<p>If no one owns a field end-to-end, then:</p>
+<section id="compatibility-classification-mandatory" class="level3">
+<h3 class="anchored" data-anchor-id="compatibility-classification-mandatory">2. Compatibility Classification (Mandatory)</h3>
+<p>All schema changes must be classified:</p>
 <ul>
-<li>who approves a schema change?</li>
-<li>who validates semantic impact?</li>
-<li>who signs off reconciliation tolerances?</li>
-<li>who decides whether a deviation is acceptable?</li>
+<li><strong>Non-breaking (safe)</strong></li>
+<li><strong>Conditionally breaking</strong></li>
+<li><strong>Breaking</strong></li>
 </ul>
-<p>Without named ownership and approval boundaries, controls become performative rather than preventative.</p>
-<p><strong>Pit signature:</strong> everyone can explain their piece, nobody can explain the full outcome.</p>
+<p>Breaking changes trigger mandatory impact assessment.</p>
+<p>No classification → no deployment.</p>
+<hr>
 </section>
-<section id="monitoring-blind-spots-you-cant-govern-what-you-cant-see" class="level2">
-<h2 class="anchored" data-anchor-id="monitoring-blind-spots-you-cant-govern-what-you-cant-see">5. Monitoring blind spots (you can’t govern what you can’t see)</h2>
-<p>Typical monitoring catches availability and runtime failures.</p>
-<p>Regulated banking pipelines require more:</p>
-<ul>
-<li>freshness and completeness checks</li>
-<li>missingness spikes</li>
-<li>distribution shifts for key measures</li>
-<li>reconciliation deltas vs authoritative sources</li>
-<li>schema compatibility and contract checks</li>
-</ul>
-<p>Without these, the system fails “politely” — outputs continue, and trust erodes only after business impact appears.</p>
-<p><strong>Pit signature:</strong> incidents are discovered by users, not by controls.</p>
+<section id="explicit-decision-ownership-raci-model" class="level3">
+<h3 class="anchored" data-anchor-id="explicit-decision-ownership-raci-model">3. Explicit Decision Ownership (RACI Model)</h3>
+<p>A minimal RACI structure:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data Product Owner</td>
+<td>Accountable for schema definition</td>
+</tr>
+<tr class="even">
+<td>Domain Architect</td>
+<td>Responsible for technical compatibility assessment</td>
+</tr>
+<tr class="odd">
+<td>Reporting Owner</td>
+<td>Consulted on regulatory impact</td>
+</tr>
+<tr class="even">
+<td>Model Risk / AI Governance</td>
+<td>Consulted on feature integrity</td>
+</tr>
+<tr class="odd">
+<td>Change Advisory Board (CAB)</td>
+<td>Approval authority for breaking changes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Veto authority:</strong><br>
+Breaking changes affecting regulatory reporting require joint sign-off from the Data Product Owner and Reporting Owner. CAB approval is mandatory for production deployment.</p>
+<hr>
 </section>
-<section id="why-ai-feels-it-first" class="level2">
-<h2 class="anchored" data-anchor-id="why-ai-feels-it-first">Why AI feels it first</h2>
-<p>AI systems are sensitive to:</p>
-<ul>
-<li>distribution shift</li>
-<li>missingness patterns</li>
-<li>label timing changes</li>
-<li>subtle semantic drift</li>
-</ul>
-<p>Traditional reporting often fails loudly (reconciliation breaks).</p>
-<p>AI often fails quietly (confidence drifts, decisions degrade).</p>
-<p>So AI doesn’t just need good models. It needs strong pipes.</p>
-</section>
-<section id="what-strong-pipes-look-like-the-preventive-layer" class="level2">
-<h2 class="anchored" data-anchor-id="what-strong-pipes-look-like-the-preventive-layer">What strong pipes look like (the preventive layer)</h2>
-<p>If you want AI to scale safely in regulated banking, the foundations look like this:</p>
-<ul>
-<li><strong>Versioned schemas</strong> with compatibility rules<br>
-</li>
-<li><strong>Explicit semantic definitions</strong> where ambiguity is managed, not ignored<br>
-</li>
-<li><strong>Named data ownership</strong> with clear approval boundaries<br>
-</li>
-<li><strong>Validation gates</strong> before changes propagate<br>
-</li>
-<li><strong>Reconciliation controls</strong> tied to authoritative sources<br>
-</li>
-<li><strong>Observability</strong> for freshness, missingness, drift, and contract violations</li>
-</ul>
-<p>AI industrialisation is not primarily a modelling challenge.</p>
-<p>It’s a structural systems challenge.</p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="override-escalation-boundary" class="level3">
+<h3 class="anchored" data-anchor-id="override-escalation-boundary">4. Override &amp; Escalation Boundary</h3>
+<p>If downstream refuses a breaking change:</p>
 <ol type="1">
-<li>Basel Committee on Banking Supervision (2013). <em>Principles for effective risk data aggregation and risk reporting (BCBS 239)</em>.</li>
-<li>Basel Committee on Banking Supervision (2011, rev. 2019). <em>Principles for the Sound Management of Operational Risk</em>.</li>
-<li>European Central Bank (2023). <em>Guide to internal models</em>.</li>
-<li>Financial Stability Board (2017). <em>Supervisory and regulatory implications of artificial intelligence and machine learning in financial services</em>.</li>
-<li>NIST (2023). <em>AI Risk Management Framework (AI RMF 1.0)</em>.</li>
-<li>ISO/IEC 25012. <em>Data quality model</em>.</li>
+<li>Impact documented formally.</li>
+<li>Risk acceptance signed by accountable executive.</li>
+<li>Temporary mitigation (e.g., transformation shim layer) implemented.</li>
+<li>Sunset deadline defined.</li>
 </ol>
+<p>Unresolved schema disputes cannot remain implicit.</p>
+<hr>
+</section>
+<section id="ci-observability-enforcement" class="level3">
+<h3 class="anchored" data-anchor-id="ci-observability-enforcement">5. CI + Observability Enforcement</h3>
+<p>Before deployment:</p>
+<ul>
+<li>Schema compatibility tests run automatically.</li>
+<li>Downstream contract validation executed.</li>
+<li>Affected regulatory aggregates simulated.</li>
+</ul>
+<p>After deployment:</p>
+<ul>
+<li>Null rate monitoring</li>
+<li>Cardinality monitoring</li>
+<li>Distribution shift checks</li>
+<li>Reconciliation delta thresholds</li>
+</ul>
+<p>Incidents detected by controls and not by end users.</p>
+<hr>
+</section>
+</section>
+<section id="minimal-change-flow" class="level2">
+<h2 class="anchored" data-anchor-id="minimal-change-flow">Minimal Change Flow</h2>
+<ol type="1">
+<li>Upstream proposes schema update.</li>
+<li>Compatibility classified.</li>
+<li>Automated validation runs.</li>
+<li>Impact assessment circulated (Risk / Finance / AI stakeholders).</li>
+<li>CAB reviews breaking change.</li>
+<li>Approval or escalation.</li>
+<li>Deployment with monitoring guardrails.</li>
+</ol>
+<p>No informal propagation.</p>
+<hr>
+</section>
+<section id="why-this-matters-for-ai" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters-for-ai">Why This Matters for AI</h2>
+<p>AI systems depend on:</p>
+<ul>
+<li>Stable feature semantics</li>
+<li>Deterministic category sets</li>
+<li>Controlled distribution evolution</li>
+</ul>
+<p>Unmanaged schema drift results in:</p>
+<ul>
+<li>Feature drift</li>
+<li>Retraining instability</li>
+<li>Model risk documentation gaps</li>
+<li>Supervisory challenge</li>
+</ul>
+<p>In regulated contexts, this creates governance exposure.</p>
+<hr>
+</section>
+<section id="regulatory-anchors" class="level2">
+<h2 class="anchored" data-anchor-id="regulatory-anchors">Regulatory Anchors</h2>
+<p>This control pattern aligns with supervisory expectations such as:</p>
+<ul>
+<li><strong>BCBS 239 — Principles for effective risk data aggregation and reporting</strong></li>
+<li><strong>SR 11-7 (Model Risk Management)</strong></li>
+<li><strong>ECB TRIM guidance</strong></li>
+<li><strong>DORA operational resilience requirements</strong></li>
+<li>National competent authority reporting frameworks</li>
+</ul>
+<p>These frameworks consistently emphasize:</p>
+<ul>
+<li>Traceability</li>
+<li>Control evidence</li>
+<li>Accountability</li>
+<li>Change governance</li>
+</ul>
+<p>Schema drift governance is not optional architecture hygiene.</p>
+<p>It is supervisory expectation.</p>
+<hr>
+</section>
+<section id="final-observation" class="level2">
+<h2 class="anchored" data-anchor-id="final-observation">Final Observation</h2>
+<p>Banks do not fail because change occurs.</p>
+<p>They fail because change propagates without controlled decision boundaries under deadline pressure.</p>
+<p>Schema drift is inevitable.</p>
+<p>Unaccountable schema drift is a governance failure.</p>
+<p>And this message should be percolated throughout the organisation, as a mandatory control pattern, not an optional best practice.</p>
 
 
 </section>
