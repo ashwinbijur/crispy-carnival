@@ -1,6 +1,6 @@
 ---
 title: "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works"
-date: 2026-02-20
+date: 2026-02-19
 categories: [Pipes, Governance Patterns, Data Contracts, Regulatory Reporting]
 ---
 
@@ -19,7 +19,7 @@ The question is whether it is governed under constraint.
 
 ---
 
-## The Practical Constraints (Reality Layer)
+## The Practical Constraints
 
 Schema governance does not operate in a vacuum.
 
@@ -53,7 +53,7 @@ AI systems inherit degraded feature definitions.
 
 ---
 
-## The Control Pattern (Under Constraint)
+## The Control Pattern
 
 A realistic schema governance model contains five enforceable layers.
 
@@ -199,3 +199,15 @@ Schema drift is inevitable.
 This control discipline must be embedded across the organisation as a formal governance requirement and not treated as an optional best practice or local implementation choice.
 
 Uncontrolled schema drift is avoidable.
+
+## References
+
+- Basel Committee on Banking Supervision. (2013). *Principles for effective risk data aggregation and risk reporting (BCBS 239).* Bank for International Settlements.
+
+- Board of Governors of the Federal Reserve System & Office of the Comptroller of the Currency. (2011). *Supervisory Guidance on Model Risk Management (SR 11-7).*
+
+- European Central Bank. (2017). *Guide for the Targeted Review of Internal Models (TRIM).*
+
+- European Union. (2022). *Regulation (EU) 2022/2554 on digital operational resilience for the financial sector (DORA).*
+
+- European Banking Authority. (2019). *Guidelines on ICT and security risk management (EBA/GL/2019/04).*
