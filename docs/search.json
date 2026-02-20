@@ -677,5 +677,82 @@
     "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
     "section": "Final Observation",
     "text": "Final Observation\nBanks do not fail because change occurs.\nThey fail because change propagates without controlled decision boundaries under deadline pressure.\nSchema drift is inevitable.\nUnaccountable schema drift is a governance failure.\nAnd this message should be percolated throughout the organisation, as a mandatory control pattern, not an optional best practice."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "",
+    "text": "Schema drift is not a rare edge case in banking systems.\nIt is routine.\nFields are renamed.\nEnums expand.\nData types evolve.\nUpstream vendors change formats.\nIn regulated environments, the question is not whether drift occurs.\nThe question is whether it is governed under constraint."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-practical-constraints-reality-layer",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-practical-constraints-reality-layer",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Practical Constraints (Reality Layer)",
+    "text": "The Practical Constraints (Reality Layer)\nSchema governance does not operate in a vacuum.\nIn regulated banks, it is constrained by:\n\nLegacy mainframe architectures where schemas are embedded in COBOL copybooks or batch file structures.\nVendor schema lock-in, particularly in core banking or market data systems, where upstream structures cannot be modified.\nCross-border data residency constraints, limiting replication or transformation patterns.\nRegulatory submission timelines (e.g., liquidity, capital, trade reporting) where changes cannot delay filing.\nChange politics, where domain owners resist breaking downstream consumers.\n\nGovernance patterns must function within these constraints and not assume greenfield control authority."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-problem-drift-without-boundary",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-problem-drift-without-boundary",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Problem: Drift Without Boundary",
+    "text": "The Problem: Drift Without Boundary\nIn many legacy banking environments:\n\nSchema changes are communicated informally.\nDownstream consumers rely on documentation rather than enforcement.\nType coercion is silent.\nBreaking changes are bundled with unrelated releases due to deadline pressure.\n\nThe result:\nThe system remains operational.\nMeaning shifts silently.\nReconciliation detects issues late.\nAI systems inherit degraded feature definitions."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-control-pattern-under-constraint",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-control-pattern-under-constraint",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Control Pattern (Under Constraint)",
+    "text": "The Control Pattern (Under Constraint)\nA realistic schema governance model contains five enforceable layers.\n\n1. Versioned Schema Registry (Even for Legacy)\nEven if upstream is mainframe:\n\nExtracted schemas must be version-controlled at ingestion boundary.\nCopybooks or flat-file definitions must be checked into source control.\nCompatibility checks occur at the ingestion layer.\n\nGovernance begins where control is possible.\n\n\n\n2. Compatibility Classification (Mandatory)\nAll schema changes must be classified:\n\nNon-breaking (safe)\nConditionally breaking\nBreaking\n\nBreaking changes trigger mandatory impact assessment.\nNo classification → no deployment.\n\n\n\n3. Explicit Decision Ownership (RACI Model)\nA minimal RACI structure:\n\n\n\n\n\n\n\nRole\nResponsibility\n\n\n\n\nData Product Owner\nAccountable for schema definition\n\n\nDomain Architect\nResponsible for technical compatibility assessment\n\n\nReporting Owner\nConsulted on regulatory impact\n\n\nModel Risk / AI Governance\nConsulted on feature integrity\n\n\nChange Advisory Board (CAB)\nApproval authority for breaking changes\n\n\n\nVeto authority:\nBreaking changes affecting regulatory reporting require joint sign-off from the Data Product Owner and Reporting Owner. CAB approval is mandatory for production deployment.\n\n\n\n4. Override & Escalation Boundary\nIf downstream refuses a breaking change:\n\nImpact documented formally.\nRisk acceptance signed by accountable executive.\nTemporary mitigation (e.g., transformation shim layer) implemented.\nSunset deadline defined.\n\nUnresolved schema disputes cannot remain implicit.\n\n\n\n5. CI + Observability Enforcement\nBefore deployment:\n\nSchema compatibility tests run automatically.\nDownstream contract validation executed.\nAffected regulatory aggregates simulated.\n\nAfter deployment:\n\nNull rate monitoring\nCardinality monitoring\nDistribution shift checks\nReconciliation delta thresholds\n\nIncidents detected by controls and not by end users."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#minimal-change-flow",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#minimal-change-flow",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Minimal Change Flow",
+    "text": "Minimal Change Flow\n\nUpstream proposes schema update.\nCompatibility classified.\nAutomated validation runs.\nImpact assessment circulated (Risk / Finance / AI stakeholders).\nCAB reviews breaking change.\nApproval or escalation.\nDeployment with monitoring guardrails.\n\nNo informal propagation."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#why-this-matters-for-ai",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#why-this-matters-for-ai",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Why This Matters for AI",
+    "text": "Why This Matters for AI\nAI systems depend on:\n\nStable feature semantics\nDeterministic category sets\nControlled distribution evolution\n\nUnmanaged schema drift results in:\n\nFeature drift\nRetraining instability\nModel risk documentation gaps\nSupervisory challenge\n\nIn regulated contexts, this creates governance exposure."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#regulatory-anchors",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#regulatory-anchors",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Regulatory Anchors",
+    "text": "Regulatory Anchors\nThis control pattern aligns with supervisory expectations such as:\n\nBCBS 239 — Principles for effective risk data aggregation and reporting\nSR 11-7 (Model Risk Management)\nECB TRIM guidance\nDORA operational resilience requirements\nNational competent authority reporting frameworks\n\nThese frameworks consistently emphasize:\n\nTraceability\nControl evidence\nAccountability\nChange governance\n\nSchema drift governance is not optional architecture hygiene.\nIt is supervisory expectation."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#final-observation",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#final-observation",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Final Observation",
+    "text": "Final Observation\nChange is constant in complex banking systems.\nStability is determined not by the absence of change, but by the presence of controlled decision boundaries, documented accountability, and enforceable validation gates.\nSchema drift is inevitable.\nThis control discipline must be embedded across the organisation as a formal governance requirement and not treated as an optional best practice or local implementation choice.\nUncontrolled schema drift is avoidable."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#references",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#references",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "References",
+    "text": "References\n\nBasel Committee on Banking Supervision. (2013). Principles for effective risk data aggregation and risk reporting (BCBS 239). Bank for International Settlements.\nBoard of Governors of the Federal Reserve System & Office of the Comptroller of the Currency. (2011). Supervisory Guidance on Model Risk Management (SR 11-7).\nEuropean Central Bank. (2017). Guide for the Targeted Review of Internal Models (TRIM).\nEuropean Union. (2022). Regulation (EU) 2022/2554 on digital operational resilience for the financial sector (DORA).\nEuropean Banking Authority. (2019). Guidelines on ICT and security risk management (EBA/GL/2019/04)."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-practical-constraints",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-practical-constraints",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Practical Constraints",
+    "text": "The Practical Constraints\nSchema governance does not operate in a vacuum.\nIn regulated banks, it is constrained by:\n\nLegacy mainframe architectures where schemas are embedded in COBOL copybooks or batch file structures.\nVendor schema lock-in, particularly in core banking or market data systems, where upstream structures cannot be modified.\nCross-border data residency constraints, limiting replication or transformation patterns.\nRegulatory submission timelines (e.g., liquidity, capital, trade reporting) where changes cannot delay filing.\nChange politics, where domain owners resist breaking downstream consumers.\n\nGovernance patterns must function within these constraints and not assume greenfield control authority."
+  },
+  {
+    "objectID": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-control-pattern",
+    "href": "pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html#the-control-pattern",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Control Pattern",
+    "text": "The Control Pattern\nA realistic schema governance model contains five enforceable layers.\n\n1. Versioned Schema Registry (Even for Legacy)\nEven if upstream is mainframe:\n\nExtracted schemas must be version-controlled at ingestion boundary.\nCopybooks or flat-file definitions must be checked into source control.\nCompatibility checks occur at the ingestion layer.\n\nGovernance begins where control is possible.\n\n\n\n2. Compatibility Classification (Mandatory)\nAll schema changes must be classified:\n\nNon-breaking (safe)\nConditionally breaking\nBreaking\n\nBreaking changes trigger mandatory impact assessment.\nNo classification → no deployment.\n\n\n\n3. Explicit Decision Ownership (RACI Model)\nA minimal RACI structure:\n\n\n\n\n\n\n\nRole\nResponsibility\n\n\n\n\nData Product Owner\nAccountable for schema definition\n\n\nDomain Architect\nResponsible for technical compatibility assessment\n\n\nReporting Owner\nConsulted on regulatory impact\n\n\nModel Risk / AI Governance\nConsulted on feature integrity\n\n\nChange Advisory Board (CAB)\nApproval authority for breaking changes\n\n\n\nVeto authority:\nBreaking changes affecting regulatory reporting require joint sign-off from the Data Product Owner and Reporting Owner. CAB approval is mandatory for production deployment.\n\n\n\n4. Override & Escalation Boundary\nIf downstream refuses a breaking change:\n\nImpact documented formally.\nRisk acceptance signed by accountable executive.\nTemporary mitigation (e.g., transformation shim layer) implemented.\nSunset deadline defined.\n\nUnresolved schema disputes cannot remain implicit.\n\n\n\n5. CI + Observability Enforcement\nBefore deployment:\n\nSchema compatibility tests run automatically.\nDownstream contract validation executed.\nAffected regulatory aggregates simulated.\n\nAfter deployment:\n\nNull rate monitoring\nCardinality monitoring\nDistribution shift checks\nReconciliation delta thresholds\n\nIncidents detected by controls and not by end users."
   }
 ]

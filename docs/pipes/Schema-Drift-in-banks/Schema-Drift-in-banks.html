@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-02-19">
 
-<title>Pipes – Banking : Pipes &amp; Pits</title>
+<title>Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works – Banking : Pipes &amp; Pits</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +24,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-24772959a0e306aba8d7698078628ce7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-24772959a0e306aba8d7698078628ce7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -246,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Banking : Pipes &amp; Pits</span>
     </a>
   </div>
@@ -257,11 +258,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./pipes.html" aria-current="page"> 
+    <a class="nav-link" href="../../pipes.html"> 
 <span class="menu-text">Pipes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pits.html"> 
+    <a class="nav-link" href="../../pits.html"> 
 <span class="menu-text">Pits</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -270,23 +271,23 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-lab">    
         <li>
-    <a class="dropdown-item" href="./lab.html">
+    <a class="dropdown-item" href="../../lab.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./projects.html">
+    <a class="dropdown-item" href="../../projects.html">
  <span class="dropdown-text">Projects</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data-blog.html">
+    <a class="dropdown-item" href="../../data-blog.html">
  <span class="dropdown-text">Data blog</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./math&amp;stat.html">
+    <a class="dropdown-item" href="../../math&amp;stat.html">
  <span class="dropdown-text">Math &amp; Stats</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./wire.html">
+    <a class="dropdown-item" href="../../wire.html">
  <span class="dropdown-text">Wire</span></a>
   </li>  
     </ul>
@@ -321,14 +322,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pipes</h1>
-</div>
+<h1 class="title">Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Pipes</div>
+    <div class="quarto-category">Governance Patterns</div>
+    <div class="quarto-category">Data Contracts</div>
+    <div class="quarto-category">Regulatory Reporting</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 19, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -338,27 +351,212 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Banking systems run on pipes.</p>
-<p>Data moves across domains (Risk, Finance, Treasury, Markets) through ingestion, transformation, aggregation, reconciliation, and control layers.</p>
-<p>This section focuses on the <strong>structures that keep pipelines reliable under supervisory scrutiny</strong>:</p>
+<p>Schema drift is not a rare edge case in banking systems.</p>
+<p>It is routine.</p>
+<p>Fields are renamed.<br>
+Enums expand.<br>
+Data types evolve.<br>
+Upstream vendors change formats.</p>
+<p>In regulated environments, the question is not whether drift occurs.</p>
+<p>The question is whether it is governed under constraint.</p>
+<hr>
+<section id="the-practical-constraints" class="level2">
+<h2 class="anchored" data-anchor-id="the-practical-constraints">The Practical Constraints</h2>
+<p>Schema governance does not operate in a vacuum.</p>
+<p>In regulated banks, it is constrained by:</p>
 <ul>
-<li>Data lineage and traceability patterns<br>
-</li>
-<li>Governance operating models (ownership, approvals, change boundaries)<br>
-</li>
-<li>Data contracts and validation controls<br>
-</li>
-<li>Minimal reference architectures for regulated environments<br>
-</li>
-<li>AI readiness foundations (what must be true before AI can scale)</li>
+<li><strong>Legacy mainframe architectures</strong> where schemas are embedded in COBOL copybooks or batch file structures.</li>
+<li><strong>Vendor schema lock-in</strong>, particularly in core banking or market data systems, where upstream structures cannot be modified.</li>
+<li><strong>Cross-border data residency constraints</strong>, limiting replication or transformation patterns.</li>
+<li><strong>Regulatory submission timelines</strong> (e.g., liquidity, capital, trade reporting) where changes cannot delay filing.</li>
+<li><strong>Change politics</strong>, where domain owners resist breaking downstream consumers.</li>
 </ul>
-<section id="start-with" class="level2">
-<h2 class="anchored" data-anchor-id="start-with">Start with</h2>
+<p>Governance patterns must function within these constraints and not assume greenfield control authority.</p>
+<hr>
+</section>
+<section id="the-problem-drift-without-boundary" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-drift-without-boundary">The Problem: Drift Without Boundary</h2>
+<p>In many legacy banking environments:</p>
 <ul>
-<li><a href="./pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.html">Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works</a></li>
-<li><a href="./pipes/banking-ai-playbook/banking-ai-playbook.html">Banking AI Playbook</a></li>
-<li><a href="./pipes/data-contracts/data-contracts.html">Data contracts and schema governance</a></li>
-<li><a href="./pipes/validation-gates/validation-gates.html">Validation gates for regulated pipelines</a></li>
+<li>Schema changes are communicated informally.</li>
+<li>Downstream consumers rely on documentation rather than enforcement.</li>
+<li>Type coercion is silent.</li>
+<li>Breaking changes are bundled with unrelated releases due to deadline pressure.</li>
+</ul>
+<p>The result:</p>
+<p>The system remains operational.<br>
+Meaning shifts silently.<br>
+Reconciliation detects issues late.<br>
+AI systems inherit degraded feature definitions.</p>
+<hr>
+</section>
+<section id="the-control-pattern" class="level2">
+<h2 class="anchored" data-anchor-id="the-control-pattern">The Control Pattern</h2>
+<p>A realistic schema governance model contains five enforceable layers.</p>
+<section id="versioned-schema-registry-even-for-legacy" class="level3">
+<h3 class="anchored" data-anchor-id="versioned-schema-registry-even-for-legacy">1. Versioned Schema Registry (Even for Legacy)</h3>
+<p>Even if upstream is mainframe:</p>
+<ul>
+<li>Extracted schemas must be version-controlled at ingestion boundary.</li>
+<li>Copybooks or flat-file definitions must be checked into source control.</li>
+<li>Compatibility checks occur at the ingestion layer.</li>
+</ul>
+<p>Governance begins where control is possible.</p>
+<hr>
+</section>
+<section id="compatibility-classification-mandatory" class="level3">
+<h3 class="anchored" data-anchor-id="compatibility-classification-mandatory">2. Compatibility Classification (Mandatory)</h3>
+<p>All schema changes must be classified:</p>
+<ul>
+<li><strong>Non-breaking (safe)</strong></li>
+<li><strong>Conditionally breaking</strong></li>
+<li><strong>Breaking</strong></li>
+</ul>
+<p>Breaking changes trigger mandatory impact assessment.</p>
+<p>No classification → no deployment.</p>
+<hr>
+</section>
+<section id="explicit-decision-ownership-raci-model" class="level3">
+<h3 class="anchored" data-anchor-id="explicit-decision-ownership-raci-model">3. Explicit Decision Ownership (RACI Model)</h3>
+<p>A minimal RACI structure:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data Product Owner</td>
+<td>Accountable for schema definition</td>
+</tr>
+<tr class="even">
+<td>Domain Architect</td>
+<td>Responsible for technical compatibility assessment</td>
+</tr>
+<tr class="odd">
+<td>Reporting Owner</td>
+<td>Consulted on regulatory impact</td>
+</tr>
+<tr class="even">
+<td>Model Risk / AI Governance</td>
+<td>Consulted on feature integrity</td>
+</tr>
+<tr class="odd">
+<td>Change Advisory Board (CAB)</td>
+<td>Approval authority for breaking changes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Veto authority:</strong><br>
+Breaking changes affecting regulatory reporting require joint sign-off from the Data Product Owner and Reporting Owner. CAB approval is mandatory for production deployment.</p>
+<hr>
+</section>
+<section id="override-escalation-boundary" class="level3">
+<h3 class="anchored" data-anchor-id="override-escalation-boundary">4. Override &amp; Escalation Boundary</h3>
+<p>If downstream refuses a breaking change:</p>
+<ol type="1">
+<li>Impact documented formally.</li>
+<li>Risk acceptance signed by accountable executive.</li>
+<li>Temporary mitigation (e.g., transformation shim layer) implemented.</li>
+<li>Sunset deadline defined.</li>
+</ol>
+<p>Unresolved schema disputes cannot remain implicit.</p>
+<hr>
+</section>
+<section id="ci-observability-enforcement" class="level3">
+<h3 class="anchored" data-anchor-id="ci-observability-enforcement">5. CI + Observability Enforcement</h3>
+<p>Before deployment:</p>
+<ul>
+<li>Schema compatibility tests run automatically.</li>
+<li>Downstream contract validation executed.</li>
+<li>Affected regulatory aggregates simulated.</li>
+</ul>
+<p>After deployment:</p>
+<ul>
+<li>Null rate monitoring</li>
+<li>Cardinality monitoring</li>
+<li>Distribution shift checks</li>
+<li>Reconciliation delta thresholds</li>
+</ul>
+<p>Incidents detected by controls and not by end users.</p>
+<hr>
+</section>
+</section>
+<section id="minimal-change-flow" class="level2">
+<h2 class="anchored" data-anchor-id="minimal-change-flow">Minimal Change Flow</h2>
+<ol type="1">
+<li>Upstream proposes schema update.</li>
+<li>Compatibility classified.</li>
+<li>Automated validation runs.</li>
+<li>Impact assessment circulated (Risk / Finance / AI stakeholders).</li>
+<li>CAB reviews breaking change.</li>
+<li>Approval or escalation.</li>
+<li>Deployment with monitoring guardrails.</li>
+</ol>
+<p>No informal propagation.</p>
+<hr>
+</section>
+<section id="why-this-matters-for-ai" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters-for-ai">Why This Matters for AI</h2>
+<p>AI systems depend on:</p>
+<ul>
+<li>Stable feature semantics</li>
+<li>Deterministic category sets</li>
+<li>Controlled distribution evolution</li>
+</ul>
+<p>Unmanaged schema drift results in:</p>
+<ul>
+<li>Feature drift</li>
+<li>Retraining instability</li>
+<li>Model risk documentation gaps</li>
+<li>Supervisory challenge</li>
+</ul>
+<p>In regulated contexts, this creates governance exposure.</p>
+<hr>
+</section>
+<section id="regulatory-anchors" class="level2">
+<h2 class="anchored" data-anchor-id="regulatory-anchors">Regulatory Anchors</h2>
+<p>This control pattern aligns with supervisory expectations such as:</p>
+<ul>
+<li><strong>BCBS 239 — Principles for effective risk data aggregation and reporting</strong></li>
+<li><strong>SR 11-7 (Model Risk Management)</strong></li>
+<li><strong>ECB TRIM guidance</strong></li>
+<li><strong>DORA operational resilience requirements</strong></li>
+<li>National competent authority reporting frameworks</li>
+</ul>
+<p>These frameworks consistently emphasize:</p>
+<ul>
+<li>Traceability</li>
+<li>Control evidence</li>
+<li>Accountability</li>
+<li>Change governance</li>
+</ul>
+<p>Schema drift governance is not optional architecture hygiene.</p>
+<p>It is supervisory expectation.</p>
+<hr>
+</section>
+<section id="final-observation" class="level2">
+<h2 class="anchored" data-anchor-id="final-observation">Final Observation</h2>
+<p>Change is constant in complex banking systems.</p>
+<p>Stability is determined not by the absence of change, but by the presence of controlled decision boundaries, documented accountability, and enforceable validation gates.</p>
+<p>Schema drift is inevitable.</p>
+<p>This control discipline must be embedded across the organisation as a formal governance requirement and not treated as an optional best practice or local implementation choice.</p>
+<p>Uncontrolled schema drift is avoidable.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><p>Basel Committee on Banking Supervision. (2013). <em>Principles for effective risk data aggregation and risk reporting (BCBS 239).</em> Bank for International Settlements.</p></li>
+<li><p>Board of Governors of the Federal Reserve System &amp; Office of the Comptroller of the Currency. (2011). <em>Supervisory Guidance on Model Risk Management (SR 11-7).</em></p></li>
+<li><p>European Central Bank. (2017). <em>Guide for the Targeted Review of Internal Models (TRIM).</em></p></li>
+<li><p>European Union. (2022). <em>Regulation (EU) 2022/2554 on digital operational resilience for the financial sector (DORA).</em></p></li>
+<li><p>European Banking Authority. (2019). <em>Guidelines on ICT and security risk management (EBA/GL/2019/04).</em></p></li>
 </ul>
 
 
