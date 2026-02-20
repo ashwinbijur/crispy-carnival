@@ -16,6 +16,7 @@ This section focuses on the **structures that keep pipelines reliable under supe
 
 ## Start with
 
+- [AI Act for Banking - A Use-Case Inventory Framework for Structured Compliance](pipes/Inventory-Framework/Inventory-Framework.qmd)
 - [Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works](pipes/Schema-Drift-in-banks/Schema-Drift-in-banks.qmd)
 - [Banking AI Playbook](pipes/banking-ai-playbook/banking-ai-playbook.qmd)
 - [Data contracts and schema governance](pipes/data-contracts/data-contracts.qmd)
