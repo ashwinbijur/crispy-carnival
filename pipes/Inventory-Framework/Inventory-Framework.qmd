@@ -1,0 +1,445 @@
+---
+title: "AI Act for Banking - A Use-Case Inventory Framework for Structured Compliance"
+author: "Ashwin Bijur"
+date: 2026-02-20
+categories: [AI Governance, Banking Regulation, EU AI Act, Model Risk]
+---
+
+## Executive Summary
+
+The EU Artificial Intelligence Act establishes a risk-based regulatory framework under which obligations apply to identifiable AI systems according to their classification (e.g., high-risk, limited-risk). Requirements relating to documentation, governance, monitoring, and human oversight are therefore triggered at the system level rather than at the level of general enterprise policy.
+
+For banks, this structure implies the need to:
+
+- Identify AI systems in scope  
+- Determine their risk classification  
+- Map applicable regulatory requirements  
+- Demonstrate implemented controls  
+
+An enterprise-wide AI use-case inventory provides the structural basis for performing this analysis consistently across business units and model types.
+
+This article outlines a framework tailored to banking environments where model risk management, operational risk, outsourcing oversight, and data governance functions already exist, but where alignment to system-level AI Act obligations requires additional integration and documentation discipline.
+
+---
+
+## 1. Why Inventory Precedes Compliance Structuring
+
+The political agreement reached in December 2023 on the EU Artificial Intelligence Act confirms a risk-based framework distinguishing:
+
+- Prohibited AI practices  
+- High-risk AI systems  
+- Limited-risk systems  
+- Minimal-risk systems
+
+Obligations are triggered at the **AI system level**.
+
+Most banks maintain:
+
+- Model inventories  
+- Data governance registers  
+- Outsourcing risk registers  
+- ICT risk frameworks  
+
+However, these are typically structured around models, vendors, or data assets rather than around **AI systems as defined in regulatory scope**.
+
+A cross-enterprise AI system inventory enables:
+
+- Consistent risk classification  
+- Traceability to business processes  
+- Identification of high-risk systems  
+- Structured documentation readiness  
+
+Without a system-level inventory, classification decisions may vary across departments, and evidence assembly becomes fragmented.
+
+
+### 1.1 Structural Failure Modes in AI Act Readiness
+
+An inventory-led approach reduces structural risk, but several predictable failure modes should be anticipated and governed explicitly.
+
+#### 1.1.1 Misclassification Risk and Regulatory Exposure
+
+Risk classification determines the applicable obligations. Misclassification can occur due to:
+
+- Over-reliance on business interpretation of “intended purpose”
+- Underestimation of downstream impact on individuals
+- Treating advisory systems as low-impact without analysing practical decision weight
+
+Regulatory exposure arises where:
+
+- A system should have been classified as high-risk but was not
+- Documentation obligations were therefore not fulfilled
+- Conformity assessment requirements were not triggered
+
+Classification decisions should therefore be independently reviewed and formally recorded.
+
+#### 1.1.2 Inventory Drift Over Time
+
+AI system inventories are not static artefacts.
+
+Drift occurs when:
+
+- Systems evolve through incremental enhancements
+- LLM integrations are added to previously non-AI workflows
+- Decision influence increases without reclassification
+- Legacy systems are repurposed
+
+Without periodic reclassification review, inventory accuracy degrades and compliance posture becomes misaligned with operational reality.
+
+Recommended control:
+
+- Annual classification review
+- Mandatory reassessment upon material system change
+- Trigger-based reassessment for scope expansion
+
+#### 1.1.3 Business Unit Under-Reporting
+
+Business functions may under-report AI usage due to:
+
+- Ambiguity around what constitutes an AI system
+- Perceived regulatory burden
+- Pilot-stage deployments not considered “in production”
+- Embedded AI within vendor SaaS platforms
+
+This creates regulatory blind spots.
+
+Mitigation mechanisms:
+
+- Clear AI system definition guidance
+- Attestation requirements by business unit heads
+- Integration of AI declaration into procurement and change processes
+- Internal audit sampling of unregistered AI usage
+
+#### 1.1.4 GPAI Vendor Dependency and Opacity
+
+Foundation models and General Purpose AI systems introduce additional complexity.
+
+Opacity risks include:
+
+- Limited visibility into training data sources
+- Unclear allocation of provider versus deployer obligations
+- Incomplete technical documentation access
+- Limited assurance on post-market monitoring by vendors
+
+Where high-risk use cases rely on external General Purpose AI (GPAI) systems, banks must document:
+
+- Provider obligation mapping
+- Contractual allocation of responsibilities
+- Monitoring of upstream model changes
+- Contingency planning for vendor compliance failure
+
+Vendor dependency should be incorporated into outsourcing and third-party risk frameworks.
+
+---
+
+## 2. Banking AI Use-Case Taxonomy for Classification
+
+A functional taxonomy aligned to banking workflows supports consistent regulatory assessment.
+
+### 2.1 Customer-Facing AI
+
+Examples:
+- Chatbots and LLM-driven assistants  
+- Robo-advisory tools  
+- Automated onboarding systems  
+
+Assessment consideration: Does the system materially affect access to financial services or rights?
+
+Annex III of the provisional text classifies AI systems evaluating access to essential services — including credit — as high-risk.
+
+---
+
+### 2.2 Credit & Risk Decisioning
+
+Examples:
+- Retail credit scoring  
+- SME risk rating systems  
+- Automated limit allocation  
+
+These systems fall explicitly within high-risk categories under Annex III.
+
+Banks commonly apply model validation, performance monitoring, and backtesting. The AI Act extends this framework to include:
+
+- Formalized technical documentation  
+- Data governance specifications  
+- Defined human oversight design  
+- Post-market monitoring obligations  
+
+---
+
+### 2.3 Fraud & AML Systems
+
+Examples:
+- Transaction monitoring ML  
+- Fraud detection models  
+- Sanctions screening NLP  
+
+Risk classification depends on:
+
+- Degree of automation  
+- Decision impact on individuals  
+- Level of human intervention  
+
+Documentation should clearly distinguish between advisory systems and automated enforcement mechanisms.
+
+---
+
+### 2.4 Internal Operations & Generative AI
+
+Examples:
+- Intelligent document processing  
+- GenAI summarization tools  
+- Internal copilots  
+
+These systems may fall into limited-risk or minimal-risk categories depending on impact. Classification must be documented with reference to intended purpose and system design.
+
+The Act introduces specific provisions for **General Purpose AI (GPAI)** models and foundation models integrated downstream. Deployers must assess the allocation of obligations between providers and institutional users.
+
+---
+
+## 3. Control Mapping at System Level
+
+Following classification, controls should be mapped systematically to each AI system.
+
+### 3.1 Data Governance
+
+High-risk systems must meet data governance requirements addressing relevance, representativeness, and bias mitigation.
+
+Banking alignment typically involves:
+
+- Data quality frameworks  
+- Lineage documentation  
+- Bias testing protocols  
+
+---
+
+### 3.2 Technical Documentation
+
+High-risk systems require documentation sufficient to demonstrate regulatory conformity.
+
+Existing model documentation practices can be expanded to include:
+
+- System-level scope definitions  
+- Intended purpose statements  
+- Risk classification justification  
+
+---
+
+### 3.3 Monitoring & Post-Market Surveillance
+
+The Act introduces post-market monitoring obligations.
+
+Operational alignment includes:
+
+- Performance dashboards  
+- Drift detection  
+- Incident logging  
+- Periodic review mechanisms  
+
+Monitoring processes must be demonstrable and auditable.
+
+---
+
+### 3.4 Human Oversight
+
+Human oversight mechanisms must be designed into system architecture.
+
+Supervisory examination will focus on:
+
+- Override authority  
+- Escalation pathways  
+- Accountability assignment  
+- Reviewer qualification  
+
+Oversight must be operationally meaningful.
+
+---
+
+### 3.5 Transparency & Explainability
+
+Transparency obligations apply where individuals interact with AI systems.
+
+For high-risk systems, explanation capability becomes critical, particularly in credit and eligibility contexts.
+
+---
+
+### 3.6 Incident Reporting
+
+Serious incidents involving high-risk AI systems must be documented and reported under defined procedures.
+
+Banks should incorporate AI-specific categorization within existing operational risk frameworks.
+
+---
+
+## 4. Intersection with Existing Banking Supervision
+
+There is alignment with:
+
+- EBA Guidelines on Loan Origination and Monitoring  
+- EBA Guidelines on ICT and Security Risk Management  
+- ECB supervisory expectations on model risk  
+
+However, AI Act compliance differs structurally:
+
+| Banking Supervision Focus | AI Act Focus |
+|---------------------------|--------------|
+| Model-level governance | System-level conformity |
+| Prudential risk | Fundamental rights impact |
+| Internal validation | Regulatory technical documentation |
+| Risk appetite | Formal risk classification |
+
+Existing governance structures provide foundational capabilities but do not automatically satisfy AI Act conformity requirements.
+
+---
+
+## 5. Evidence Pack Structuring
+
+Regulatory readiness requires system-centric evidence.
+
+A high-risk AI evidence package should include:
+
+1. System description and intended purpose  
+2. Risk classification rationale  
+3. Data governance documentation  
+4. Validation and testing artefacts  
+5. Monitoring logs and performance evidence  
+6. Human oversight documentation  
+7. Change management history  
+8. Vendor documentation where applicable  
+
+Documentation should be structured per system to enable efficient supervisory review.
+
+---
+
+## 6. Explicit Operating Model for AI System Governance
+
+An inventory-based framework requires clear role allocation across lines of defence.
+
+The following structure provides analytical clarity and supervisory defensibility.
+
+### 6.1 First Line of Defence — System Owner
+
+**Role:** Business owner of the AI system.
+
+**Responsibilities:**
+
+- Declare system inclusion in AI inventory
+- Document intended purpose
+- Initiate risk classification proposal
+- Ensure operational monitoring
+- Maintain system-level documentation
+- Trigger reassessment upon material change
+
+Accountability rests with the business owner for system accuracy and completeness.
+
+### 6.2 Second Line of Defence — Risk & Classification Validator
+
+**Role:** Independent validation function (e.g., Model Risk, Enterprise Risk).
+
+**Responsibilities:**
+
+- Review risk classification determination
+- Validate documentation completeness
+- Assess alignment with Annex III criteria
+- Challenge advisory vs determinative positioning
+- Confirm human oversight adequacy
+
+Classification should not be self-certified by the business function.
+
+### 6.3 Compliance Function — Regulatory Conformity Sign-Off
+
+**Role:** Regulatory interpretation and conformity oversight.
+
+**Responsibilities:**
+
+- Confirm applicable AI Act obligations
+- Validate documentation against regulatory requirements
+- Review transparency obligations
+- Approve high-risk system conformity positioning
+
+Formal sign-off should be recorded for high-risk systems prior to deployment or material modification.
+
+### 6.4 Escalation Path
+
+Clear escalation is required where:
+
+- Classification disputes arise
+- Significant incidents occur
+- Vendor compliance risk is identified
+- Documentation gaps persist
+
+Recommended escalation path:
+
+1. Business Owner
+2. Risk Validation Committee
+3. AI Governance Committee
+4. Executive Risk Committee
+
+Escalation thresholds should be predefined and documented.
+
+### 6.5 Board and Executive Reporting
+
+AI governance requires structured reporting at board level.
+
+Recommended minimum reporting cadence:
+
+- Semi-annual AI system inventory summary
+- Quarterly high-risk system monitoring overview
+- Immediate escalation for serious incidents
+
+Board reporting should include:
+
+- Total AI systems by classification tier
+- Number of high-risk systems
+- Documentation completeness status
+- Incident summary
+- Vendor dependency exposure
+
+Board-level visibility ensures alignment with institutional risk appetite.
+
+---
+
+## 7. Phased Implementation Approach
+
+### Phase 1 (0–6 months)
+- Establish enterprise AI system register  
+- Conduct initial risk classification  
+- Assign accountable owners  
+
+### Phase 2 (6–12 months)
+- Map regulatory requirements to high-risk systems  
+- Close documentation gaps  
+- Standardize technical documentation templates  
+
+### Phase 3 (12–18 months)
+- Integrate monitoring and reporting workflows  
+- Conduct internal readiness assessments  
+- Validate oversight mechanisms  
+
+---
+
+## Conclusion
+
+The EU AI Act introduces system-level obligations structured around risk classification and demonstrable control implementation.
+
+For banks, compliance readiness depends on the institution’s ability to:
+
+- Maintain an accurate AI system inventory
+- Apply consistent risk classification criteria
+- Map regulatory requirements to implemented controls
+- Evidence monitoring and oversight mechanisms
+- Govern vendor dependencies transparently
+
+Failure modes such as misclassification, inventory drift, under-reporting, and GPAI opacity introduce structural compliance risk if not addressed explicitly.
+
+An inventory-led governance model, supported by clear role allocation and board visibility, provides a scalable mechanism for aligning existing banking control environments with AI Act conformity requirements.
+
+AI Act readiness therefore becomes a question of operational governance integration rather than policy formulation.
+
+---
+
+## References
+
+- European Commission, Political Agreement on the Artificial Intelligence Act, December 2023
+- Proposal for a Regulation Laying Down Harmonised Rules on Artificial Intelligence (COM/2021/206 final), Annex III (as amended in political agreement)
+- Political agreement provisions on General Purpose AI models, December 2023 compromise text
+- AI Act Title III – Requirements for High-Risk AI Systems (data governance provisions)
