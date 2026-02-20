@@ -1,5 +1,135 @@
 ---
-title: "Where banking data pipelines break — and why AI suffers first"
+title: "Where Banking Data Pipelines Break and Why AI Suffers First"
+date: 2026-02-15
+categories: [Pits, Failure Modes, AI Readiness, Data Governance]
 ---
 
-(Coming next.)
+Banking systems look stable from the outside.
+
+Reports run. Dashboards populate. Regulatory submissions go out.
+
+But underneath, data moves through layered transformations, joins, aggregations, reconciliations, and controls across front-to-back systems. Those are the *pipes*.
+
+Where pipes weaken, *pits* form.
+
+AI systems are often the first to fall into them, not because AI is fragile, but because it is highly sensitive to silent changes in meaning.
+
+## 1. Schema drift (the silent break)
+
+A field is renamed.  
+An enum expands.  
+A data type changes.  
+A timestamp shifts from local time to UTC.
+
+Downstream pipelines often keep running.
+
+The dangerous part is not the change. It’s the *silence*.
+
+- Reporting processes may surface the issue later through reconciliation breaks.
+- AI systems can degrade quietly: feature distributions shift, model confidence patterns change, and performance decays without a clean “fail” signal.
+
+**Pit signature:** the pipeline is “green” but the meaning is wrong.
+
+## 2. Semantic inconsistency (same word, different truth)
+
+In banks, the same business term can carry different definitions across domains.
+
+“Exposure” in Risk might not equal “Exposure” in Treasury.  
+“Customer” in onboarding might not equal “Customer” in CRM.  
+“Product” in Finance might not equal “Product” in Markets.
+
+These mismatches create systemic disagreement:
+
+- Different filters, cut-offs, and aggregation logic
+- Different timing and booking assumptions
+- Different reference data sources
+
+If semantics are not explicit and governed, models learn patterns that are *structurally disputed*.
+
+**Pit signature:** technically correct data that is contextually incorrect.
+
+## 3. Identity resolution gaps (broken joins, distorted aggregates)
+
+Identity is foundational, and it is frequently weak.
+
+- multiple IDs for the same real-world entity
+- unstable keys across systems
+- duplicate records and many-to-many joins
+- missing link tables that force heuristics
+
+Regulatory reporting can sometimes detect this via late reconciliation.
+
+AI training pipelines often cannot. They absorb the distortion.
+
+**Pit signature:** aggregate numbers fluctuate or drift “mysteriously” after upstream changes, despite no visible logic change downstream.
+
+## 4. Ownership ambiguity (controls without accountability)
+
+Most pipeline weakness is not technical. It is organisational.
+
+If no one owns a field end-to-end, then:
+
+- who approves a schema change?
+- who validates semantic impact?
+- who signs off reconciliation tolerances?
+- who decides whether a deviation is acceptable?
+
+Without named ownership and approval boundaries, controls become performative rather than preventative.
+
+**Pit signature:** everyone can explain their piece, nobody can explain the full outcome.
+
+## 5. Monitoring blind spots (you can’t govern what you can’t see)
+
+Typical monitoring catches availability and runtime failures.
+
+Regulated banking pipelines require more:
+
+- freshness and completeness checks
+- missingness spikes
+- distribution shifts for key measures
+- reconciliation deltas vs authoritative sources
+- schema compatibility and contract checks
+
+Without these, the system fails “politely” — outputs continue, and trust erodes only after business impact appears.
+
+**Pit signature:** incidents are discovered by users, not by controls.
+
+## Why AI feels it first
+
+AI systems are sensitive to:
+
+- distribution shift
+- missingness patterns
+- label timing changes
+- subtle semantic drift
+
+Traditional reporting often fails loudly (reconciliation breaks).
+
+AI often fails quietly (confidence drifts, decisions degrade).
+
+So AI doesn’t just need good models. It needs strong pipes.
+
+## What strong pipes look like (the preventive layer)
+
+If you want AI to scale safely in regulated banking, the foundations look like this:
+
+- **Versioned schemas** with compatibility rules  
+- **Explicit semantic definitions** where ambiguity is managed, not ignored  
+- **Named data ownership** with clear approval boundaries  
+- **Validation gates** before changes propagate  
+- **Reconciliation controls** tied to authoritative sources  
+- **Observability** for freshness, missingness, drift, and contract violations  
+
+AI industrialisation is not primarily a modelling challenge.
+
+It’s a structural systems challenge.
+
+
+## References
+
+1. Basel Committee on Banking Supervision (2013). *Principles for effective risk data aggregation and risk reporting (BCBS 239)*.
+2. Basel Committee on Banking Supervision (2011, rev. 2019). *Principles for the Sound Management of Operational Risk*.
+3. European Central Bank (2023). *Guide to internal models*.
+4. Financial Stability Board (2017). *Supervisory and regulatory implications of artificial intelligence and machine learning in financial services*.
+5. NIST (2023). *AI Risk Management Framework (AI RMF 1.0)*.
+6. ISO/IEC 25012. *Data quality model*.

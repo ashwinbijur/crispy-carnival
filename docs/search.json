@@ -459,7 +459,7 @@
     "href": "pipes.html#start-with",
     "title": "Pipes",
     "section": "Start with",
-    "text": "Start with\n\nBanking AI Playbook\nData contracts and schema governance\nValidation gates for regulated pipelines"
+    "text": "Start with\n\nSchema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works\nBanking AI Playbook\nData contracts and schema governance\nValidation gates for regulated pipelines"
   },
   {
     "objectID": "pits.html",
@@ -473,7 +473,7 @@
     "href": "pits.html#start-with",
     "title": "Pits",
     "section": "Start with",
-    "text": "Start with\n\nWhere banking data pipelines break — and why AI suffers first\nSchema drift in regulated reporting pipelines"
+    "text": "Start with\n\nWhere banking data pipelines break and why AI suffers first\nSchema drift in regulated reporting pipelines"
   },
   {
     "objectID": "pits/schema-drift/schema-drift.html",
@@ -499,9 +499,9 @@
   {
     "objectID": "pits/pipelines-break/pipelines-break.html",
     "href": "pits/pipelines-break/pipelines-break.html",
-    "title": "Where banking data pipelines break — and why AI suffers first",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
     "section": "",
-    "text": "(Coming next.)"
+    "text": "Banking systems look stable from the outside.\nReports run. Dashboards populate. Regulatory submissions go out.\nBut underneath, data moves through layered transformations, joins, aggregations, reconciliations, and controls across front-to-back systems. Those are the pipes.\nWhere pipes weaken, pits form.\nAI systems are often the first to fall into them, not because AI is fragile, but because it is highly sensitive to silent changes in meaning."
   },
   {
     "objectID": "pipes/banking-ai-playbook/banking-ai-playbook.html",
@@ -509,5 +509,173 @@
     "title": "Banking AI Playbook",
     "section": "",
     "text": "(Coming next.)"
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html#schema-drift-the-silent-break",
+    "href": "pits/pipelines-break/pipelines-break.html#schema-drift-the-silent-break",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
+    "section": "1. Schema drift (the silent break)",
+    "text": "1. Schema drift (the silent break)\nA field is renamed.\nAn enum expands.\nA data type changes.\nA timestamp shifts from local time to UTC.\nDownstream pipelines often keep running.\nThe dangerous part is not the change. It’s the silence.\n\nReporting processes may surface the issue later through reconciliation breaks.\nAI systems can degrade quietly: feature distributions shift, model confidence patterns change, and performance decays without a clean “fail” signal.\n\nPit signature: the pipeline is “green” but the meaning is wrong."
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html#semantic-inconsistency-same-word-different-truth",
+    "href": "pits/pipelines-break/pipelines-break.html#semantic-inconsistency-same-word-different-truth",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
+    "section": "2. Semantic inconsistency (same word, different truth)",
+    "text": "2. Semantic inconsistency (same word, different truth)\nIn banks, the same business term can carry different definitions across domains.\n“Exposure” in Risk might not equal “Exposure” in Treasury.\n“Customer” in onboarding might not equal “Customer” in CRM.\n“Product” in Finance might not equal “Product” in Markets.\nThese mismatches create systemic disagreement:\n\nDifferent filters, cut-offs, and aggregation logic\nDifferent timing and booking assumptions\nDifferent reference data sources\n\nIf semantics are not explicit and governed, models learn patterns that are structurally disputed.\nPit signature: technically correct data that is contextually incorrect."
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html#identity-resolution-gaps-broken-joins-distorted-aggregates",
+    "href": "pits/pipelines-break/pipelines-break.html#identity-resolution-gaps-broken-joins-distorted-aggregates",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
+    "section": "3. Identity resolution gaps (broken joins, distorted aggregates)",
+    "text": "3. Identity resolution gaps (broken joins, distorted aggregates)\nIdentity is foundational, and it is frequently weak.\n\nmultiple IDs for the same real-world entity\nunstable keys across systems\nduplicate records and many-to-many joins\nmissing link tables that force heuristics\n\nRegulatory reporting can sometimes detect this via late reconciliation.\nAI training pipelines often cannot. They absorb the distortion.\nPit signature: aggregate numbers fluctuate or drift “mysteriously” after upstream changes, despite no visible logic change downstream."
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html#ownership-ambiguity-controls-without-accountability",
+    "href": "pits/pipelines-break/pipelines-break.html#ownership-ambiguity-controls-without-accountability",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
+    "section": "4. Ownership ambiguity (controls without accountability)",
+    "text": "4. Ownership ambiguity (controls without accountability)\nMost pipeline weakness is not technical. It is organisational.\nIf no one owns a field end-to-end, then:\n\nwho approves a schema change?\nwho validates semantic impact?\nwho signs off reconciliation tolerances?\nwho decides whether a deviation is acceptable?\n\nWithout named ownership and approval boundaries, controls become performative rather than preventative.\nPit signature: everyone can explain their piece, nobody can explain the full outcome."
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html#monitoring-blind-spots-you-cant-govern-what-you-cant-see",
+    "href": "pits/pipelines-break/pipelines-break.html#monitoring-blind-spots-you-cant-govern-what-you-cant-see",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
+    "section": "5. Monitoring blind spots (you can’t govern what you can’t see)",
+    "text": "5. Monitoring blind spots (you can’t govern what you can’t see)\nTypical monitoring catches availability and runtime failures.\nRegulated banking pipelines require more:\n\nfreshness and completeness checks\nmissingness spikes\ndistribution shifts for key measures\nreconciliation deltas vs authoritative sources\nschema compatibility and contract checks\n\nWithout these, the system fails “politely” — outputs continue, and trust erodes only after business impact appears.\nPit signature: incidents are discovered by users, not by controls."
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html#why-ai-feels-it-first",
+    "href": "pits/pipelines-break/pipelines-break.html#why-ai-feels-it-first",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
+    "section": "Why AI feels it first",
+    "text": "Why AI feels it first\nAI systems are sensitive to:\n\ndistribution shift\nmissingness patterns\nlabel timing changes\nsubtle semantic drift\n\nTraditional reporting often fails loudly (reconciliation breaks).\nAI often fails quietly (confidence drifts, decisions degrade).\nSo AI doesn’t just need good models. It needs strong pipes."
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html#what-strong-pipes-look-like-the-preventive-layer",
+    "href": "pits/pipelines-break/pipelines-break.html#what-strong-pipes-look-like-the-preventive-layer",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
+    "section": "What strong pipes look like (the preventive layer)",
+    "text": "What strong pipes look like (the preventive layer)\nIf you want AI to scale safely in regulated banking, the foundations look like this:\n\nVersioned schemas with compatibility rules\n\nExplicit semantic definitions where ambiguity is managed, not ignored\n\nNamed data ownership with clear approval boundaries\n\nValidation gates before changes propagate\n\nReconciliation controls tied to authoritative sources\n\nObservability for freshness, missingness, drift, and contract violations\n\nAI industrialisation is not primarily a modelling challenge.\nIt’s a structural systems challenge."
+  },
+  {
+    "objectID": "pits/pipelines-break/pipelines-break.html#references",
+    "href": "pits/pipelines-break/pipelines-break.html#references",
+    "title": "Where Banking Data Pipelines Break and Why AI Suffers First",
+    "section": "References",
+    "text": "References\n\nBasel Committee on Banking Supervision (2013). Principles for effective risk data aggregation and risk reporting (BCBS 239).\nBasel Committee on Banking Supervision (2011, rev. 2019). Principles for the Sound Management of Operational Risk.\nEuropean Central Bank (2023). Guide to internal models.\nFinancial Stability Board (2017). Supervisory and regulatory implications of artificial intelligence and machine learning in financial services.\nNIST (2023). AI Risk Management Framework (AI RMF 1.0).\nISO/IEC 25012. Data quality model."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "",
+    "text": "Schema drift is not a rare edge case in banking systems.\nIt is routine.\nFields are renamed.\nEnums expand.\nData types evolve.\nUpstream vendors change formats.\nIn regulated environments, the question is not whether drift occurs.\nThe question is whether it is governed under constraint."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#the-practical-constraints-reality-layer",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#the-practical-constraints-reality-layer",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Practical Constraints (Reality Layer)",
+    "text": "The Practical Constraints (Reality Layer)\nSchema governance does not operate in a vacuum.\nIn regulated banks, it is constrained by:\n\nLegacy mainframe architectures where schemas are embedded in COBOL copybooks or batch file structures.\nVendor schema lock-in, particularly in core banking or market data systems, where upstream structures cannot be modified.\nCross-border data residency constraints, limiting replication or transformation patterns.\nRegulatory submission timelines (e.g., liquidity, capital, trade reporting) where changes cannot delay filing.\nChange politics, where domain owners resist breaking downstream consumers.\n\nGovernance patterns must function within these constraints and not assume greenfield control authority."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#the-problem-drift-without-boundary",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#the-problem-drift-without-boundary",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Problem: Drift Without Boundary",
+    "text": "The Problem: Drift Without Boundary\nIn many legacy banking environments:\n\nSchema changes are communicated informally.\nDownstream consumers rely on documentation rather than enforcement.\nType coercion is silent.\nBreaking changes are bundled with unrelated releases due to deadline pressure.\n\nThe result:\nThe system remains operational.\nMeaning shifts silently.\nReconciliation detects issues late.\nAI systems inherit degraded feature definitions."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#the-control-pattern-under-constraint",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#the-control-pattern-under-constraint",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Control Pattern (Under Constraint)",
+    "text": "The Control Pattern (Under Constraint)\nA realistic schema governance model contains five enforceable layers.\n\n1. Versioned Schema Registry (Even for Legacy)\nEven if upstream is mainframe:\n\nExtracted schemas must be version-controlled at ingestion boundary.\nCopybooks or flat-file definitions must be checked into source control.\nCompatibility checks occur at the ingestion layer.\n\nGovernance begins where control is possible.\n\n\n\n2. Compatibility Classification (Mandatory)\nAll schema changes must be classified:\n\nNon-breaking (safe)\nConditionally breaking\nBreaking\n\nBreaking changes trigger mandatory impact assessment.\nNo classification → no deployment.\n\n\n\n3. Explicit Decision Ownership (RACI Model)\nA minimal RACI structure:\n\n\n\n\n\n\n\nRole\nResponsibility\n\n\n\n\nData Product Owner\nAccountable for schema definition\n\n\nDomain Architect\nResponsible for technical compatibility assessment\n\n\nReporting Owner\nConsulted on regulatory impact\n\n\nModel Risk / AI Governance\nConsulted on feature integrity\n\n\nChange Advisory Board (CAB)\nApproval authority for breaking changes\n\n\n\nVeto authority:\nBreaking changes affecting regulatory reporting require joint sign-off from the Data Product Owner and Reporting Owner. CAB approval is mandatory for production deployment.\n\n\n\n4. Override & Escalation Boundary\nIf downstream refuses a breaking change:\n\nImpact documented formally.\nRisk acceptance signed by accountable executive.\nTemporary mitigation (e.g., transformation shim layer) implemented.\nSunset deadline defined.\n\nUnresolved schema disputes cannot remain implicit.\n\n\n\n5. CI + Observability Enforcement\nBefore deployment:\n\nSchema compatibility tests run automatically.\nDownstream contract validation executed.\nAffected regulatory aggregates simulated.\n\nAfter deployment:\n\nNull rate monitoring\nCardinality monitoring\nDistribution shift checks\nReconciliation delta thresholds\n\nIncidents detected by controls and not by end users."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#minimal-change-flow",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#minimal-change-flow",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Minimal Change Flow",
+    "text": "Minimal Change Flow\n\nUpstream proposes schema update.\nCompatibility classified.\nAutomated validation runs.\nImpact assessment circulated (Risk / Finance / AI stakeholders).\nCAB reviews breaking change.\nApproval or escalation.\nDeployment with monitoring guardrails.\n\nNo informal propagation."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#why-this-matters-for-ai",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#why-this-matters-for-ai",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Why This Matters for AI",
+    "text": "Why This Matters for AI\nAI systems depend on:\n\nStable feature semantics\nDeterministic category sets\nControlled distribution evolution\n\nUnmanaged schema drift results in:\n\nFeature drift\nRetraining instability\nModel risk documentation gaps\nSupervisory challenge\n\nIn regulated contexts, this creates governance exposure."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#regulatory-anchors",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#regulatory-anchors",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Regulatory Anchors",
+    "text": "Regulatory Anchors\nThis control pattern aligns with supervisory expectations such as:\n\nBCBS 239 — Principles for effective risk data aggregation and reporting\nSR 11-7 (Model Risk Management)\nECB TRIM guidance\nDORA operational resilience requirements\nNational competent authority reporting frameworks\n\nThese frameworks consistently emphasize:\n\nTraceability\nControl evidence\nAccountability\nChange governance\n\nSchema drift governance is not optional architecture hygiene.\nIt is supervisory expectation."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#final-observation",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works.html#final-observation",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Final Observation",
+    "text": "Final Observation\nBanks do not fail because change occurs.\nThey fail because change propagates without controlled decision boundaries under deadline pressure.\nSchema drift is inevitable.\nUnaccountable schema drift is a governance failure.\nAnd this message should be percolated throughout the organisation, as a mandatory control pattern, not an optional best practice."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "",
+    "text": "Schema drift is not a rare edge case in banking systems.\nIt is routine.\nFields are renamed.\nEnums expand.\nData types evolve.\nUpstream vendors change formats.\nIn regulated environments, the question is not whether drift occurs.\nThe question is whether it is governed under constraint."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#the-practical-constraints-reality-layer",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#the-practical-constraints-reality-layer",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Practical Constraints (Reality Layer)",
+    "text": "The Practical Constraints (Reality Layer)\nSchema governance does not operate in a vacuum.\nIn regulated banks, it is constrained by:\n\nLegacy mainframe architectures where schemas are embedded in COBOL copybooks or batch file structures.\nVendor schema lock-in, particularly in core banking or market data systems, where upstream structures cannot be modified.\nCross-border data residency constraints, limiting replication or transformation patterns.\nRegulatory submission timelines (e.g., liquidity, capital, trade reporting) where changes cannot delay filing.\nChange politics, where domain owners resist breaking downstream consumers.\n\nGovernance patterns must function within these constraints and not assume greenfield control authority."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#the-problem-drift-without-boundary",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#the-problem-drift-without-boundary",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Problem: Drift Without Boundary",
+    "text": "The Problem: Drift Without Boundary\nIn many legacy banking environments:\n\nSchema changes are communicated informally.\nDownstream consumers rely on documentation rather than enforcement.\nType coercion is silent.\nBreaking changes are bundled with unrelated releases due to deadline pressure.\n\nThe result:\nThe system remains operational.\nMeaning shifts silently.\nReconciliation detects issues late.\nAI systems inherit degraded feature definitions."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#the-control-pattern-under-constraint",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#the-control-pattern-under-constraint",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "The Control Pattern (Under Constraint)",
+    "text": "The Control Pattern (Under Constraint)\nA realistic schema governance model contains five enforceable layers.\n\n1. Versioned Schema Registry (Even for Legacy)\nEven if upstream is mainframe:\n\nExtracted schemas must be version-controlled at ingestion boundary.\nCopybooks or flat-file definitions must be checked into source control.\nCompatibility checks occur at the ingestion layer.\n\nGovernance begins where control is possible.\n\n\n\n2. Compatibility Classification (Mandatory)\nAll schema changes must be classified:\n\nNon-breaking (safe)\nConditionally breaking\nBreaking\n\nBreaking changes trigger mandatory impact assessment.\nNo classification → no deployment.\n\n\n\n3. Explicit Decision Ownership (RACI Model)\nA minimal RACI structure:\n\n\n\n\n\n\n\nRole\nResponsibility\n\n\n\n\nData Product Owner\nAccountable for schema definition\n\n\nDomain Architect\nResponsible for technical compatibility assessment\n\n\nReporting Owner\nConsulted on regulatory impact\n\n\nModel Risk / AI Governance\nConsulted on feature integrity\n\n\nChange Advisory Board (CAB)\nApproval authority for breaking changes\n\n\n\nVeto authority:\nBreaking changes affecting regulatory reporting require joint sign-off from the Data Product Owner and Reporting Owner. CAB approval is mandatory for production deployment.\n\n\n\n4. Override & Escalation Boundary\nIf downstream refuses a breaking change:\n\nImpact documented formally.\nRisk acceptance signed by accountable executive.\nTemporary mitigation (e.g., transformation shim layer) implemented.\nSunset deadline defined.\n\nUnresolved schema disputes cannot remain implicit.\n\n\n\n5. CI + Observability Enforcement\nBefore deployment:\n\nSchema compatibility tests run automatically.\nDownstream contract validation executed.\nAffected regulatory aggregates simulated.\n\nAfter deployment:\n\nNull rate monitoring\nCardinality monitoring\nDistribution shift checks\nReconciliation delta thresholds\n\nIncidents detected by controls and not by end users."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#minimal-change-flow",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#minimal-change-flow",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Minimal Change Flow",
+    "text": "Minimal Change Flow\n\nUpstream proposes schema update.\nCompatibility classified.\nAutomated validation runs.\nImpact assessment circulated (Risk / Finance / AI stakeholders).\nCAB reviews breaking change.\nApproval or escalation.\nDeployment with monitoring guardrails.\n\nNo informal propagation."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#why-this-matters-for-ai",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#why-this-matters-for-ai",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Why This Matters for AI",
+    "text": "Why This Matters for AI\nAI systems depend on:\n\nStable feature semantics\nDeterministic category sets\nControlled distribution evolution\n\nUnmanaged schema drift results in:\n\nFeature drift\nRetraining instability\nModel risk documentation gaps\nSupervisory challenge\n\nIn regulated contexts, this creates governance exposure."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#regulatory-anchors",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#regulatory-anchors",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Regulatory Anchors",
+    "text": "Regulatory Anchors\nThis control pattern aligns with supervisory expectations such as:\n\nBCBS 239 — Principles for effective risk data aggregation and reporting\nSR 11-7 (Model Risk Management)\nECB TRIM guidance\nDORA operational resilience requirements\nNational competent authority reporting frameworks\n\nThese frameworks consistently emphasize:\n\nTraceability\nControl evidence\nAccountability\nChange governance\n\nSchema drift governance is not optional architecture hygiene.\nIt is supervisory expectation."
+  },
+  {
+    "objectID": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#final-observation",
+    "href": "pipes/Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works/Schema-Drift-in-Regulated-Reporting-Pipelines-A-Control-Pattern-That-Actually-Works.html#final-observation",
+    "title": "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works",
+    "section": "Final Observation",
+    "text": "Final Observation\nBanks do not fail because change occurs.\nThey fail because change propagates without controlled decision boundaries under deadline pressure.\nSchema drift is inevitable.\nUnaccountable schema drift is a governance failure.\nAnd this message should be percolated throughout the organisation, as a mandatory control pattern, not an optional best practice."
   }
 ]

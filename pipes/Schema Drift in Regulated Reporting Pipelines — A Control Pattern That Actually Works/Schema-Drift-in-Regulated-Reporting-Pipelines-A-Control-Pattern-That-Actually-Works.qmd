@@ -1,0 +1,201 @@
+---
+title: "Schema Drift in Regulated Reporting Pipelines — A Control Pattern That Actually Works"
+date: 2026-02-20
+categories: [Pipes, Governance Patterns, Data Contracts, Regulatory Reporting]
+---
+
+Schema drift is not a rare edge case in banking systems.
+
+It is routine.
+
+Fields are renamed.  
+Enums expand.  
+Data types evolve.  
+Upstream vendors change formats.
+
+In regulated environments, the question is not whether drift occurs.
+
+The question is whether it is governed under constraint.
+
+---
+
+## The Practical Constraints (Reality Layer)
+
+Schema governance does not operate in a vacuum.
+
+In regulated banks, it is constrained by:
+
+- **Legacy mainframe architectures** where schemas are embedded in COBOL copybooks or batch file structures.
+- **Vendor schema lock-in**, particularly in core banking or market data systems, where upstream structures cannot be modified.
+- **Cross-border data residency constraints**, limiting replication or transformation patterns.
+- **Regulatory submission timelines** (e.g., liquidity, capital, trade reporting) where changes cannot delay filing.
+- **Change politics**, where domain owners resist breaking downstream consumers.
+
+Governance patterns must function within these constraints and not assume greenfield control authority.
+
+---
+
+## The Problem: Drift Without Boundary
+
+In many legacy banking environments:
+
+- Schema changes are communicated informally.
+- Downstream consumers rely on documentation rather than enforcement.
+- Type coercion is silent.
+- Breaking changes are bundled with unrelated releases due to deadline pressure.
+
+The result:
+
+The system remains operational.  
+Meaning shifts silently.  
+Reconciliation detects issues late.  
+AI systems inherit degraded feature definitions.
+
+---
+
+## The Control Pattern (Under Constraint)
+
+A realistic schema governance model contains five enforceable layers.
+
+### 1. Versioned Schema Registry (Even for Legacy)
+
+Even if upstream is mainframe:
+
+- Extracted schemas must be version-controlled at ingestion boundary.
+- Copybooks or flat-file definitions must be checked into source control.
+- Compatibility checks occur at the ingestion layer.
+
+Governance begins where control is possible.
+
+---
+
+### 2. Compatibility Classification (Mandatory)
+
+All schema changes must be classified:
+
+- **Non-breaking (safe)**
+- **Conditionally breaking**
+- **Breaking**
+
+Breaking changes trigger mandatory impact assessment.
+
+No classification → no deployment.
+
+---
+
+### 3. Explicit Decision Ownership (RACI Model)
+
+A minimal RACI structure:
+
+| Role | Responsibility |
+|------|----------------|
+| Data Product Owner | Accountable for schema definition |
+| Domain Architect | Responsible for technical compatibility assessment |
+| Reporting Owner | Consulted on regulatory impact |
+| Model Risk / AI Governance | Consulted on feature integrity |
+| Change Advisory Board (CAB) | Approval authority for breaking changes |
+
+**Veto authority:**  
+Breaking changes affecting regulatory reporting require joint sign-off from the Data Product Owner and Reporting Owner. CAB approval is mandatory for production deployment.
+
+---
+
+### 4. Override & Escalation Boundary
+
+If downstream refuses a breaking change:
+
+1. Impact documented formally.
+2. Risk acceptance signed by accountable executive.
+3. Temporary mitigation (e.g., transformation shim layer) implemented.
+4. Sunset deadline defined.
+
+Unresolved schema disputes cannot remain implicit.
+
+---
+
+### 5. CI + Observability Enforcement
+
+Before deployment:
+
+- Schema compatibility tests run automatically.
+- Downstream contract validation executed.
+- Affected regulatory aggregates simulated.
+
+After deployment:
+
+- Null rate monitoring
+- Cardinality monitoring
+- Distribution shift checks
+- Reconciliation delta thresholds
+
+Incidents detected by controls and not by end users.
+
+---
+
+## Minimal Change Flow
+
+1. Upstream proposes schema update.
+2. Compatibility classified.
+3. Automated validation runs.
+4. Impact assessment circulated (Risk / Finance / AI stakeholders).
+5. CAB reviews breaking change.
+6. Approval or escalation.
+7. Deployment with monitoring guardrails.
+
+No informal propagation.
+
+---
+
+## Why This Matters for AI
+
+AI systems depend on:
+
+- Stable feature semantics
+- Deterministic category sets
+- Controlled distribution evolution
+
+Unmanaged schema drift results in:
+
+- Feature drift
+- Retraining instability
+- Model risk documentation gaps
+- Supervisory challenge
+
+In regulated contexts, this creates governance exposure.
+
+---
+
+## Regulatory Anchors
+
+This control pattern aligns with supervisory expectations such as:
+
+- **BCBS 239 — Principles for effective risk data aggregation and reporting**
+- **SR 11-7 (Model Risk Management)**
+- **ECB TRIM guidance**
+- **DORA operational resilience requirements**
+- National competent authority reporting frameworks
+
+These frameworks consistently emphasize:
+
+- Traceability
+- Control evidence
+- Accountability
+- Change governance
+
+Schema drift governance is not optional architecture hygiene.
+
+It is supervisory expectation.
+
+---
+
+## Final Observation
+
+Change is constant in complex banking systems.
+
+Stability is determined not by the absence of change, but by the presence of controlled decision boundaries, documented accountability, and enforceable validation gates.
+
+Schema drift is inevitable.
+
+This control discipline must be embedded across the organisation as a formal governance requirement and not treated as an optional best practice or local implementation choice.
+
+Uncontrolled schema drift is avoidable.
